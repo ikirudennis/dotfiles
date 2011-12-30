@@ -1,0 +1,70 @@
+.vim/bundle/,V
+yankrin,v
+git@github.com:ikirudennis/xml.vim.git,v
+git://github.com/vimoutliner/vimoutliner.git,v
+git://github.com/tpope/vim-surround.git,v
+git://github.com/tpope/vim-speeddating.git,v
+url = git://github.com/tpope/vim-speeddating.git,v
+http://github.com/bingaman/vim-sparkup.git,v
+git://github.com/jpalardy/vim-slime.git,v
+git@github.com:ikirudennis/vim-scratch.git,v
+git://github.com/tpope/vim-repeat.git,v
+git://github.com/tpope/vim-abolish.git,v
+git://github.com/msanders/snipmate.vim.git,v
+git://github.com/vim-scripts/python.vim.git,v
+gundo.vim,v
+hg clone ssh://hg@bitbucket.org/dburke/dotfiles,v
+pyflakes.vim,v
+    if !has('python')        echoerr "Error: the pyflakes.vim plugin requires Vim to be compiled with +python"        finish    endif,V
+foo,v
+git://github.com/vim-scripts/vim_django.git,v
+fname,v
+module,v
+<C-w><C-v><C-l>,v
+import ,v
+ ,v
+from apps.base.admin,v
+get_list_or_404, ,v
+autocmd Filetype html,xml,xsl,py,php source ~/.vim/scripts/closetag.vim ,V
+"source ~/.vim/plugin/toggle.vim"function! InsertCloseTag()  "if &filetype == 'html'    "" list of tags which shouldn't be closed:    "let UnaryTags = ' Area Base Br DD DT HR Img Input LI Link Meta P Param '    "" remember current position:    "normal mz    "" loop backwards looking for tags:    "let Found = 0    "while Found == 0      "" find the previous <, then go forwards one character and grab the first      "" character plus the entire word:      "execute "normal ?\<LT>\<CR>l"      "normal "zyl      "let Tag = expand('<cword>')      "" if this is a closing tag, skip back to its matching opening tag:      "if @z == '/'        "execute "normal ?\<LT>" . Tag . "\<CR>"      "" if this is a unary tag, then position the cursor for the next      "" iteration:      "elseif match(UnaryTags, ' ' . Tag . ' ') > 0        "normal h      "" otherwise this is the tag that needs closing:      "else        "let Found = 1      "endif    "endwhile " not yet found match    "" create the closing tag and insert it:    "let @z = '</' . Tag . '>'    "normal `z    "if col('.') == 1      "normal "zP    "else      "normal "zp    "endif  "else " filetype is not HTML    "echohl ErrorMsg    "echo 'The InsertCloseTag() function is only intended to be used in HTML ' .      "\ 'files.'    "sleep    "echohl None  "endif " check on filetype"endfunction " InsertCloseTag(),V
+"function! InsertCloseTag()  "if &filetype == 'html'    "" list of tags which shouldn't be closed:    "let UnaryTags = ' Area Base Br DD DT HR Img Input LI Link Meta P Param '    "" remember current position:    "normal mz    "" loop backwards looking for tags:    "let Found = 0    "while Found == 0      "" find the previous <, then go forwards one character and grab the first      "" character plus the entire word:      "execute "normal ?\<LT>\<CR>l"      "normal "zyl      "let Tag = expand('<cword>')      "" if this is a closing tag, skip back to its matching opening tag:      "if @z == '/'        "execute "normal ?\<LT>" . Tag . "\<CR>"      "" if this is a unary tag, then position the cursor for the next      "" iteration:      "elseif match(UnaryTags, ' ' . Tag . ' ') > 0        "normal h      "" otherwise this is the tag that needs closing:      "else        "let Found = 1      "endif    "endwhile " not yet found match    "" create the closing tag and insert it:    "let @z = '</' . Tag . '>'    "normal `z    "if col('.') == 1      "normal "zP    "else      "normal "zp    "endif  "else " filetype is not HTML    "echohl ErrorMsg    "echo 'The InsertCloseTag() function is only intended to be used in HTML ' .      "\ 'files.'    "sleep    "echohl None  "endif " check on filetype"endfunction " InsertCloseTag(),V
+"source ~/.vim/plugin/toggle.vim,V
+git://github.com/vim-scripts/closetag.vim.git,v
+	,v
+						,V
+https://sites.google.com/site/vimoutlinerinfo/scripts-for-vimoutliner,v
+			[_] you'd be hearing relevant information to get you to safety.,V
+_,v
+[_] % this	[_] is a test	[_] % of the emergency response		[_] system		[_] % if this were a real emergency,V
+ if this were a real emergency,v
+" this fixes the closetag script" set noignorecase,V
+],v
+[_] this is	[_] a test	[_] of the emergency response system,V
+y,v
+http://www.vim.org/scripts/script.php?script_id=1397,v
+duff,v
+://,v
+	fetch = +refs/heads/*:refs/remotes/upstream/*,V
+	url = git://github.com/duff/vim-scratch.git,V
+ikirudennis,v
+othree,v
+@,v
+5133902b0b6a42484ba11aebde2af790,v
+[alias]	st = status	ci = commit	co = checkout,V
+*.swp,V
+yankring_history_dir,v
+hg clone ssh://hg@bitbucket.org/sjl/gundo.vim,v
+git://github.com/kien/rainbow_parentheses.vim.git,v
+hiya,\ buddy.txt,v
+\,v
+if !exists('g:yankring_history_dir'),V
+hiya,\\ buddy.txt,v
+$HOME/.vim/bundle/yankring/history/,v
+let yankring_history_dir='$HOME/.vim/bundle/yankring/history/',V
+'',v
+. "\"",v
+ . "\"",v
+",v
+"hiya, buddy.txt",v
+ ~,v
+git://github.com/duff/vim-scratch.git,v
