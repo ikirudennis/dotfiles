@@ -111,6 +111,6 @@ let snips_author='Dennis Burke'
 
 map <leader>a :Ack
 map <leader><tab> :tabnew<cr>:Scratch<cr>
-let yankring_history_dir='$HOME/.vim/bundle/yankring/history/'
+let yankring_history_dir='$HOME/.vim/bundle/yankring/history'
 let scratch_filename='hiya,\ buddy.txt'
 map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:RainbowParenthesesLoadSquare<cr>

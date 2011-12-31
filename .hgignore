@@ -1,1 +1,1 @@
-.vim/bundle/yankring/history/
+^\.vim/bundle/yankring/history/.*\.txt$
