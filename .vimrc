@@ -114,3 +114,7 @@ map <leader><tab> :tabnew<cr>:Scratch<cr>
 let yankring_history_dir='$HOME/.vim/bundle/yankring/history'
 let scratch_filename='hiya,\ buddy.txt'
 map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:RainbowParenthesesLoadSquare<cr>
+
+" toggle pastemode
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
