@@ -1,0 +1,4 @@
+[ui]
+username = dburke <dennisburke@prodigy.net>
+editor = vim
+ignore = ~/.hgignore
