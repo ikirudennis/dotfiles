@@ -1,7 +1,7 @@
 [ui]
 editor = vim
 username = dburke <dennisburke@prodigy.net>
-ignore = ~/.hgignore
+ignore = ~/.hgconfig/.hgignore
 
 [extensions]
 bitbucketextension = ~/.hgext/bbext/bitbucketrepo
