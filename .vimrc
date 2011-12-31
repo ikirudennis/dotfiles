@@ -119,3 +119,7 @@ map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:Rai
 " function.  Will investigate further to suss this out.
 map <Leader>djt :VimDjangoCommandTTemplate<CR>
 map <Leader>dja :VimDjangoCommandTApp<CR>
+
+" toggle pastemode
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
