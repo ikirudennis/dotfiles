@@ -114,3 +114,8 @@ map <leader><tab> :tabnew<cr>:Scratch<cr>
 let yankring_history_dir='$HOME/.vim/bundle/yankring/history'
 let scratch_filename='hiya,\ buddy.txt'
 map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:RainbowParenthesesLoadSquare<cr>
+
+" vim_django commands - dt seemed like it was already mapped to a yankring
+" function.  Will investigate further to suss this out.
+map <Leader>djt :VimDjangoCommandTTemplate<CR>
+map <Leader>dja :VimDjangoCommandTApp<CR>
