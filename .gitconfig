@@ -1,0 +1,19 @@
+[user]
+	name = Dennis Burke
+	email = dennisburke@prodigy.net
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[core]
+	editor = vim
+	excludesfile = $HOME/.gitignore
+[github]
+	user = ikirudennis
+	token = 5133902b0b6a42484ba11aebde2af790
