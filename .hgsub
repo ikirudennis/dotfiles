@@ -1,3 +1,5 @@
+.hgext/bbext = https://bitbucket.org/boredzo/bitbucketextension
+
 .vim/bundle/ack.vim = [git]https://github.com/mileszs/ack.vim
 .vim/bundle/closetag.vim = [git]git://github.com/vim-scripts/closetag.vim.git 
 .vim/bundle/command-t = [git]git://git.wincent.com/command-t.git
