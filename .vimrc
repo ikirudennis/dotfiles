@@ -114,7 +114,7 @@ autocmd FileType sql set omnifunc=sqlcomplete#Complete
 
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4|setlocal foldcolumn=1|setlocal foldmethod=indent
 autocmd BufNewFile,BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-let python_highlight_all = 1                                                                      112,106 / 145  70
+let python_highlight_all = 1
 
 autocmd BufNewFile,BufRead *.txt setlocal modeline|setlocal modelines=1
 
