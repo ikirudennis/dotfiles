@@ -1,4 +1,12 @@
-" pathogen - supposedly the greatest thing since sliced bread
+" pathogen - the greatest thing since sliced bread
+
+" allow disabling of individual plugins
+let g:pathogen_disabled = []
+
+" to disable plugin, insert the plugin's name into the second argument of the
+" following line:
+"call add(g:pathogen_disabled, '')
+
 call pathogen#infect()
 
 " set auto-indenting on for programming
@@ -13,7 +21,6 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set ttyfast
-set ruler
 if version >=730
 	set relativenumber
 	set undofile
@@ -50,7 +57,7 @@ set shiftwidth=4
 " line numbering
 set number
 
-"sane line breaks -- to turn off for individual files, run set nolbr
+" sane line breaks -- to turn off for individual files, run set nolbr
 set lbr
 
 " keys that wrap to the next line
@@ -72,7 +79,6 @@ set binary noeol
 " make that backspace key work the way it should
 set backspace=indent,eol,start
 
-" OPTIONAL
 " show whitespace at end of lines
 highlight WhitespaceEOL ctermbg=lightgray guibg=lightgray
 match WhitespaceEOL /s+$/
@@ -81,18 +87,22 @@ match WhitespaceEOL /s+$/
 set showmode
 set showcmd
 
-set statusline=%=%l,%c%V\/%L\ \ %P
+" define the display of the ruler.
+" NOTES:
+" 	- %25 sets the width of the ruler format area to 25 characters.  Seems
+" 	  like a high enough number.  That allows me to see information on
+" 	  insane files, i.e.: 826,1619-2983/ 827 Bot
+" 	- it needs those parentheses immediately after to work right.
+" 	- A good way of testing these settings is to use the :sandbox command.
+" 	  A la :san[dbox] :set rulerform...
+set ruler
+set rulerformat=%25(%=%l,%c%<%V\/\ %L\ %P%)
 set laststatus=2
 
 " incsearch searches as you type in the search term
 set incsearch
 
-filetype plugin on
-"au FileType python source ~/.vim/scripts/python.vim 
-"au FileType python source ~/.vim/ftplugin/python_fold.vim 
-autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4
-autocmd BufNewFile,BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-let python_highlight_all = 1
+filetype plugin indent on
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -102,17 +112,23 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType sql set omnifunc=sqlcomplete#Complete
 
-augroup filetype
-autocmd BufRead *.tab set filetype=tab
-augroup END
-filetype plugin indent on
+autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4|setlocal foldcolumn=1|setlocal foldmethod=indent
+autocmd BufNewFile,BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+let python_highlight_all = 1                                                                      112,106 / 145  70
+
+autocmd BufNewFile,BufRead *.txt setlocal modeline|setlocal modelines=1
+
+autocmd BufRead *.tab setlocal filetype=tab
 
 let snips_author='Dennis Burke'
 
 map <leader>a :Ack
+
 map <leader><tab> :tabnew<cr>:Scratch<cr>
-let yankring_history_dir='$HOME/.vim/bundle/yankring/history'
 let scratch_filename='hiya,\ buddy.txt'
+
+let yankring_history_dir='$HOME/.vim/bundle/yankring/history'
+
 map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:RainbowParenthesesLoadSquare<cr>
 
 " vim_django commands - dt seemed like it was already mapped to a yankring
@@ -123,3 +139,12 @@ map <Leader>dja :VimDjangoCommandTApp<CR>
 " toggle pastemode
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
+
+" gundo plugin shortcut
+nnoremap <F5> :GundoToggle<CR>
+
+" set command-t to open files in new tab when I hit enter
+let g:CommandTAcceptSelectionMap='<C-CR>'
+let g:CommandTAcceptSelectionTabMap='<CR>'
+let g:CommandTAcceptSelectionSplitMap='<C-s>'
+"let g:CommandTScanDotDirectories=1

@@ -4,7 +4,7 @@ username = dburke <dennisburke@prodigy.net>
 ignore = ~/.hgconfig/.hgignore
 
 [extensions]
-bitbucketextension = ~/.hgext/bbext/bitbucketrepo
+bitbucketrepo = ~/.hgext/bbext/bitbucketrepo
 hgpunchcard = ~/.hgext/hgpunchcard.py
 hgext.bookmarks = 
 hggit = 
