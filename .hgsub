@@ -1,10 +1,10 @@
 .hgext/bbext = https://bitbucket.org/boredzo/bitbucketextension
 
-.vim/bundle/ack.vim = [git]https://github.com/mileszs/ack.vim
+.vim/bundle/ack.vim = [git]git://github.com/mileszs/ack.vim.git
 .vim/bundle/closetag.vim = [git]git://github.com/vim-scripts/closetag.vim.git 
 .vim/bundle/command-t = [git]git://git.wincent.com/command-t.git
-.vim/bundle/nerdcommenter = [git]https://github.com/scrooloose/nerdcommenter.git
-.vim/bundle/nerdtree = [git]https://github.com/scrooloose/nerdtree.git
+.vim/bundle/nerdcommenter = [git]git://github.com/scrooloose/nerdcommenter.git
+.vim/bundle/nerdtree = [git]git://github.com/scrooloose/nerdtree.git
 .vim/bundle/python_match.vim = [git]git://github.com/vim-scripts/python_match.vim.git
 .vim/bundle/python.vim = [git]git://github.com/ikirudennis/python.vim.git
 .vim/bundle/rainbow_parentheses.vim = [git]git://github.com/kien/rainbow_parentheses.vim.git
@@ -15,7 +15,7 @@
 .vim/bundle/vim-repeat = [git]git://github.com/tpope/vim-repeat.git
 .vim/bundle/vim-scratch = [git]git://github.com/ikirudennis/vim-scratch.git
 .vim/bundle/vim-slime = [git]git://github.com/jpalardy/vim-slime.git
-.vim/bundle/vim-sparkup = [git]http://github.com/bingaman/vim-sparkup.git
+.vim/bundle/vim-sparkup = [git]git://github.com/bingaman/vim-sparkup.git
 .vim/bundle/vim-speeddating = [git]git://github.com/tpope/vim-speeddating.git
 .vim/bundle/vim-surround = [git]git://github.com/tpope/vim-surround.git
 .vim/bundle/vim_django = [git]git://github.com/ikirudennis/vim_django.git
