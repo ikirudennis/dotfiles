@@ -5,3 +5,5 @@ syntax: glob
 *.swp
 *.swo
 *.pyc
+
+*.un~

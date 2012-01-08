@@ -21,10 +21,12 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set ttyfast
-if version >=730
+if version >=703
 	set relativenumber
 	set undofile
 	set colorcolumn=85
+else
+	set number
 endif
 let mapleader = ","
 nnoremap / /\v
@@ -53,9 +55,6 @@ inoremap jj <Esc>
 " set our tabs to four spaces
 set tabstop=4
 set shiftwidth=4
-
-" line numbering
-set number
 
 " sane line breaks -- to turn off for individual files, run set nolbr
 set lbr
@@ -147,4 +146,6 @@ nnoremap <F5> :GundoToggle<CR>
 let g:CommandTAcceptSelectionMap='<C-CR>'
 let g:CommandTAcceptSelectionTabMap='<CR>'
 let g:CommandTAcceptSelectionSplitMap='<C-s>'
-"let g:CommandTScanDotDirectories=1
+let g:CommandTScanDotDirectories=1
+
+let g:slime_send_key = ',slime'
