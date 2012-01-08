@@ -1,4 +1,5 @@
 aef32afe8b435627c6cdd0792ed78a6fcee947d2 .hgext/bbext
+3a48680559dbf81afb2eda15cf753fa3e15ff1e2 .vim/bundle/Toggle
 9895285042a2fd5691b2f6582aa979e4d1bdffea .vim/bundle/ack.vim
 77572b488175c9b33917980540c487ceed471be4 .vim/bundle/closetag.vim
 18686a82a2e4d015b877bf0b6867a269aa8a284f .vim/bundle/command-t
