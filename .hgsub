@@ -6,7 +6,7 @@
 .vim/bundle/nerdcommenter = [git]https://github.com/scrooloose/nerdcommenter.git
 .vim/bundle/nerdtree = [git]https://github.com/scrooloose/nerdtree.git
 .vim/bundle/python_match.vim = [git]git://github.com/vim-scripts/python_match.vim.git
-.vim/bundle/python.vim = [git]git://github.com/vim-scripts/python.vim.git
+.vim/bundle/python.vim = [git]git://github.com/ikirudennis/python.vim.git
 .vim/bundle/rainbow_parentheses.vim = [git]git://github.com/kien/rainbow_parentheses.vim.git
 .vim/bundle/snipmate.vim = [git]git://github.com/msanders/snipmate.vim.git
 .vim/bundle/Toggle = [git]git://github.com/vim-scripts/Toggle.git
