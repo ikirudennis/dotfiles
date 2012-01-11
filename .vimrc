@@ -115,16 +115,17 @@ autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtab
 autocmd BufNewFile,BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 let python_highlight_all = 1
 
-autocmd BufNewFile,BufRead *.txt setlocal modeline|setlocal modelines=1
+autocmd BufRead *.txt setlocal modeline|setlocal modelines=1
 
-autocmd BufRead *.tab setlocal filetype=tab
+autocmd BufRead *.tab setfiletype=tab
 
 let snips_author='Dennis Burke'
 
 map <leader>a :Ack
 
-map <leader><tab> :tabnew<cr>:Scratch<cr>
-let scratch_filename='hiya,\ buddy.txt'
+map <leader><tab> :Tscratch<cr>
+let g:scratch_filename='hiya, buddy'
+let g:scratch_bufclose=2
 
 let yankring_history_dir='$HOME/.vim/bundle/yankring/history'
 
@@ -149,3 +150,11 @@ let g:CommandTAcceptSelectionSplitMap='<C-s>'
 let g:CommandTScanDotDirectories=1
 
 let g:slime_send_key = ',slime'
+
+function! Helptab(search)
+	" open help file related to the argument in a new tab which is the only
+	" window in that tab
+	exec ':tabnew +:h\ '. a:search .' | only'
+endfunction
+
+command -nargs=1 H call Helptab(<q-args>)
