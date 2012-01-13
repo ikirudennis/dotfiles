@@ -46,7 +46,9 @@ set listchars=tab:▸\ ,eol:¬
 set showbreak=…
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>v V`]
+" reformat a paragraph
 nnoremap <leader>q gqip
+" HTML fold tag
 nnoremap <leader>ft Vatzf
 nnoremap <leader>a :Ack
 inoremap jj <Esc>
