@@ -3,8 +3,8 @@ aef32afe8b435627c6cdd0792ed78a6fcee947d2 .hgext/bbext
 9895285042a2fd5691b2f6582aa979e4d1bdffea .vim/bundle/ack.vim
 77572b488175c9b33917980540c487ceed471be4 .vim/bundle/closetag.vim
 18686a82a2e4d015b877bf0b6867a269aa8a284f .vim/bundle/command-t
-0fe4938d22ae6bbfca054820909c9f176fbf3644 .vim/bundle/nerdcommenter
-205367ab3f46dcc88b6ebb819a276e793a21e995 .vim/bundle/nerdtree
+f4d9f99f67189aa5725fdfc4c13fd33089446ccc .vim/bundle/nerdcommenter
+eced5f98a0724cd6498b70024b3edec1e7b29b2e .vim/bundle/nerdtree
 20a00261b1e2c7f85f2f9e07b89507050aaa3ee4 .vim/bundle/python.vim
 f7ae2fb8ba0ca7166d56025e58bf30b5897a82e9 .vim/bundle/python_match.vim
 fa3563dda862c1dc46ddac32d8a9f939e9077379 .vim/bundle/rainbow_parentheses.vim
