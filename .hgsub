@@ -5,6 +5,7 @@
 .vim/bundle/command-t = [git]git://git.wincent.com/command-t.git
 .vim/bundle/nerdcommenter = [git]git://github.com/scrooloose/nerdcommenter.git
 .vim/bundle/nerdtree = [git]git://github.com/scrooloose/nerdtree.git
+.vim/bundle/pyflakes-vim = [git]git://github.com/kevinw/pyflakes-vim.git
 .vim/bundle/python_match.vim = [git]git://github.com/ikirudennis/python_match.vim.git
 .vim/bundle/python.vim = [git]git://github.com/ikirudennis/python.vim.git
 .vim/bundle/rainbow_parentheses.vim = [git]git://github.com/kien/rainbow_parentheses.vim.git

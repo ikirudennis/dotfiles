@@ -5,6 +5,7 @@ aef32afe8b435627c6cdd0792ed78a6fcee947d2 .hgext/bbext
 18686a82a2e4d015b877bf0b6867a269aa8a284f .vim/bundle/command-t
 f4d9f99f67189aa5725fdfc4c13fd33089446ccc .vim/bundle/nerdcommenter
 eced5f98a0724cd6498b70024b3edec1e7b29b2e .vim/bundle/nerdtree
+76cc5dd24d478b6265666587a245d6a17964257f .vim/bundle/pyflakes-vim
 20a00261b1e2c7f85f2f9e07b89507050aaa3ee4 .vim/bundle/python.vim
 f7ae2fb8ba0ca7166d56025e58bf30b5897a82e9 .vim/bundle/python_match.vim
 fa3563dda862c1dc46ddac32d8a9f939e9077379 .vim/bundle/rainbow_parentheses.vim
