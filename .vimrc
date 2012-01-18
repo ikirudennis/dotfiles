@@ -20,39 +20,46 @@ set encoding=utf-8
 set hidden
 set wildmenu
 set wildmode=list:longest
+set wildignore=*.swo,*.swp,.DS_Store,*.pyc
 set ttyfast
 if version >=703
 	set relativenumber
 	set undofile
-	set colorcolumn=85
+	set colorcolumn=+1
 else
 	set number
 endif
 let mapleader = ","
-nnoremap / /\v
-vnoremap / /\v
 set ignorecase
 set smartcase
 set gdefault
 set hlsearch
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
 set wrap
-set textwidth=79
+set textwidth=80
+" format comments with gq-commands -q, continue comment on return -r, recognize
+" numbered lists -n, don't break a line after a one-letter word -1.
 set formatoptions=qrn1
 set list
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set showbreak=…
+set splitbelow
+set splitright
+set autoread
+
+" Shortcuts
+" edit .vimrc
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
+" Select recently-pasted text
 nnoremap <leader>v V`]
 " reformat a paragraph
 nnoremap <leader>q gqip
-" HTML fold tag
-nnoremap <leader>ft Vatzf
 nnoremap <leader>a :Ack
 inoremap jj <Esc>
-
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+nnoremap / /\v
+vnoremap / /\v
 
 " set our tabs to four spaces
 set tabstop=4
@@ -112,6 +119,8 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType sql set omnifunc=sqlcomplete#Complete
+" HTML fold tag
+au FileType html,htmldjango nnoremap <buffer> <leader>ft Vatzf
 
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4|setlocal foldcolumn=1|setlocal foldmethod=indent
 autocmd BufNewFile,BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
@@ -151,7 +160,7 @@ let g:CommandTAcceptSelectionTabMap='<CR>'
 let g:CommandTAcceptSelectionSplitMap='<C-s>'
 let g:CommandTScanDotDirectories=1
 
-let g:slime_send_key = ',slime'
+let g:slime_send_key = '<leader>slime'
 
 function! Helptab(search)
 	" open help file related to the argument in a new tab which is the only
@@ -159,4 +168,4 @@ function! Helptab(search)
 	exec ':tabnew +:h\ '. a:search .' | only'
 endfunction
 
-command -nargs=1 H call Helptab(<q-args>)
+command -complete=help -nargs=1 H call Helptab(<q-args>)
