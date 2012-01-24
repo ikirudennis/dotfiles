@@ -7,6 +7,7 @@ ignore = ~/.hgconfig/.hgignore
 bitbucketrepo = ~/.hgext/bbext/bitbucketrepo
 hgpunchcard = ~/.hgext/hgpunchcard.py
 hgext.bookmarks = 
+highlight=
 hggit = 
 color = 
 mq = 
@@ -55,3 +56,6 @@ path=~/.hgext/hgk
 
 [pager]
 pager = LESS="FSR" less
+
+[web]
+pygments_style = murphy

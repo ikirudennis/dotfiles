@@ -106,5 +106,5 @@ else
 	export LESS_TERMCAP_us=$'\E[01;04;33m'
 	export LESS_TERMCAP_ue=$'\E[0m'
 fi
-export LESS="FSR"
+export LESS="R"
 export PAGER=less
