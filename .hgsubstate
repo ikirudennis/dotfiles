@@ -3,6 +3,7 @@ aef32afe8b435627c6cdd0792ed78a6fcee947d2 .hgext/bbext
 9895285042a2fd5691b2f6582aa979e4d1bdffea .vim/bundle/ack.vim
 77572b488175c9b33917980540c487ceed471be4 .vim/bundle/closetag.vim
 18686a82a2e4d015b877bf0b6867a269aa8a284f .vim/bundle/command-t
+ced6c409c9beeb0b4142d21906606bd194411d1d .vim/bundle/matchit.zip
 f4d9f99f67189aa5725fdfc4c13fd33089446ccc .vim/bundle/nerdcommenter
 eced5f98a0724cd6498b70024b3edec1e7b29b2e .vim/bundle/nerdtree
 76cc5dd24d478b6265666587a245d6a17964257f .vim/bundle/pyflakes-vim
