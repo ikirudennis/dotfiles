@@ -100,6 +100,9 @@ function sshscreen () {
 
 alias vi=/usr/bin/vim
 
+alias zcp=zmv -C
+alias zls=zmv -L
+
 if [[ -s $HOME/.zshrc_local ]] ; then
     source $HOME/.zshrc_local ;
 fi
