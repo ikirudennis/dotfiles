@@ -20,7 +20,8 @@ autoload -U run-help
 autoload -U zmv
 autoload -Uz zsh/terminfo
 
-zmodload zsh/datetime
+# load this module, but don't complain if it's already loaded
+zmodload -i zsh/datetime
 
 # zsh boolean options
 setopt complete_in_word
