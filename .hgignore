@@ -1,2 +1,2 @@
 ^\.vim/view/*
-^\.vim/bundle/yankring/history/.*\.txt$
+^\.vim/bundle/YankRing.vim/history/.*\.txt$

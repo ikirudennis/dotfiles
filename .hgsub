@@ -23,3 +23,4 @@
 .vim/bundle/vim_django = [git]git://github.com/ikirudennis/vim_django.git
 .vim/bundle/vimoutliner = [git]git://github.com/vimoutliner/vimoutliner.git
 .vim/bundle/xml.vim = [git]git://github.com/ikirudennis/xml.vim.git
+.vim/bundle/YankRing.vim = [git]git://github.com/grota/YankRing.vim.git
