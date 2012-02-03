@@ -70,7 +70,7 @@ fi
 # zle-keymap-select is executed every time KEYMAP changes.
 # From http://zshwiki.org/home/examples/zlewidgets
 function zle-line-init zle-keymap-select {
-    VIMODE="${${KEYMAP/vicmd/$fg_bold[red]}/(main|viins)/$reset_color}"
+    VIMODE="${${KEYMAP/vicmd/$fg_no_bold[red]}/(main|viins)/$reset_color}"
     zle reset-prompt
 }
 zle -N zle-line-init
