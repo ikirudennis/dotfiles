@@ -11,6 +11,7 @@
 .vim/bundle/python.vim = [git]git://github.com/ikirudennis/python.vim.git
 .vim/bundle/rainbow_parentheses.vim = [git]git://github.com/kien/rainbow_parentheses.vim.git
 .vim/bundle/snipmate.vim = [git]git://github.com/msanders/snipmate.vim.git
+.vim/bundle/textile.vim = [git]git://github.com/ikirudennis/textile.vim.git
 .vim/bundle/Toggle = [git]git://github.com/vim-scripts/Toggle.git
 .vim/bundle/threesome.vim = https://bitbucket.org/sjl/threesome.vim
 .vim/bundle/vim-abolish = [git]git://github.com/tpope/vim-abolish.git
