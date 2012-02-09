@@ -138,7 +138,7 @@ map <leader><tab> :Tscratch<cr>
 let g:scratch_filename='hiya, buddy'
 let g:scratch_bufclose=2
 
-let yankring_history_dir='/Users/dburke/.vim/bundle/YankRing.vim/history'
+let yankring_history_dir='$HOME/.vim/bundle/YankRing.vim/history'
 
 map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:RainbowParenthesesLoadSquare<cr>
 
