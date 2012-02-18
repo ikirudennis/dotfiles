@@ -6,7 +6,6 @@ ignore = ~/.hgconfig/.hgignore
 [extensions]
 bitbucketrepo = ~/.hgext/bbext/bitbucketrepo
 hgpunchcard = ~/.hgext/hgpunchcard.py
-hgext.bookmarks = 
 highlight=
 hggit = 
 color = 
