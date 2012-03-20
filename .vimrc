@@ -122,7 +122,7 @@ autocmd FileType sql set omnifunc=sqlcomplete#Complete
 " HTML fold tag
 au FileType html,htmldjango nnoremap <buffer> <leader>ft Vatzf
 
-autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4|setlocal foldcolumn=1|setlocal foldmethod=indent
+autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4|setlocal foldcolumn=1|setlocal foldmethod=indent|setlocal textwidth=80
 autocmd BufNewFile,BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 let python_highlight_all = 1
 
