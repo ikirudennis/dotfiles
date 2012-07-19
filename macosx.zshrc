@@ -22,3 +22,4 @@ function anagram () {
     grep -E "^[$1]{2,${#1}}$" /usr/share/dict/words | grep -Ev "${grep2}"
 }
 
+alias xld='/Applications/XLD.app/Contents/MacOS/XLD --cmdline $@'
