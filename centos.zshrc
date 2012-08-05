@@ -35,7 +35,7 @@ function pyng () {
 #PATH=$PATH:$HOME/bin
 #export PATH
 
-PYTHONPATH=$HOME/lib/python2.5:$PYTHONPATH
+PYTHONPATH=$HOME/lib/python2.7:$PYTHONPATH
 export PYTHONPATH
 
 TZ=America/New_York
