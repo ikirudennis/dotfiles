@@ -38,4 +38,5 @@ function pyng () {
 PYTHONPATH=$HOME/lib/python2.5:$PYTHONPATH
 export PYTHONPATH
 
-
+TZ=America/New_York
+export TZ
