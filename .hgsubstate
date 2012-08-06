@@ -12,6 +12,7 @@ eced5f98a0724cd6498b70024b3edec1e7b29b2e .vim/bundle/nerdtree
 f7ae2fb8ba0ca7166d56025e58bf30b5897a82e9 .vim/bundle/python_match.vim
 fa3563dda862c1dc46ddac32d8a9f939e9077379 .vim/bundle/rainbow_parentheses.vim
 f5a75d075d3c005ebe69e3f5e56cf99516e8aa3b .vim/bundle/snipmate.vim
+3a2ab096c039516a8f43e6acd0264d8a81cd0544 .vim/bundle/splice.vim
 c5b6d48b2859a10901a56ac1e0b80bab01613abe .vim/bundle/textile.vim
 6a633f685c59d80d9b73fb40506fde2e709abe04 .vim/bundle/vim-abolish
 cdffdd43816ddaeee858ae42da3ab6ddcfa25d19 .vim/bundle/vim-repeat
