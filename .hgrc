@@ -19,7 +19,7 @@ record =
 
 [merge-tools]
 macvim.executable = /Applications/Vim/mvim
-macvim.args = -f $base $local $other $output -c 'ThreesomeInit'
+macvim.args = -f $base $local $other $output -c 'SpliceInit'
 macvim.premerge = keep
 macvim.gui = true
 
