@@ -2,7 +2,7 @@ export LS_COLORS="ExfxcxdxbxegEdabagacad"
 export CLICOLOR_FORCE=1
 
 
-export PATH="$PATH:/usr/local/sbin:/usr/local/bin/bin:/Library/PostgreSQL/9.1/bin:${HOME}/Library/android-sdk-mac_x86/tools:${HOME}/Library/android-sdk-mac_x86/platform-tools"
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin/bin:/Library/PostgreSQL/9.1/bin:${HOME}/Library/android-sdk-macosx/tools:${HOME}/Library/android-sdk-macosx/platform-tools"
 export MANPATH="$MANPATH:/usr/local/man/man1"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
