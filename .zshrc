@@ -113,3 +113,6 @@ alias zls=zmv -L
 if [[ -s $HOME/.zshrc_local ]] ; then
     source $HOME/.zshrc_local ;
 fi
+
+# set stderr output to be displayed in red
+exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
