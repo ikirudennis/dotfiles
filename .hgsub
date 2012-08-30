@@ -6,6 +6,7 @@
 .vim/bundle/matchit.zip = [git]git://github.com/benjifisher/matchit.zip.git
 .vim/bundle/nerdcommenter = [git]git://github.com/scrooloose/nerdcommenter.git
 .vim/bundle/nerdtree = [git]git://github.com/scrooloose/nerdtree.git
+.vim/bundle/vim-nerdtree-tabs = [git]git://github.com/jistr/vim-nerdtree-tabs.git
 .vim/bundle/pyflakes-vim = [git]git://github.com/kevinw/pyflakes-vim.git
 .vim/bundle/python_match.vim = [git]git://github.com/ikirudennis/python_match.vim.git
 .vim/bundle/python.vim = [git]git://github.com/ikirudennis/python.vim.git
