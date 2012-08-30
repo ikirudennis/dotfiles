@@ -3,6 +3,12 @@
 # use vim keybindings by default
 bindkey -v
 
+# vi style incremental search
+# bindkey '^R' history-incremental-search-backward
+# bindkey '^S' history-incremental-search-forward
+# bindkey '^P' history-search-backward
+# bindkey '^N' history-search-forward
+
 export EDITOR=/usr/bin/vim
 
 # turn on colors in ls
@@ -32,6 +38,7 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt inc_append_history
 setopt prompt_subst
+setopt auto_cd
 
 # zsh configurations
 HISTSIZE=200
