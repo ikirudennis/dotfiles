@@ -169,3 +169,7 @@ function! Helptab(search)
 endfunction
 
 command -complete=help -nargs=1 H call Helptab(<q-args>)
+
+" hide nerdtree-tabs by default
+let g:nerdtree_tabs_open_on_gui_startup=0
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
