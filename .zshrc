@@ -4,10 +4,10 @@
 bindkey -v
 
 # vi style incremental search
-# bindkey '^R' history-incremental-search-backward
-# bindkey '^S' history-incremental-search-forward
-# bindkey '^P' history-search-backward
-# bindkey '^N' history-search-forward
+bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-search-forward
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward
 
 export EDITOR=/usr/bin/vim
 
@@ -34,16 +34,22 @@ setopt complete_in_word
 setopt correct
 setopt extended_glob
 setopt hash_list_all
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
-setopt inc_append_history
 setopt prompt_subst
 setopt auto_cd
 
-# zsh configurations
-HISTSIZE=200
+# zsh history configurations
+HISTSIZE=1000
 HISTFILE=~/.zsh_history
-SAVEHIST=200
+SAVEHIST=1000
+
+setopt hist_ignore_all_dups
+setopt hist_expire_dups_first
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt append_history
+setopt extended_history
+setopt share_history
 
 eval "`pip completion --zsh`"
 
