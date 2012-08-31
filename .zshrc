@@ -111,6 +111,10 @@ function sshscreen () {
     ssh -t $1 screen
 }
 
+function zsh_stats () {
+    history | awk '{print $2}' | sort | uniq -c | sort -rn | head
+}
+
 alias vi=/usr/bin/vim
 
 alias zcp=zmv -C
