@@ -23,3 +23,5 @@ function anagram () {
 }
 
 alias xld='/Applications/XLD.app/Contents/MacOS/XLD --cmdline $@'
+
+alias ctags='/usr/local/bin/ctags'
