@@ -16,6 +16,7 @@
 .vim/bundle/textile.vim = [git]git://github.com/ikirudennis/textile.vim.git
 .vim/bundle/Toggle = [git]git://github.com/vim-scripts/Toggle.git
 .vim/bundle/vim-abolish = [git]git://github.com/tpope/vim-abolish.git
+.vim/bundle/vim-easytags = [git]git://github.com/xolox/vim-easytags.git
 .vim/bundle/vim-repeat = [git]git://github.com/tpope/vim-repeat.git
 .vim/bundle/vim-scratch = [git]git://github.com/ikirudennis/vim-scratch.git
 .vim/bundle/vim-slime = [git]git://github.com/jpalardy/vim-slime.git

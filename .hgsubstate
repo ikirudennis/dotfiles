@@ -15,6 +15,7 @@ f5a75d075d3c005ebe69e3f5e56cf99516e8aa3b .vim/bundle/snipmate.vim
 3a2ab096c039516a8f43e6acd0264d8a81cd0544 .vim/bundle/splice.vim
 c5b6d48b2859a10901a56ac1e0b80bab01613abe .vim/bundle/textile.vim
 6a633f685c59d80d9b73fb40506fde2e709abe04 .vim/bundle/vim-abolish
+44b04871f812418ac0fe7b38e59222de118d07cb .vim/bundle/vim-easytags
 1b2871987bdf97e066554794c45639d5df2a3d93 .vim/bundle/vim-nerdtree-tabs
 cdffdd43816ddaeee858ae42da3ab6ddcfa25d19 .vim/bundle/vim-repeat
 396601e07fa28f4ea9623a24ffd3b84e72534531 .vim/bundle/vim-scratch
