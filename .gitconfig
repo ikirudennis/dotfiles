@@ -11,6 +11,8 @@
 	ci = commit
 	co = checkout
 	br = branch
+	cm = commit -m
+	ca = commit -a -m
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
