@@ -161,6 +161,7 @@ let g:CommandTAcceptSelectionSplitMap='<C-s>'
 let g:CommandTScanDotDirectories=1
 
 let g:slime_send_key = '<leader>slime'
+let g:slime_target = 'tmux'
 
 function! Helptab(search)
 	" open help file related to the argument in a new tab which is the only
@@ -173,3 +174,14 @@ command -complete=help -nargs=1 H call Helptab(<q-args>)
 " hide nerdtree-tabs by default
 let g:nerdtree_tabs_open_on_gui_startup=0
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+let os = system('uname -s')
+let osversion = system('uname -r')
+if os == 'Darwin'
+    let g:easytags_cmd = '/usr/local/bin/ctags'
+else
+    " if centos 6
+    if matchstr(osversion, '2.6.32')
+        let g:easytags_cmd = '$HOME/bin/ctags'
+    endif
+endif
