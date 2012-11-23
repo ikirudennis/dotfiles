@@ -21,11 +21,13 @@ record =
 macvim.executable = /Applications/Vim/mvim
 macvim.args = -f $base $local $other $output -c 'SpliceInit'
 macvim.premerge = keep
+macvim.priority = 1
 macvim.gui = true
 
 vim.executable = vim
-vim.args = -d $base $local $other $output
-vim.checkchanged = true
+vim.args = -f $base $local $other $output -c 'SpliceInit'
+vim.premerge = keep
+vim.priority = 1
 vim.gui = false
 
 [color]
