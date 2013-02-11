@@ -133,7 +133,7 @@ autocmd BufRead *.txt setlocal modeline|setlocal modelines=1
 
 autocmd BufRead *.tab setfiletype=tab
 
-let snips_author='Dennis Burke'
+let g:snips_author='Dennis Burke'
 
 map <leader>a :Ack
 
