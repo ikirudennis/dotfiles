@@ -18,7 +18,9 @@ c5b6d48b2859a10901a56ac1e0b80bab01613abe .vim/bundle/textile.vim
 58122ab00417416757d62867f785d5a96021c0d0 .vim/bundle/tlib_vim
 6a633f685c59d80d9b73fb40506fde2e709abe04 .vim/bundle/vim-abolish
 0c5612fa31ee434ba055e21c76f456244b3b5109 .vim/bundle/vim-addon-mw-utils
+13fe3d8064647e2cdf07e12840108c3f917f5636 .vim/bundle/vim-autocomplpop
 44b04871f812418ac0fe7b38e59222de118d07cb .vim/bundle/vim-easytags
+3bb534a720fa762aa01d2df2d5d41bd3c4122169 .vim/bundle/vim-l9
 1b2871987bdf97e066554794c45639d5df2a3d93 .vim/bundle/vim-nerdtree-tabs
 cdffdd43816ddaeee858ae42da3ab6ddcfa25d19 .vim/bundle/vim-repeat
 396601e07fa28f4ea9623a24ffd3b84e72534531 .vim/bundle/vim-scratch

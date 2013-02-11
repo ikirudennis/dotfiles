@@ -19,7 +19,9 @@
 .vim/bundle/Toggle = [git]git://github.com/vim-scripts/Toggle.git
 .vim/bundle/vim-abolish = [git]git://github.com/tpope/vim-abolish.git
 .vim/bundle/vim-addon-mw-utils = [git]git://github.com/MarcWeber/vim-addon-mw-utils.git
+.vim/bundle/vim-autocomplpop = https://bitbucket.org/ns9tks/vim-autocomplpop
 .vim/bundle/vim-easytags = [git]git://github.com/xolox/vim-easytags.git
+.vim/bundle/vim-l9 = https://bitbucket.org/ns9tks/vim-l9
 .vim/bundle/vim-repeat = [git]git://github.com/tpope/vim-repeat.git
 .vim/bundle/vim-scratch = [git]git://github.com/ikirudennis/vim-scratch.git
 .vim/bundle/vim-slime = [git]git://github.com/jpalardy/vim-slime.git
