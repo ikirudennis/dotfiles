@@ -45,3 +45,6 @@ TZ=America/New_York
 export TZ
 
 alias tmux=$HOME/bin/tmux
+
+TMUX_V16=1
+export TMUX_V16
