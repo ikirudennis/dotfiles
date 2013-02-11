@@ -33,3 +33,7 @@ alias ctags='/usr/local/bin/ctags'
 
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
+
+TMUX_V16=1
+TMUX_MAC=1
+export TMUX_V16 TMUX_MAC
