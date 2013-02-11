@@ -126,6 +126,9 @@ autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtab
 autocmd BufNewFile,BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 let python_highlight_all = 1
 
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab|set softtabstop=2|setlocal foldcolumn=1|setlocal foldmethod=syntax|setlocal textwidth=79|setlocal foldlevelstart=0
+let javaScript_fold=1
+
 autocmd BufRead *.txt setlocal modeline|setlocal modelines=1
 
 autocmd BufRead *.tab setfiletype=tab
