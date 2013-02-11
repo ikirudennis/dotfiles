@@ -40,3 +40,6 @@ export PYTHONPATH
 
 TZ=America/New_York
 export TZ
+
+TMPDIR=$HOME/tmp
+export TMPDIR
