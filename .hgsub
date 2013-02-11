@@ -13,6 +13,7 @@
 .vim/bundle/rainbow_parentheses.vim = [git]git://github.com/kien/rainbow_parentheses.vim.git
 .vim/bundle/snipmate-snippets = [git]git://github.com/honza/snipmate-snippets.git
 .vim/bundle/splice.vim = https://bitbucket.org/sjl/splice.vim
+.vim/bundle/supertab = [git]git://github.com/ervandew/supertab.git
 .vim/bundle/textile.vim = [git]git://github.com/ikirudennis/textile.vim.git
 .vim/bundle/tlib_vim = [git]git://github.com/tomtom/tlib_vim.git
 .vim/bundle/Toggle = [git]git://github.com/vim-scripts/Toggle.git

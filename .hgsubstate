@@ -13,6 +13,7 @@ f7ae2fb8ba0ca7166d56025e58bf30b5897a82e9 .vim/bundle/python_match.vim
 fa3563dda862c1dc46ddac32d8a9f939e9077379 .vim/bundle/rainbow_parentheses.vim
 12bf43a2936ca30b13d78888199d078487929e21 .vim/bundle/snipmate-snippets
 3a2ab096c039516a8f43e6acd0264d8a81cd0544 .vim/bundle/splice.vim
+cb8a2979afca175ddc3c126c7b4a2610bd32a6f5 .vim/bundle/supertab
 c5b6d48b2859a10901a56ac1e0b80bab01613abe .vim/bundle/textile.vim
 58122ab00417416757d62867f785d5a96021c0d0 .vim/bundle/tlib_vim
 6a633f685c59d80d9b73fb40506fde2e709abe04 .vim/bundle/vim-abolish
