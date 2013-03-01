@@ -7,13 +7,13 @@ a6a604876f4d24bf329e73a4884c26f2184445f0 .vim/bundle/command-t
 ced6c409c9beeb0b4142d21906606bd194411d1d .vim/bundle/matchit.zip
 0b3d928dce8262dedfc2f83b9aeb59a94e4f0ae4 .vim/bundle/nerdcommenter
 40d05ace57fb51cc2c2b2e9eb81c4832ed291630 .vim/bundle/nerdtree
-76cc5dd24d478b6265666587a245d6a17964257f .vim/bundle/pyflakes-vim
 20a00261b1e2c7f85f2f9e07b89507050aaa3ee4 .vim/bundle/python.vim
 f7ae2fb8ba0ca7166d56025e58bf30b5897a82e9 .vim/bundle/python_match.vim
 874367f41275d8dd43204f0c491157accc8b5f03 .vim/bundle/rainbow_parentheses.vim
 f80cc3e03fd8267c893f7068a363b7a47aad9e65 .vim/bundle/snipmate-snippets
 86a478f40df643a3d85771d5c38e43318d007ba1 .vim/bundle/splice.vim
 a2268b61edc4ba38d152ecfa7c853a7f1bc71370 .vim/bundle/supertab
+2519d835694e9aee41b0aa607b9e1d9c5685fd7a .vim/bundle/syntastic
 7a4c26f04f71b67c850965d2620b703b209cd1b6 .vim/bundle/textile.vim
 9649dfbd78410300ca4231cb6bfcc7e822868cad .vim/bundle/tlib_vim
 d64ce06650cf9b098b5a01c0db53864965d9310b .vim/bundle/vim-abolish
