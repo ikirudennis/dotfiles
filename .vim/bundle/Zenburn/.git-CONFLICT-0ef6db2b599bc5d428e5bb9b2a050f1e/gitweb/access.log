@@ -1,0 +1,13 @@
+# Logfile created on Sat Mar 02 19:08:15 -0500 2013 by logger.rb/1.2.6
+localhost - - [02/Mar/2013:19:08:27 EST] "GET / HTTP/1.1" 200 3113 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:08:28 EST] "GET /static/gitweb.css HTTP/1.1" 200 10580 "http://localhost:1234/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:08:28 EST] "GET /static/git-logo.png HTTP/1.1" 200 207 "http://localhost:1234/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:08:28 EST] "GET /static/gitweb.js HTTP/1.1" 200 48814 "http://localhost:1234/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:08:28 EST] "GET /static/git-favicon.png HTTP/1.1" 200 115 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:08:39 EST] "GET /?p=.git;a=summary HTTP/1.1" 200 17183 "http://localhost:1234/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:08:45 EST] "GET /favicon.ico HTTP/1.1" 404 281 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:08:47 EST] "GET /?p=.git;a=summary HTTP/1.1" 200 17183 "http://localhost:1234/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:08:51 EST] "GET / HTTP/1.1" 200 3113 "http://localhost:1234/?p=.git;a=summary" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:08:54 EST] "GET /?p=.git;a=summary HTTP/1.1" 200 17183 "http://localhost:1234/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:09:03 EST] "GET /?p=.git;a=shortlog;h=refs/remotes/origin/contribs HTTP/1.1" 200 14481 "http://localhost:1234/?p=.git;a=summary" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
+localhost - - [02/Mar/2013:19:09:30 EST] "GET /?p=.git;a=log HTTP/1.1" 200 18498 "http://localhost:1234/?p=.git;a=summary" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"

@@ -37,33 +37,34 @@ vnoremap / /\v
 " ----------------------------------------------------------------------------
 " iii. Settings for specific file types
 " ----------------------------------------------------------------------------
-filetype plugin indent on
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType sql set omnifunc=sqlcomplete#Complete
+if has("autocmd")
+	filetype plugin indent on
+	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+	autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+	autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+	autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+	autocmd FileType c setlocal omnifunc=ccomplete#Complete
+	autocmd FileType sql setlocal omnifunc=sqlcomplete#Complete
 
-" HTML fold tag
-au FileType html,htmldjango nnoremap <buffer> <leader>ft Vatzf
+	" HTML fold tag
+	au FileType html,htmldjango nnoremap <buffer> <leader>ft Vatzf
 
-" default settings for working with a python file.
-autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4|setlocal foldcolumn=1|setlocal foldmethod=indent|setlocal textwidth=79
-autocmd BufNewFile,BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-let python_highlight_all = 1
+	" default settings for working with a python file.
+	autocmd FileType python setlocal tabstop=4|setlocal shiftwidth=4|setlocal expandtab|setlocal softtabstop=4|setlocal foldcolumn=1|setlocal foldmethod=indent|setlocal textwidth=79
+	autocmd BufNewFile,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class|let python_highlight_all = 1
 
-" default settings for working in javascript
-autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab|set softtabstop=2|setlocal foldcolumn=1|setlocal foldmethod=syntax|setlocal textwidth=79|setlocal foldlevelstart=0
-let javaScript_fold=1
+	" default settings for working in javascript
+	autocmd FileType javascript setlocal tabstop=2|setlocal shiftwidth=2|setlocal expandtab|setlocal softtabstop=2|setlocal foldcolumn=1|setlocal foldmethod=syntax|setlocal textwidth=79|setlocal foldlevelstart=0|let javaScript_fold=1
 
-" allow txt files to utilize modelines to specify local settings
-autocmd BufRead *.txt setlocal modeline|setlocal modelines=1
+	" allow txt files to utilize modelines to specify local settings
+	autocmd BufRead *.txt setlocal modeline|setlocal modelines=1
 
-" tab filetype is for guitar tabs
-autocmd BufRead *.tab setfiletype=tab
+	" tab filetype is for guitar tabs
+	autocmd BufRead *.tab setfiletype=tab
+
+endif
 
 " ----------------------------------------------------------------------------
 " iv. Plugin settings and shortcuts
@@ -172,7 +173,8 @@ set showbreak=…
 " sane line breaks -- to turn off for individual files, run set nolbr
 set linebreak
 " set colorscheme to slate
-colorscheme slate
+colorscheme zenburn
+let g:zenburn_transparent = 1
 
 " ----------------------------------------------------------------------------
 " 5 syntax, highlighting and spelling
