@@ -180,9 +180,11 @@ let g:zenburn_transparent = 1
 " 5 syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
 if has('syntax')
-	" show a vertical indication of the column which is one character beyond
-	" the textwidth setting
-	set colorcolumn=+1
+	if exists('+colorcolumn')
+		" show a vertical indication of the column which is one character beyond
+		" the textwidth setting
+		set colorcolumn=+1
+	endif
 	" turn syntax highlighting on by default
 	syntax on
 endif
