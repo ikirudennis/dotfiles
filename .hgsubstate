@@ -18,9 +18,9 @@ a2268b61edc4ba38d152ecfa7c853a7f1bc71370 .vim/bundle/supertab
 9649dfbd78410300ca4231cb6bfcc7e822868cad .vim/bundle/tlib_vim
 d64ce06650cf9b098b5a01c0db53864965d9310b .vim/bundle/vim-abolish
 0c5612fa31ee434ba055e21c76f456244b3b5109 .vim/bundle/vim-addon-mw-utils
-13fe3d8064647e2cdf07e12840108c3f917f5636 .vim/bundle/vim-autocomplpop
+79deff1f82be46ac52ba01faa7bedfde76450661 .vim/bundle/vim-autocomplpop
 44b04871f812418ac0fe7b38e59222de118d07cb .vim/bundle/vim-easytags
-3bb534a720fa762aa01d2df2d5d41bd3c4122169 .vim/bundle/vim-l9
+e736ab3113ee462939ec5599fd4d2dcd47b3f339 .vim/bundle/vim-l9
 0b08a09efa28a9e419f95f8b6d1d818c0c9ffa86 .vim/bundle/vim-nerdtree-tabs
 a81bef76031ca1c71766b516417480caeb01c932 .vim/bundle/vim-repeat
 61839b4b7da34f2018023dd640e961de0a2bee19 .vim/bundle/vim-scratch
