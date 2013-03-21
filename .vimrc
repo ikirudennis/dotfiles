@@ -240,7 +240,7 @@ set rulerformat=%25(%=%l,%c%<%V\/\ %L\ %P%)
 set textwidth=80
 " define how to automatically format comments.  See :help fo-table for
 " explanation.
-set formatoptions=qcan1j
+set formatoptions=qcan1
 " automatically show matching brackets. Works like it does in bbedit.
 set showmatch
 " make that backspace key work the way it should
