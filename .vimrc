@@ -238,9 +238,9 @@ set rulerformat=%25(%=%l,%c%<%V\/\ %L\ %P%)
 " ----------------------------------------------------------------------------
 " set default textwidth to a reasonable value
 set textwidth=80
-" format comments with gq-commands -q, continue comment on return -r,
-" recognize numbered lists -n, don't break a line after a one-letter word -1.
-set formatoptions=qrn1
+" define how to automatically format comments.  see :help fo-table for
+" explanation.
+set formatoptions=qcan1j
 " automatically show matching brackets. works like it does in bbedit.
 set showmatch
 " make that backspace key work the way it should
