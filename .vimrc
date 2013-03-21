@@ -64,6 +64,13 @@ if has("autocmd")
 	" tab filetype is for guitar tabs
 	autocmd BufRead *.tab setfiletype=tab
 
+	" Upon opening a file that has previously been opened, go to the position
+	" the cursor was in the last time it was opened. From :help restore-cursor
+	autocmd BufReadPost *
+	    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+	    \   exe "normal! g`\"" |
+		\ endif
+
 endif
 
 " ----------------------------------------------------------------------------
