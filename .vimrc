@@ -94,7 +94,7 @@ map <Leader>dja :VimDjangoCommandTApp<CR>
 " gundo plugin shortcut
 nnoremap <F5> :GundoToggle<CR>
 
-" set command-t to open files in new tab when I hit enter
+" set command-T to open files in new tab when I hit enter
 let g:CommandTAcceptSelectionMap='<C-CR>'
 let g:CommandTAcceptSelectionTabMap='<CR>'
 let g:CommandTAcceptSelectionSplitMap='<C-s>'
@@ -238,10 +238,10 @@ set rulerformat=%25(%=%l,%c%<%V\/\ %L\ %P%)
 " ----------------------------------------------------------------------------
 " set default textwidth to a reasonable value
 set textwidth=80
-" define how to automatically format comments.  see :help fo-table for
+" define how to automatically format comments.  See :help fo-table for
 " explanation.
 set formatoptions=qcan1j
-" automatically show matching brackets. works like it does in bbedit.
+" automatically show matching brackets. Works like it does in bbedit.
 set showmatch
 " make that backspace key work the way it should
 set backspace=indent,eol,start
@@ -260,7 +260,7 @@ set shiftwidth=4
 " ----------------------------------------------------------------------------
 " update the buffer to reflect changes made to a file outside of vim.
 set autoread
-" do NOT put a carriage return at the end of the last line! if you are
+" do NOT put a carriage return at the end of the last line! If you are
 " programming for the web the default will cause http headers to be sent.
 " that's bad.
 set binary noeol
