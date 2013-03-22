@@ -37,8 +37,8 @@ vnoremap / /\v
 " ----------------------------------------------------------------------------
 " iii. Settings for specific file types
 " ----------------------------------------------------------------------------
+filetype plugin indent on
 if has("autocmd")
-	filetype plugin indent on
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 	autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
@@ -70,6 +70,9 @@ if has("autocmd")
 	    \ if line("'\"") > 1 && line("'\"") <= line("$") |
 	    \   exe "normal! g`\"" |
 		\ endif
+
+	" Source the vimrc file after saving it
+	autocmd! BufWritePost [\._]vimrc source $MYVIMRC
 
 endif
 
@@ -136,7 +139,7 @@ function! Helptab(search)
 endfunction
 " define a command ':H' which calls the function defined above.
 " completion for this command with be use arguments available to help.
-command -complete=help -nargs=1 H call Helptab(<q-args>)
+command! -complete=help -nargs=1 H call Helptab(<q-args>)
 
 " ----------------------------------------------------------------------------
 " 1 important
@@ -180,16 +183,16 @@ set showbreak=…
 " sane line breaks -- to turn off for individual files, run set nolbr
 set linebreak
 " set colorscheme to slate
-colorscheme zenburn
 let g:zenburn_transparent = 1
+colorscheme zenburn
 
 " ----------------------------------------------------------------------------
 " 5 syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
 if has('syntax')
 	if exists('+colorcolumn')
-		" show a vertical indication of the column which is one character beyond
-		" the textwidth setting
+		" show a vertical indication of the column which is one character
+		" beyond the textwidth setting
 		set colorcolumn=+1
 	endif
 	" turn syntax highlighting on by default
