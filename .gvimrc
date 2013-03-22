@@ -1,4 +1,12 @@
 " ----------------------------------------------------------------------------
+" iii. Settings for specific file types
+" ----------------------------------------------------------------------------
+if has("autocmd")
+	" Source the gvimrc file after saving it
+	autocmd! BufWritePost [\._]gvimrc source $MYGVIMRC
+endif
+
+" ----------------------------------------------------------------------------
 " 4 displaying text
 " ----------------------------------------------------------------------------
 " size the screen
@@ -19,4 +27,6 @@ if has("gui_macvim")
 	set transparency=3
 	" a better font...
 	set gfn=Monaco:h14
+	" formatoptions j is only available in macvim
+	set formatoptions+=j
 endif
