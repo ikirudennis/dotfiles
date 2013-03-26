@@ -29,6 +29,7 @@ d209d220358d67d630c6f166d277b88ed9e480c6 .vim/bundle/vim-snipmate
 62830e8990b21280a5cc244568065abb085fe395 .vim/bundle/vim-sparkup
 d01b8083f336b451df618fa623d3b4948ceea19a .vim/bundle/vim-speeddating
 02199ea0080d744ec76b79d74ce56d51d25cf7ae .vim/bundle/vim-surround
+cabf4b79b1c0cd9c9a8beec303c2e6172c82d19f .vim/bundle/vim-unimpaired
 0d0b20c16c5d236fbd6ad1d12be846ac500b0a28 .vim/bundle/vim_django
 8d6fbc0845b62295632acec16b76cabe44309703 .vim/bundle/vimoutliner
 0e3da3ed04b1f3c8551a2197f95758ed2fd612da .vim/bundle/xml.vim
