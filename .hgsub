@@ -29,6 +29,7 @@
 .vim/bundle/vim-sparkup = [git]git://github.com/bingaman/vim-sparkup.git
 .vim/bundle/vim-speeddating = [git]git://github.com/tpope/vim-speeddating.git
 .vim/bundle/vim-surround = [git]git://github.com/tpope/vim-surround.git
+.vim/bundle/vim-unimpaired = [git]git://github.com/tpope/vim-unimpaired.git
 .vim/bundle/vim_django = [git]git://github.com/ikirudennis/vim_django.git
 .vim/bundle/vimoutliner = [git]git://github.com/vimoutliner/vimoutliner.git
 .vim/bundle/xml.vim = [git]git://github.com/ikirudennis/xml.vim.git
