@@ -24,7 +24,7 @@ nnoremap <leader>q gqip
 " jj is easier to type than escape 
 inoremap jj <Esc>
 " easily turn off search highlighting with comma-space
-nnoremap <leader><space> :noh<cr>
+nnoremap <silent> <leader><space> :noh<cr>
 " in both normal and visual modes, use tab key as a synonym for % which jumps
 " to corresponding parentheses, braces and brackets
 nnoremap <tab> %
