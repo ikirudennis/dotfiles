@@ -10,7 +10,6 @@
 .vim/bundle/python_match.vim = [git]git://github.com/ikirudennis/python_match.vim.git
 .vim/bundle/python.vim = [git]git://github.com/ikirudennis/python.vim.git
 .vim/bundle/rainbow_parentheses.vim = [git]git://github.com/kien/rainbow_parentheses.vim.git
-.vim/bundle/snipmate-snippets = [git]git://github.com/honza/snipmate-snippets.git
 .vim/bundle/splice.vim = https://bitbucket.org/sjl/splice.vim
 .vim/bundle/supertab = [git]git://github.com/ervandew/supertab.git
 .vim/bundle/syntastic = [git]git://github.com/scrooloose/syntastic.git
@@ -26,6 +25,7 @@
 .vim/bundle/vim-scratch = [git]git://github.com/ikirudennis/vim-scratch.git
 .vim/bundle/vim-slime = [git]git://github.com/jpalardy/vim-slime.git
 .vim/bundle/vim-snipmate = [git]git://github.com/garbas/vim-snipmate.git
+.vim/bundle/vim-snippets = [git]git://github.com/honza/vim-snippets.git
 .vim/bundle/vim-sparkup = [git]git://github.com/bingaman/vim-sparkup.git
 .vim/bundle/vim-speeddating = [git]git://github.com/tpope/vim-speeddating.git
 .vim/bundle/vim-surround = [git]git://github.com/tpope/vim-surround.git

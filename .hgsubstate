@@ -11,7 +11,6 @@ ced6c409c9beeb0b4142d21906606bd194411d1d .vim/bundle/matchit.zip
 20a00261b1e2c7f85f2f9e07b89507050aaa3ee4 .vim/bundle/python.vim
 f7ae2fb8ba0ca7166d56025e58bf30b5897a82e9 .vim/bundle/python_match.vim
 874367f41275d8dd43204f0c491157accc8b5f03 .vim/bundle/rainbow_parentheses.vim
-f80cc3e03fd8267c893f7068a363b7a47aad9e65 .vim/bundle/snipmate-snippets
 86a478f40df643a3d85771d5c38e43318d007ba1 .vim/bundle/splice.vim
 a2268b61edc4ba38d152ecfa7c853a7f1bc71370 .vim/bundle/supertab
 2519d835694e9aee41b0aa607b9e1d9c5685fd7a .vim/bundle/syntastic
@@ -27,6 +26,7 @@ a81bef76031ca1c71766b516417480caeb01c932 .vim/bundle/vim-repeat
 61839b4b7da34f2018023dd640e961de0a2bee19 .vim/bundle/vim-scratch
 f5c1833ee688efdbc4a5197fc273d67d4adc1b7b .vim/bundle/vim-slime
 2f2a101942f8cfdc4eae504b7baec62dc2b2b232 .vim/bundle/vim-snipmate
+a5990defd738c02902a0170177d403e065c45270 .vim/bundle/vim-snippets
 62830e8990b21280a5cc244568065abb085fe395 .vim/bundle/vim-sparkup
 d01b8083f336b451df618fa623d3b4948ceea19a .vim/bundle/vim-speeddating
 02199ea0080d744ec76b79d74ce56d51d25cf7ae .vim/bundle/vim-surround
