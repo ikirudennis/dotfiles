@@ -120,6 +120,9 @@ alias vi=/usr/bin/vim
 alias zcp=zmv -C
 alias zls=zmv -L
 
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
 if [[ -s $HOME/.zshrc_local ]] ; then
     source $HOME/.zshrc_local ;
 fi

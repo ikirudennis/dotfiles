@@ -31,3 +31,5 @@ alias xld='/Applications/XLD.app/Contents/MacOS/XLD --cmdline $@'
 
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
+
+export PROJECT_HOME=$HOME/Documents/code
