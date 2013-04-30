@@ -129,6 +129,14 @@ else
     endif
 endif
 
+" by default, easytags stores tags in ~/.vimtags.  This contributes to that
+" file becoming exceptionally large.  This will force easytags to use a tags
+" file relative to a project instead of using a global tagsfile.
+let g:easytags_dynamic_files = 2
+
+" Make SuperTab work sanely with snippets
+let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+
 " ----------------------------------------------------------------------------
 " v. Custom commands
 " ----------------------------------------------------------------------------
@@ -162,6 +170,13 @@ set whichwrap=<,>,b
 " searches as you type in the search term
 set incsearch
 
+ " ----------------------------------------------------------------------------
+ " 3 tags
+ " ----------------------------------------------------------------------------
+" Hopefully this reduces the size of the global vimtags file and contributes
+" to easytags being more responsive
+ set tags=./.tags;,~/.vimtags
+ 
 " ----------------------------------------------------------------------------
 " 4 displaying text
 " ----------------------------------------------------------------------------
