@@ -29,4 +29,10 @@ if has("gui_macvim")
 	set gfn=Monaco:h14
 	" formatoptions j is only available in macvim
 	set formatoptions+=j
+else
+	" Droid Sans Mono size 11
+	set gfn=Droid\ Sans\ Mono\ 11
 endif
+
+" hide toolbar
+set guioptions-=T
