@@ -1,6 +1,12 @@
 " ----------------------------------------------------------------------------
 " i. Setup
 " ----------------------------------------------------------------------------
+" Oh, windows. Must you always be such a pain in the ass?
+if has('win32') || has('win64')
+    " Make windows use ~/.vim too, I don't want to use _vimfiles
+    set runtimepath^=~/.vimrc
+endif
+
 " pathogen - the greatest thing since sliced bread
 " allow disabling of individual plugins
 let g:pathogen_disabled = []
