@@ -6,5 +6,6 @@ syntax: glob
 *.swp
 *.swo
 *.pyc
+*.pyo
 
 *.un~
