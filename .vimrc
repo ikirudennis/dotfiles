@@ -187,8 +187,13 @@ set incsearch
 " ----------------------------------------------------------------------------
 " 4 displaying text
 " ----------------------------------------------------------------------------
-" relativenumber is a vim 7.3+ feature
-if version >=703
+" relativenumber is a vim 7.3+ feature and can only be used in conjunction
+" with number in vim 7.4+
+if version >= 704
+	" show relative numbers and current line number
+	set relativenumber
+	set number
+elseif version == 703
 	" line numbers are shown relative to the current line
 	set relativenumber
 else
