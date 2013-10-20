@@ -53,6 +53,8 @@ setopt share_history
 
 eval "`pip completion --zsh`"
 
+eval "`npm completion`"
+
 # define colors used by less
 if [[ "$terminfo[colors]" -eq 256 ]]; then
     # this is for advanced terminals that use 256 colors
