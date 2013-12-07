@@ -12,7 +12,7 @@ b0bb781fc73ef40365e4c996a16f04368d64fc9d .vim/bundle/nerdtree
 20a00261b1e2c7f85f2f9e07b89507050aaa3ee4 .vim/bundle/python.vim
 f7ae2fb8ba0ca7166d56025e58bf30b5897a82e9 .vim/bundle/python_match.vim
 874367f41275d8dd43204f0c491157accc8b5f03 .vim/bundle/rainbow_parentheses.vim
-86a478f40df643a3d85771d5c38e43318d007ba1 .vim/bundle/splice.vim
+8e1c1dc358de2132b7fbc1adaf94f528e3238e4d .vim/bundle/splice.vim
 a2268b61edc4ba38d152ecfa7c853a7f1bc71370 .vim/bundle/supertab
 2519d835694e9aee41b0aa607b9e1d9c5685fd7a .vim/bundle/syntastic
 7a4c26f04f71b67c850965d2620b703b209cd1b6 .vim/bundle/textile.vim
