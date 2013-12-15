@@ -31,7 +31,7 @@ if has("gui_macvim")
 	set formatoptions+=j
 else
 	" Droid Sans Mono size 11
-	set gfn=Droid\ Sans\ Mono\ 11
+	set gfn=DejaVu_Sans_Mono:h11
 endif
 
 " hide toolbar
