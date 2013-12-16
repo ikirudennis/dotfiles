@@ -9,3 +9,6 @@ export TERM=xterm-256color
 [[ "$terminfo[kcuu1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcuu1]/O/[}" up-line-or-history
 
 alias ack=ack-grep
+
+fpath=($HOME/.zsh/func $fpath)
+typeset -U fpath
