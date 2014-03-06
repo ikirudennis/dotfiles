@@ -123,8 +123,13 @@ alias zcp=zmv -C
 alias zls=zmv -L
 
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
 
 if [[ -s $HOME/.zshrc_local ]] ; then
     source $HOME/.zshrc_local ;
 fi
+
+if [[ -s $HOME/.zshrc_private ]] ; then
+    source $HOME/.zshrc_private ;
+fi
+
+source /usr/local/bin/virtualenvwrapper.sh
