@@ -29,9 +29,12 @@ if has("gui_macvim")
 	set gfn=Monaco:h14
 	" formatoptions j is only available in macvim
 	set formatoptions+=j
-else
-	" Droid Sans Mono size 11
+elseif has("win32")
+	" windows just HAS to be different, eh?
 	set gfn=DejaVu_Sans_Mono:h11
+else
+	" fallback
+	set gfn=DejaVu\ Sans\ Mono\ 11
 endif
 
 " hide toolbar
