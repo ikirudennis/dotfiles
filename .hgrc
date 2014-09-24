@@ -6,6 +6,7 @@ ignore = ~/.hgconfig/.hgignore
 [extensions]
 bitbucketrepo = ~/.hgext/bbext/bitbucketrepo
 hgpunchcard = ~/.hgext/hgpunchcard.py
+flow = ~/.hgext/hgflow/src/hgflow.py
 highlight=
 hggit = 
 color = 
@@ -15,6 +16,7 @@ hgk =
 fetch = 
 pager = 
 record = 
+shelve = 
 
 
 [merge-tools]
