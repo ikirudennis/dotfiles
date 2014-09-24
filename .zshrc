@@ -25,6 +25,12 @@ autoload -U promptinit && promptinit
 autoload -U run-help
 autoload -U zmv
 autoload -Uz zsh/terminfo
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' enable hg git
+precmd() {
+	vcs_info
+}
 
 # load this module, but don't complain if it's already loaded
 zmodload -i zsh/datetime
@@ -101,7 +107,7 @@ setprompt () {
     done
 
     # Finally, set the prompt
-    PROMPT='%{${VIMODE}%}%m%{$reset_color%}:%. %n %# '
+    PROMPT='%{${VIMODE}%}%m%{$reset_color%}${vcs_info_msg_0_}:%. %n %# '
 
     # Of course we need a matching continuation prompt
     PROMPT2='%_>'
