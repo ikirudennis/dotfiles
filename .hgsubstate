@@ -6,6 +6,7 @@ a4d366b2f7f6db285bc5b0e79d1492f58236d1c2 .vim/bundle/Zenburn
 34d0b2fbc182b31d926632d170bc07d6a6fc3f9b .vim/bundle/ack.vim
 77572b488175c9b33917980540c487ceed471be4 .vim/bundle/closetag.vim
 a6a604876f4d24bf329e73a4884c26f2184445f0 .vim/bundle/command-t
+d44fd5cca10c466c0eb3d6f7b18c4b13f5bf24d7 .vim/bundle/dbext.vim
 eb9fc8676b8959c3c2c95bf6b6e8f0f44317c5c0 .vim/bundle/gundo.vim
 ced6c409c9beeb0b4142d21906606bd194411d1d .vim/bundle/matchit.zip
 0b3d928dce8262dedfc2f83b9aeb59a94e4f0ae4 .vim/bundle/nerdcommenter

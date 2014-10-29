@@ -4,6 +4,7 @@
 .vim/bundle/ack.vim = [git]git://github.com/mileszs/ack.vim.git
 .vim/bundle/closetag.vim = [git]git://github.com/vim-scripts/closetag.vim.git 
 .vim/bundle/command-t = [git]git://git.wincent.com/command-t.git
+.vim/bundle/dbext.vim = [git]git://github.com/vim-scripts/dbext.vim.git
 .vim/bundle/gundo.vim = https://bitbucket.org/sjl/gundo.vim
 .vim/bundle/matchit.zip = [git]git://github.com/benjifisher/matchit.zip.git
 .vim/bundle/nerdcommenter = [git]git://github.com/scrooloose/nerdcommenter.git
