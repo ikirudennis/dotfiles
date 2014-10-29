@@ -63,3 +63,6 @@ pager = LESS="R" less
 
 [web]
 pygments_style = murphy
+
+[flow]
+autoshelve = yes

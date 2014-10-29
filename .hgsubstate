@@ -1,5 +1,5 @@
 a804ef4be3434993211bdf700379b24f0ea5c672 .hgext/bbext
-a8bb9ff841cf9476cdaf9a43665a77e62af01fb0 .hgext/hgflow
+c53a3249bd1f846d60f891f1683ac89be256939b .hgext/hgflow
 3a48680559dbf81afb2eda15cf753fa3e15ff1e2 .vim/bundle/Toggle
 925efc36277c11d1715e7e48d4d5e36675ba5103 .vim/bundle/YankRing.vim
 a4d366b2f7f6db285bc5b0e79d1492f58236d1c2 .vim/bundle/Zenburn
