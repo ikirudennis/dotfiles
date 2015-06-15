@@ -93,6 +93,9 @@ if has("autocmd")
 	    \   exe "normal! g`\"" |
 		\ endif
 
+	" use modelines in *.vim files
+	autocmd BufRead *.vim setlocal modeline|setlocal modelines=1
+
 	" Source the vimrc file after saving it
 	autocmd! BufWritePost [\._]vimrc source $MYVIMRC
 
@@ -224,8 +227,7 @@ set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set showbreak=…
 " sane line breaks -- to turn off for individual files, run set nolbr
 set linebreak
-" set colorscheme to slate
-let g:zenburn_transparent = 1
+" set colorscheme to zenburn
 colorscheme zenburn
 
 " ----------------------------------------------------------------------------
