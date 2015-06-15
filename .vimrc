@@ -1,20 +1,35 @@
 " ----------------------------------------------------------------------------
 " i. Setup
 " ----------------------------------------------------------------------------
+
+source $HOME/.vim/addons.vim
+
+" VAM is a slightly neater way of setting up vim plugins.  Vundle and the like
+" make it easy to use up-to-date versions of plugins, but don't allow for
+" mercurial repos.  The documentation for VAM kind of sucks, but I've at least
+" got this working, and this will mean a lot fewer sub-repos.
+fun! SetupVAM(addons)
+  let c = get(g:, 'vim_addon_manager', {})
+  let c.plugin_root_dir = expand('$HOME', 1) . '/.vim/vim-addons'
+  let c.log_to_buf = 0
+  let c.auto_install = 1
+  let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
+  if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
+    let cmd = '/usr/bin/git clone --depth=1 git://github.com/MarcWeber/vim-addon-manager '
+    let cmd .= shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
+    call system(cmd)
+  endif
+  call vam#ActivateAddons(a:addons, {'auto_install' : 1})
+endfun
+
+call SetupVAM(g:my_addons)
+
 " Oh, windows. Must you always be such a pain in the ass?
 if has('win32') || has('win64')
     " Make windows use ~/.vim too, I don't want to use _vimfiles
     set runtimepath^=~/.vim
     set encoding=utf-8
 endif
-
-" pathogen - the greatest thing since sliced bread
-" allow disabling of individual plugins
-let g:pathogen_disabled = []
-" to disable plugin, insert the plugin's name into the second argument of the
-" following line:
-"call add(g:pathogen_disabled, '')
-call pathogen#infect()
 
 " use comma instead of backslash for commands
 let mapleader = ","
