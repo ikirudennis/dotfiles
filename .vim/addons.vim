@@ -1,5 +1,6 @@
-let g:my_addons = [ 'Zenburn', 'surround', 'easytags', 'Syntastic', 'Gundo',
-    \ 'github:ikirudennis/vim-scratch', 'The_NERD_Commenter', 'repeat',
-    \ 'Splice', 'sparkup', 'snipmate', 'vim-snippets' ]
+let g:my_addons = [ 'surround', 'easytags', 'Syntastic', 'Gundo', 'repeat',
+            \ 'github:ikirudennis/vim-scratch', 'The_NERD_Commenter',
+            \ 'Splice', 'sparkup', 'snipmate', 'vim-snippets',
+            \ 'github:jnurmine/Zenburn' ]
 
-" vim: et
+" vim: set expandtab :
