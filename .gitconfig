@@ -20,5 +20,3 @@
 	user = ikirudennis
 [credential]
 	helper = osxkeychain
-[push]
-	default = simple
