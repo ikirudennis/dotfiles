@@ -8,7 +8,6 @@
 .vim/bundle/vim-nerdtree-tabs = [git]git://github.com/jistr/vim-nerdtree-tabs.git
 .vim/bundle/python_match.vim = [git]git://github.com/ikirudennis/python_match.vim.git
 .vim/bundle/python.vim = [git]git://github.com/ikirudennis/python.vim.git
-.vim/bundle/rainbow_parentheses.vim = [git]git://github.com/kien/rainbow_parentheses.vim.git
 .vim/bundle/supertab = [git]git://github.com/ervandew/supertab.git
 .vim/bundle/textile.vim = [git]git://github.com/ikirudennis/textile.vim.git
 .vim/bundle/vim-abolish = [git]git://github.com/tpope/vim-abolish.git
