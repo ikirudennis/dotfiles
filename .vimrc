@@ -121,19 +121,8 @@ let yankring_history_dir='$HOME/.vim_run'
 " Toggle rainbow parentheses
 map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:RainbowParenthesesLoadSquare<cr>
 
-" vim_django commands - dt seemed like it was already mapped to a yankring
-" function.  Will investigate further to suss this out.
-map <Leader>djt :VimDjangoCommandTTemplate<CR>
-map <Leader>dja :VimDjangoCommandTApp<CR>
-
 " gundo plugin shortcut
 nnoremap <F5> :GundoToggle<CR>
-
-" set command-T to open files in new tab when I hit enter
-let g:CommandTAcceptSelectionMap='<C-CR>'
-let g:CommandTAcceptSelectionTabMap='<CR>'
-let g:CommandTAcceptSelectionSplitMap='<C-s>'
-let g:CommandTScanDotDirectories=1
 
 let g:slime_send_key = '<leader>slime'
 let g:slime_target = 'tmux'
