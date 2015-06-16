@@ -1,9 +1,6 @@
 a804ef4be3434993211bdf700379b24f0ea5c672 .hgext/bbext
 c53a3249bd1f846d60f891f1683ac89be256939b .hgext/hgflow
-3a48680559dbf81afb2eda15cf753fa3e15ff1e2 .vim/bundle/Toggle
 925efc36277c11d1715e7e48d4d5e36675ba5103 .vim/bundle/YankRing.vim
-34d0b2fbc182b31d926632d170bc07d6a6fc3f9b .vim/bundle/ack.vim
-77572b488175c9b33917980540c487ceed471be4 .vim/bundle/closetag.vim
 a6a604876f4d24bf329e73a4884c26f2184445f0 .vim/bundle/command-t
 d44fd5cca10c466c0eb3d6f7b18c4b13f5bf24d7 .vim/bundle/dbext.vim
 ced6c409c9beeb0b4142d21906606bd194411d1d .vim/bundle/matchit.zip
@@ -19,7 +16,6 @@ e736ab3113ee462939ec5599fd4d2dcd47b3f339 .vim/bundle/vim-l9
 0b08a09efa28a9e419f95f8b6d1d818c0c9ffa86 .vim/bundle/vim-nerdtree-tabs
 f5c1833ee688efdbc4a5197fc273d67d4adc1b7b .vim/bundle/vim-slime
 d01b8083f336b451df618fa623d3b4948ceea19a .vim/bundle/vim-speeddating
-cabf4b79b1c0cd9c9a8beec303c2e6172c82d19f .vim/bundle/vim-unimpaired
 0d0b20c16c5d236fbd6ad1d12be846ac500b0a28 .vim/bundle/vim_django
 8d6fbc0845b62295632acec16b76cabe44309703 .vim/bundle/vimoutliner
 008a214ac4e2e4165bb344e9f3e1243a7309faa8 .vim/bundle/xml.vim

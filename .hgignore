@@ -1,4 +1,3 @@
 ^\.vim/view/*
-^\.vim/bundle/YankRing\.vim/history/.*\.txt$
 ^\.vim/\.netrwhist
 ^\.vim/vim-addons

@@ -116,7 +116,7 @@ let g:scratch_filename='hiya, buddy'
 let g:scratch_bufclose=2
 
 " gotta store the history somewhere
-let yankring_history_dir='$HOME/.vim/bundle/YankRing.vim/history'
+let yankring_history_dir='$HOME/.vim_run'
 
 " Toggle rainbow parentheses
 map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:RainbowParenthesesLoadSquare<cr>
