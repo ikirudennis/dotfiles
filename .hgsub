@@ -7,8 +7,6 @@
 .vim/bundle/python.vim = [git]git://github.com/ikirudennis/python.vim.git
 .vim/bundle/textile.vim = [git]git://github.com/ikirudennis/textile.vim.git
 .vim/bundle/vim-abolish = [git]git://github.com/tpope/vim-abolish.git
-.vim/bundle/vim-autocomplpop = https://bitbucket.org/dburke/vim-autocomplpop
-.vim/bundle/vim-l9 = https://bitbucket.org/dburke/vim-l9
 .vim/bundle/vim-slime = [git]git://github.com/jpalardy/vim-slime.git
 .vim/bundle/vim-speeddating = [git]git://github.com/tpope/vim-speeddating.git
 .vim/bundle/vim_django = [git]git://github.com/ikirudennis/vim_django.git
