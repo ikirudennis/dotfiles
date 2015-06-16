@@ -1,6 +1,5 @@
 a804ef4be3434993211bdf700379b24f0ea5c672 .hgext/bbext
 c53a3249bd1f846d60f891f1683ac89be256939b .hgext/hgflow
-a6a604876f4d24bf329e73a4884c26f2184445f0 .vim/bundle/command-t
 d44fd5cca10c466c0eb3d6f7b18c4b13f5bf24d7 .vim/bundle/dbext.vim
 ced6c409c9beeb0b4142d21906606bd194411d1d .vim/bundle/matchit.zip
 b0bb781fc73ef40365e4c996a16f04368d64fc9d .vim/bundle/nerdtree
