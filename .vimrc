@@ -148,11 +148,10 @@ endif
 " file relative to a project instead of using a global tagsfile.
 let g:easytags_dynamic_files = 2
 
-" Make SuperTab work sanely with snippets
-let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
-
 " bind ctrlp to <Leader>p
 let g:ctrlp_map = '<Leader>p'
+" make ctrlp show hidden files
+let g:ctrlp_show_hidden = 1
 
 " ----------------------------------------------------------------------------
 " v. Custom commands

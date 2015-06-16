@@ -2,15 +2,12 @@ a804ef4be3434993211bdf700379b24f0ea5c672 .hgext/bbext
 c53a3249bd1f846d60f891f1683ac89be256939b .hgext/hgflow
 d44fd5cca10c466c0eb3d6f7b18c4b13f5bf24d7 .vim/bundle/dbext.vim
 ced6c409c9beeb0b4142d21906606bd194411d1d .vim/bundle/matchit.zip
-b0bb781fc73ef40365e4c996a16f04368d64fc9d .vim/bundle/nerdtree
 20a00261b1e2c7f85f2f9e07b89507050aaa3ee4 .vim/bundle/python.vim
 f7ae2fb8ba0ca7166d56025e58bf30b5897a82e9 .vim/bundle/python_match.vim
-a2268b61edc4ba38d152ecfa7c853a7f1bc71370 .vim/bundle/supertab
 7a4c26f04f71b67c850965d2620b703b209cd1b6 .vim/bundle/textile.vim
 d64ce06650cf9b098b5a01c0db53864965d9310b .vim/bundle/vim-abolish
 79deff1f82be46ac52ba01faa7bedfde76450661 .vim/bundle/vim-autocomplpop
 e736ab3113ee462939ec5599fd4d2dcd47b3f339 .vim/bundle/vim-l9
-0b08a09efa28a9e419f95f8b6d1d818c0c9ffa86 .vim/bundle/vim-nerdtree-tabs
 f5c1833ee688efdbc4a5197fc273d67d4adc1b7b .vim/bundle/vim-slime
 d01b8083f336b451df618fa623d3b4948ceea19a .vim/bundle/vim-speeddating
 0d0b20c16c5d236fbd6ad1d12be846ac500b0a28 .vim/bundle/vim_django
