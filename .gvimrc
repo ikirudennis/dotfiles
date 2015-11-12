@@ -26,7 +26,7 @@ if has("gui_macvim")
 	" transparency
 	set transparency=3
 	" a better font...
-	set gfn=Monaco:h14
+	set gfn=Fira\ Mono:h14
 	" formatoptions j is only available in macvim
 	set formatoptions+=j
 elseif has("win32")
