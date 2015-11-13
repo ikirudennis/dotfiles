@@ -97,7 +97,7 @@ if has("autocmd")
 	autocmd BufRead *.vim setlocal modeline|setlocal modelines=1
 
 	" Source the vimrc file after saving it
-	autocmd! BufWritePost [\._]vimrc source $MYVIMRC
+	autocmd! BufWritePost [\._]vimrc source $MYVIMRC|call lightline#disable()|call lightline#enable()
 
 endif
 
@@ -152,6 +152,29 @@ let g:easytags_dynamic_files = 2
 let g:ctrlp_map = '<Leader>p'
 " make ctrlp show hidden files
 let g:ctrlp_show_hidden = 1
+
+" lightline configuration
+let g:lightline = {
+	\ 'colorscheme': 'Tomorrow_Night',
+	\ 'active': {
+	\   'left':  [ [ 'mode', 'paste' ],
+	\            [ 'readonly', 'filename', 'modified' ],
+	\            [ 'bufnum' ] ],
+	\   'right': [ [ 'lineinfo', 'numlines'],
+	\            [ 'percent'] , [ 'filetype' ] ]
+	\ },
+	\ 'component': {
+	\   'readonly': '%{&readonly?"\u2297":""}',
+	\   'modified': '%{&filetype=="help"?"[HELP]":&modified?"+":&modifiable?"":"-"}',
+	\   'numlines': "\u2116 %L"
+	\ },
+	\ 'component_visible_condition': {
+	\   'readonly': '(&filetype!="help"&& &readonly)',
+	\   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+	\ },
+	\ 'separator': { 'left': " \u00BB", 'right': "\u00AB " },
+	\ 'subseparator': { 'left': " \u203A", 'right': "\u2039 " }
+\ }
 
 " ----------------------------------------------------------------------------
 " v. Custom commands
