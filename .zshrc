@@ -21,7 +21,6 @@ export PAGER=less
 
 # load zsh modules
 autoload -U colors && colors
-autoload -U compinit && compinit
 autoload -U promptinit && promptinit
 autoload -U run-help
 autoload -U zmv
@@ -140,3 +139,6 @@ if [[ -s $HOME/.zshrc_private ]] ; then
 fi
 
 source /usr/local/bin/virtualenvwrapper.sh
+
+# this needs to be last to load completions in ~/.zsh/func/
+autoload -U compinit && compinit
