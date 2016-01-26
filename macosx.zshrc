@@ -2,7 +2,6 @@ export LS_COLORS="ExfxcxdxbxegEdabagacad"
 export CLICOLOR_FORCE=1
 
 
-PATH="/usr/local/sbin:/usr/local/bin/bin:/usr/local/bin:/usr/local/git/bin:/Library/PostgreSQL/9.2/bin:$PATH:${HOME}/Library/android-sdk-macosx/tools:${HOME}/Library/android-sdk-macosx/platform-tools"
 MANPATH="$MANPATH:/usr/local/man/man1"
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
@@ -31,5 +30,3 @@ alias xld='/Applications/XLD.app/Contents/MacOS/XLD --cmdline $@'
 
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
-
-export PROJECT_HOME=$HOME/Documents/code
