@@ -128,8 +128,6 @@ alias vi=/usr/bin/vim
 alias zcp=zmv -C
 alias zls=zmv -L
 
-export WORKON_HOME=$HOME/.virtualenvs
-
 if [[ -s $HOME/.zshrc_local ]] ; then
     source $HOME/.zshrc_local ;
 fi
@@ -138,7 +136,8 @@ if [[ -s $HOME/.zshrc_private ]] ; then
     source $HOME/.zshrc_private ;
 fi
 
-source /usr/local/bin/virtualenvwrapper.sh
-
 # this needs to be last to load completions in ~/.zsh/func/
 autoload -U compinit && compinit
+
+# added by Pew
+source $(pew shell_config)
