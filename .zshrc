@@ -1,5 +1,5 @@
 # universal zshrc settings
-export dotfiles_version=1.0
+export dotfiles_version=1.1
 
 # use vim keybindings by default
 bindkey -v
