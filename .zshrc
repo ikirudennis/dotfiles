@@ -57,8 +57,6 @@ setopt append_history
 setopt extended_history
 setopt share_history
 
-eval "`pip completion --zsh`"
-
 eval "`npm completion`"
 
 # define colors used by less
@@ -138,6 +136,8 @@ fi
 
 # this needs to be last to load completions in ~/.zsh/func/
 autoload -U compinit && compinit
+
+eval "`pip completion --zsh`"
 
 # added by Pew
 source $(pew shell_config)
