@@ -3,7 +3,7 @@
 " ----------------------------------------------------------------------------
 if has("autocmd")
 	" Source the gvimrc file after saving it
-	autocmd! BufWritePost [\._]gvimrc source $MYGVIMRC
+	autocmd! BufWritePost [\._]gvimrc source $MYGVIMRC|call lightline#disable()|call lightline#enable()
 endif
 
 " ----------------------------------------------------------------------------

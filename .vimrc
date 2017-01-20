@@ -164,17 +164,29 @@ let g:lightline = {
 	\            [ 'percent'] , [ 'filetype' ] ]
 	\ },
 	\ 'component': {
-	\   'readonly': '%{&readonly?"\u2297":""}',
+	\   'readonly': '%{&readonly?"\ue0a2":""}',
 	\   'modified': '%{&filetype=="help"?"[HELP]":&modified?"+":&modifiable?"":"-"}',
-	\   'numlines': "\u2116 %L"
+	\   'numlines': "\ue0a1 %L"
+	\ },
+	\ 'component_function': {
+	\   'filetype': 'LightlineFiletype',
+	\   'fileformat': 'LightlineFileformat',
 	\ },
 	\ 'component_visible_condition': {
 	\   'readonly': '(&filetype!="help"&& &readonly)',
 	\   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
 	\ },
-	\ 'separator': { 'left': " \u00BB", 'right': "\u00AB " },
-	\ 'subseparator': { 'left': " \u203A", 'right': "\u2039 " }
+	\ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+	\ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
 \ }
+
+function! LightlineFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! LightlineFileformat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
 
 " ----------------------------------------------------------------------------
 " v. Custom commands
