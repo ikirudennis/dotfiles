@@ -4,9 +4,9 @@ username = dburke <dennisburke@prodigy.net>
 ignore = ~/.hgconfig/.hgignore
 
 [extensions]
-bitbucketrepo = ~/.hgext/bbext/bitbucketrepo
 hgpunchcard = ~/.hgext/hgpunchcard.py
 flow = ~/.hgext/hgflow/src/hgflow.py
+hgext.schemes = 
 highlight=
 hggit = 
 color = 
@@ -17,7 +17,6 @@ fetch =
 pager = 
 record = 
 shelve = 
-
 
 [merge-tools]
 macvim.executable = /Applications/Vim/mvim
