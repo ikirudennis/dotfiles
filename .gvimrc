@@ -31,7 +31,7 @@ if has("gui_macvim")
 	set formatoptions+=j
 elseif has("win32")
 	" windows just HAS to be different, eh?
-	set gfn=DejaVu_Sans_Mono:h11
+	set gfn=FuraMonoForPowerline_NF:h11:cANSI:qDRAFT
 else
 	" fallback
 	set gfn=DejaVu\ Sans\ Mono\ 11
