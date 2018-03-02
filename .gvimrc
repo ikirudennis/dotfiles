@@ -34,8 +34,14 @@ elseif has("win32")
 	set gfn=FuraMonoForPowerline_NF:h11:cANSI:qDRAFT
 else
 	" fallback
-	set gfn=DejaVu\ Sans\ Mono\ 11
+	set gfn=FuraMono\ NF\ 10
+	set linespace=-2
 endif
 
 " hide toolbar
 set guioptions-=T
+
+" ----------------------------------------------------------------------------
+" 13 selecting text
+" ----------------------------------------------------------------------------
+set clipboard=unnamed
