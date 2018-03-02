@@ -34,6 +34,11 @@ endif
 " use comma instead of backslash for commands
 let mapleader = ","
 
+" fix background color erase in terminal
+if &term =~ '256color'
+   set t_ut=
+endif
+
 " ----------------------------------------------------------------------------
 " ii. Shortcuts
 " ----------------------------------------------------------------------------
@@ -99,6 +104,9 @@ if has("autocmd")
 	" Source the vimrc file after saving it
 	autocmd! BufWritePost [\._]vimrc source $MYVIMRC|call lightline#disable()|call lightline#enable()
 
+	" don't let auto-format options clobber crontab files
+	autocmd FileType crontab setlocal formatoptions-=a
+
 endif
 
 " ----------------------------------------------------------------------------
@@ -131,18 +139,6 @@ let g:slime_target = 'tmux'
 let g:nerdtree_tabs_open_on_gui_startup=0
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
-" define os-specific locations for ctags
-let os = system('uname -s')
-let osversion = system('uname -r')
-if os == 'Darwin'
-    let g:easytags_cmd = '/usr/local/bin/ctags'
-else
-    " if centos 6
-    if matchstr(osversion, '2.6.32')
-        let g:easytags_cmd = '$HOME/bin/ctags'
-    endif
-endif
-
 " by default, easytags stores tags in ~/.vimtags.  This contributes to that
 " file becoming exceptionally large.  This will force easytags to use a tags
 " file relative to a project instead of using a global tagsfile.
@@ -153,6 +149,11 @@ let g:ctrlp_map = '<Leader>p'
 " make ctrlp show hidden files
 let g:ctrlp_show_hidden = 1
 
+" gundo was being wonky with regard to python 2 and 3. prefer py3k if available
+if has('python3')
+	let g:gundo_prefer_python3 = 1
+endif
+
 " lightline configuration
 let g:lightline = {
 	\ 'colorscheme': 'Tomorrow_Night',
@@ -161,7 +162,7 @@ let g:lightline = {
 	\            [ 'readonly', 'filename', 'modified' ],
 	\            [ 'bufnum' ] ],
 	\   'right': [ [ 'lineinfo', 'numlines'],
-	\            [ 'percent'] , [ 'filetype' ] ]
+	\            [ 'percent'] , [ 'virtualenv', 'filetype' ] ]
 	\ },
 	\ 'component': {
 	\   'readonly': '%{&readonly?"\ue0a2":""}',
@@ -171,6 +172,7 @@ let g:lightline = {
 	\ 'component_function': {
 	\   'filetype': 'LightlineFiletype',
 	\   'fileformat': 'LightlineFileformat',
+	\   'virtualenv': 'LightlineVirtualenv', 
 	\ },
 	\ 'component_visible_condition': {
 	\   'readonly': '(&filetype!="help"&& &readonly)',
@@ -181,7 +183,23 @@ let g:lightline = {
 \ }
 
 function! LightlineFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+  let l:llft_string = ''
+  if winwidth(0) < 70
+    return l:llft_string
+  endif
+  if strlen(&filetype)
+    let l:llft_string = &filetype . ' ' . WebDevIconsGetFileTypeSymbol()
+  else
+    let l:llft_string = "\uf15c"
+  endif
+  return l:llft_string
+endfunction
+
+function! LightlineVirtualenv()
+  if strlen(virtualenv#statusline())
+    return virtualenv#statusline() . " \u24d4 "
+  endif
+  return ''
 endfunction
 
 function! LightlineFileformat()

@@ -34,8 +34,14 @@ elseif has("win32")
 	set gfn=DejaVu_Sans_Mono:h11
 else
 	" fallback
-	set gfn=DejaVu\ Sans\ Mono\ 11
+	set gfn=FuraMono\ NF\ 10
+	set linespace=-2
 endif
 
 " hide toolbar
 set guioptions-=T
+
+" ----------------------------------------------------------------------------
+" 13 selecting text
+" ----------------------------------------------------------------------------
+set clipboard=unnamed

@@ -4,7 +4,7 @@ username = dburke <dennisburke@prodigy.net>
 ignore = ~/.hgconfig/.hgignore
 
 [extensions]
-hgpunchcard = ~/.hgext/hgpunchcard.py
+#hgpunchcard = ~/.hgext/hgpunchcard.py
 flow = ~/.hgext/hgflow/src/hgflow.py
 hgext.schemes = 
 highlight=
@@ -25,11 +25,11 @@ macvim.premerge = keep
 macvim.priority = 1
 macvim.gui = true
 
-vim.executable = vim
+vim.executable = gvim
 vim.args = -f $base $local $other $output -c 'SpliceInit'
 vim.premerge = keep
 vim.priority = 1
-vim.gui = false
+vim.gui = true
 
 [color]
 status.modified = cyan
