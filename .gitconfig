@@ -18,7 +18,5 @@
 	excludesfile = ~/.gitignore
 [github]
 	user = ikirudennis
-[credential]
-	helper = osxkeychain
 [push]
 	default = simple
