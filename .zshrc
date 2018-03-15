@@ -126,18 +126,30 @@ alias vi=/usr/bin/vim
 alias zcp=zmv -C
 alias zls=zmv -L
 
+# usually a symlink to one of the system-specific zshrcs in this dotfiles
+# repository.
 if [[ -s $HOME/.zshrc_local ]] ; then
     source $HOME/.zshrc_local ;
 fi
 
+# usually a local file, not checked into version control because its
+# configurations are specific to the system it lives on.
 if [[ -s $HOME/.zshrc_private ]] ; then
     source $HOME/.zshrc_private ;
 fi
 
-# this needs to be last to load completions in ~/.zsh/func/
+# this needs to be last to load completions in ~/.zsh/func/  It allows
+# .zshrc_local and .zshrc_private to specify their own fpath, if need be.
 autoload -U compinit && compinit
 
 eval "`pip completion --zsh`"
+
+# useful for cases where something needs to be loaded after compinit, and
+# won't work in .zshrc_private otherwise. Will likely be a local file, not
+# a symlink to this repository.
+if [[ -s $HOME/.zshrc_after ]] ; then
+    source $HOME/.zshrc_after ;
+fi
 
 # added by Pew
 source $(pew shell_config)
