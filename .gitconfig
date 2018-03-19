@@ -20,3 +20,5 @@
 	user = ikirudennis
 [push]
 	default = simple
+[include]
+	path = ~/.gitconfig_local
