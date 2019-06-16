@@ -107,6 +107,9 @@ if has("autocmd")
 	" don't let auto-format options clobber crontab files
 	autocmd FileType crontab setlocal formatoptions-=a
 
+	" yaml defaults
+	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 endif
 
 " ----------------------------------------------------------------------------
