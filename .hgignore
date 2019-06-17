@@ -1,3 +1,5 @@
+^roles/vim/files/vim/vim-addons
+^\.vagrant
 ^\.vim/view/*
 ^\.vim/\.netrwhist
 ^\.vim/vim-addons
