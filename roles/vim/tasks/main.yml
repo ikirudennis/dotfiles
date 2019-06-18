@@ -1,4 +1,8 @@
 ---
+- name: create vim_run directory
+  file:
+    path: ~/.vim_run
+    state: directory
 - name: symlink .vim directory
   file:
     path: ~/.vim
