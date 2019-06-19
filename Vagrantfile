@@ -64,9 +64,9 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
+    yum install epel-release
     yum update
-    yum install -y git mercurial vim-enhanced ctags-etags unzip python-devel gcc
-    yum install -y python-pip 
+    yum install -y git mercurial vim-enhanced ctags-etags unzip python-pip python-devel gcc
   SHELL
 
   # Run Ansible from the Vagrant VM
