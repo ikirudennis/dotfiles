@@ -4,9 +4,14 @@
     repo: https://bitbucket.org/yujiewu/hgflow
     revision: hotfix/0.9.8.4
     dest: ~/.hgext/hgflow
-- name: install hg-git via pip
+- name: upgrade pip as user
+  pip:
+    name: pip
+    extra_args: --user --upgrade
+- name: install hg-git via pip as user
   pip:
     name: hg-git
+    extra_args: --user
 - name: symlink hgconfig directory
   file:
     path: ~/.hgconfig
