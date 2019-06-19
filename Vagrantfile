@@ -65,7 +65,7 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     yum update
-    yum install -y git mercurial hg-git
+    yum install -y git mercurial vim-enhanced ctags-etags unzip python-pip python-devel gcc
   SHELL
 
   # Run Ansible from the Vagrant VM
