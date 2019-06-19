@@ -1,5 +1,5 @@
 ---
 - hosts: all
   roles:
-    - { role: common, tags: hg }
+    - { role: hg, tags: hg }
     - { role: vim, tags: vim }
