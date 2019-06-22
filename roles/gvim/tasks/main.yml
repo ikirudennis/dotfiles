@@ -2,5 +2,5 @@
 - name: symlink .gvimrc
   file:
     path: ~/.gvimrc
-    src: "{{ansible_env.PWD}}/roles/vim/files/gvimrc"
+    src: "{{ansible_env.PWD}}/roles/gvim/files/gvimrc"
     state: link
