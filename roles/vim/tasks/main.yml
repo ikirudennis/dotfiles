@@ -13,3 +13,11 @@
     path: ~/.vimrc
     src: "{{ansible_env.PWD}}/roles/vim/files/vimrc"
     state: link
+- name: symlink .gvimrc
+  file:
+    path: ~/.gvimrc
+    src: "{{ansible_env.PWD}}/roles/vim/files/gvimrc"
+    state: link
+  tags:
+    - gvim
+    - gui
