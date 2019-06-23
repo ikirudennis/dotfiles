@@ -1,0 +1,6 @@
+---
+- name: symlink .zshrc
+  file:
+    path: ~/.zshrc
+    src: "{{ansible_env.PWD}}/roles/zsh/files/zshrc"
+    state: link
