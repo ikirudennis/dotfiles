@@ -34,7 +34,7 @@ elseif has("win32")
 	set gfn=FuraMonoForPowerline_NF:h11:cANSI:qDRAFT
 else
 	" fallback
-	set gfn=FuraMono\ NF\ 10
+	set gfn=FuraMonoForPowerline\ Nerd\ Font\ 11
 	set linespace=-2
 endif
 
