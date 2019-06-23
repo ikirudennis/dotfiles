@@ -12,7 +12,6 @@ hggit =
 color = 
 mq = 
 progress = 
-hgk = 
 fetch = 
 pager = 
 record = 
@@ -52,9 +51,6 @@ diff.trailingwhitespace = white_background
 cm = commit -m
 
 %include ~/.hgconfig/hostfingerprints
-
-[hgk]
-path=~/.hgext/hgk
 
 [pager]
 pager = LESS="R" less
