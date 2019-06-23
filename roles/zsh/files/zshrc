@@ -57,8 +57,6 @@ setopt append_history
 setopt extended_history
 setopt share_history
 
-eval "`npm completion`"
-
 # define colors used by less
 if [[ "$terminfo[colors]" -eq 256 ]]; then
     # this is for advanced terminals that use 256 colors
@@ -150,6 +148,3 @@ eval "`pip completion --zsh`"
 if [[ -s $HOME/.zshrc_after ]] ; then
     source $HOME/.zshrc_after ;
 fi
-
-# added by Pew
-source $(pew shell_config)
