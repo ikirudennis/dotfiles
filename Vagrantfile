@@ -66,8 +66,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     yum --enablerepo=extras install -y epel-release
     yum update
-    yum install -y git mercurial vim-enhanced ctags-etags unzip python-devel gcc
-    yum install -y python-pip 
+    yum install -y git mercurial vim-enhanced ctags-etags unzip python-devel gcc zsh
+    yum install -y python-pip
+    chsh -s $(which zsh) vagrant
   SHELL
 
   # Run Ansible from the Vagrant VM
