@@ -24,9 +24,9 @@ set gtl=%t\ %m gtt=%F
 " ----------------------------------------------------------------------------
 if has("gui_macvim")
 	" transparency
-	set transparency=3
+	set transparency=1
 	" a better font...
-	set gfn=FuraMonoForPowerline\ Nerd\ Font:h14
+	set gfn=FuraMonoNerdFontComplete-Regular:h14
 	" formatoptions j is only available in macvim
 	set formatoptions+=j
 elseif has("win32")
