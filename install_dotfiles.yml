@@ -4,3 +4,4 @@
     - { role: zsh, tags: zsh }
     - { role: hg, tags: hg }
     - { role: vim, tags: vim }
+    - { role: tmux, tags: tmux }
