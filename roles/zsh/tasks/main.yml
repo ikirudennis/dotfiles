@@ -13,7 +13,11 @@
   file:
     path: ~/.zshrc_private
     state: touch
+    access_time: preserve
+    modification_time: preserve
 - name: touch .zshrc_after
   file:
     path: ~/.zshrc_after
     state: touch
+    access_time: preserve
+    modification_time: preserve
