@@ -4,6 +4,10 @@
     path: ~/.zshrc
     src: "{{ ansible_env.PWD }}/roles/zsh/files/zshrc"
     state: link
+- name: create .dotfiles_version.zsh from template
+  template:
+    src: dotfiles_version.zsh.j2
+    dest: ~/.zshrc_dotfiles_version
 - name: symlink .zshrc_local
   file:
     path: ~/.zshrc_local
