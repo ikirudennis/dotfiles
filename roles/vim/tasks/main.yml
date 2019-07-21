@@ -6,12 +6,12 @@
 - name: symlink .vim directory
   file:
     path: ~/.vim
-    src: "{{ansible_env.PWD}}/roles/vim/files/vim"
+    src: "{{ ansible_env.PWD }}/roles/vim/files/vim"
     state: link
 - name: symlink .vimrc
   file:
     path: ~/.vimrc
-    src: "{{ansible_env.PWD}}/roles/vim/files/vimrc"
+    src: "{{ ansible_env.PWD }}/roles/vim/files/vimrc"
     state: link
 - name: create ~/.vim/after/plugin directory
   file:
@@ -20,7 +20,7 @@
 - name: symlink .gvimrc
   file:
     path: ~/.gvimrc
-    src: "{{ansible_env.PWD}}/roles/vim/files/gvimrc"
+    src: "{{ ansible_env.PWD }}/roles/vim/files/gvimrc"
     state: link
   tags:
     - gvim
