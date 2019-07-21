@@ -1,0 +1,24 @@
+---
+- name: install hgflow plugin
+  hg:
+    repo: https://bitbucket.org/yujiewu/hgflow
+    revision: hotfix/0.9.8.4
+    dest: ~/.hgext/hgflow
+- name: upgrade pip as user
+  pip:
+    name: pip
+    extra_args: --user --upgrade
+- name: install hg-git via pip as user
+  pip:
+    name: hg-git
+    extra_args: --user
+- name: symlink hgconfig directory
+  file:
+    path: ~/.hgconfig
+    src: "{{ ansible_env.PWD }}/roles/hg/files/hgconfig"
+    state: link
+- name: symlink hgrc file
+  file:
+    path: ~/.hgrc
+    src: "{{ ansible_env.PWD }}/roles/hg/files/hgrc"
+    state: link
