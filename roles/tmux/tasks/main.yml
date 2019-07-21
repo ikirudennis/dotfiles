@@ -2,10 +2,10 @@
 - name: symlink .tmux directory
   file:
     path: ~/.tmux
-    src: "{{ansible_env.PWD}}/roles/tmux/files/tmux"
+    src: "{{ ansible_env.PWD }}/roles/tmux/files/tmux"
     state: link
 - name: symlink .tmux.conf
   file:
     path: ~/.tmux.conf
-    src: "{{ansible_env.PWD}}/roles/tmux/files/tmux.conf"
+    src: "{{ ansible_env.PWD }}/roles/tmux/files/tmux.conf"
     state: link

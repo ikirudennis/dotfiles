@@ -2,12 +2,12 @@
 - name: symlink .zshrc
   file:
     path: ~/.zshrc
-    src: "{{ansible_env.PWD}}/roles/zsh/files/zshrc"
+    src: "{{ ansible_env.PWD }}/roles/zsh/files/zshrc"
     state: link
 - name: symlink .zshrc_local
   file:
     path: ~/.zshrc_local
-    src: "{{ansible_env.PWD}}/roles/zsh/files/{{ansible_distribution}}.zshrc"
+    src: "{{ ansible_env.PWD }}/roles/zsh/files/{{ ansible_distribution }}.zshrc"
     state: link
 - name: touch .zshrc_private
   file:

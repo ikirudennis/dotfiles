@@ -15,10 +15,10 @@
 - name: symlink hgconfig directory
   file:
     path: ~/.hgconfig
-    src: "{{ansible_env.PWD}}/roles/hg/files/hgconfig"
+    src: "{{ ansible_env.PWD }}/roles/hg/files/hgconfig"
     state: link
 - name: symlink hgrc file
   file:
     path: ~/.hgrc
-    src: "{{ansible_env.PWD}}/roles/hg/files/hgrc"
+    src: "{{ ansible_env.PWD }}/roles/hg/files/hgrc"
     state: link
