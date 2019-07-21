@@ -1,0 +1,24 @@
+[user]
+	name = Dennis Burke
+	email = dennisburke@prodigy.net
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	cm = commit -m
+	ca = commit -a -m
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[github]
+	user = ikirudennis
+[push]
+	default = simple
+[include]
+	path = ~/.gitconfig_local

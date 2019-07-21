@@ -1,0 +1,27 @@
+---
+- name: create vim_run directory
+  file:
+    path: ~/.vim_run
+    state: directory
+- name: symlink .vim directory
+  file:
+    path: ~/.vim
+    src: "{{ ansible_env.PWD }}/roles/vim/files/vim"
+    state: link
+- name: symlink .vimrc
+  file:
+    path: ~/.vimrc
+    src: "{{ ansible_env.PWD }}/roles/vim/files/vimrc"
+    state: link
+- name: create ~/.vim/after/plugin directory
+  file:
+    path: ~/.vim/after/plugin
+    state: directory
+- name: symlink .gvimrc
+  file:
+    path: ~/.gvimrc
+    src: "{{ ansible_env.PWD }}/roles/vim/files/gvimrc"
+    state: link
+  tags:
+    - gvim
+    - gui

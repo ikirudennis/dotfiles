@@ -1,0 +1,62 @@
+[ui]
+editor = vim
+username = dburke <dennisburke@prodigy.net>
+ignore = ~/.hgconfig/.hgignore
+
+[extensions]
+#hgpunchcard = ~/.hgext/hgpunchcard.py
+flow = ~/.hgext/hgflow/src/hgflow.py
+hgext.schemes = 
+highlight=
+hggit = 
+color = 
+mq = 
+progress = 
+fetch = 
+pager = 
+record = 
+shelve = 
+
+[merge-tools]
+macvim.executable = /Applications/Vim/mvim
+macvim.args = -f $base $local $other $output -c 'SpliceInit'
+macvim.premerge = keep
+macvim.priority = 1
+macvim.gui = true
+
+vim.executable = gvim
+vim.args = -f $base $local $other $output -c 'SpliceInit'
+vim.premerge = keep
+vim.priority = 1
+vim.gui = true
+
+[color]
+status.modified = cyan
+status.added = green
+status.removed = red
+status.deleted = yellow bold underline
+status.unknown = magenta bold underline
+status.ignored = black bold
+diff.diffline = none
+diff.extended = cyan
+diff.file_a = red
+diff.file_b = green
+diff.hunk = yellow bold
+diff.deleted = red
+diff.inserted = green
+diff.changed = white
+diff.trailingwhitespace = white_background
+
+[alias]
+cm = commit -m
+
+%include ~/.hgconfig/hostfingerprints
+
+[pager]
+pager = LESS="R" less
+
+[web]
+pygments_style = murphy
+
+[flow]
+autoshelve = yes

@@ -1,0 +1,27 @@
+---
+- name: symlink .zshrc
+  file:
+    path: ~/.zshrc
+    src: "{{ ansible_env.PWD }}/roles/zsh/files/zshrc"
+    state: link
+- name: create .dotfiles_version.zsh from template
+  template:
+    src: dotfiles_version.zsh.j2
+    dest: ~/.zshrc_dotfiles_version
+- name: symlink .zshrc_local
+  file:
+    path: ~/.zshrc_local
+    src: "{{ ansible_env.PWD }}/roles/zsh/files/{{ ansible_distribution }}.zshrc"
+    state: link
+- name: touch .zshrc_private
+  file:
+    path: ~/.zshrc_private
+    state: touch
+    access_time: preserve
+    modification_time: preserve
+- name: touch .zshrc_after
+  file:
+    path: ~/.zshrc_after
+    state: touch
+    access_time: preserve
+    modification_time: preserve

@@ -1,0 +1,17 @@
+---
+- name: symlink .gitconfig
+  file:
+    path: ~/.gitconfig
+    src: "{{ ansible_env.PWD }}/roles/git/files/gitconfig"
+    state: link
+- name: symlink .gitignore
+  file:
+    path: ~/.gitignore
+    src: "{{ ansible_env.PWD }}/roles/git/files/gitignore"
+    state: link
+- name: touch .gitconfig_local
+  file:
+    path: ~/.gitconfig_local
+    state: touch
+    access_time: preserve
+    modification_time: preserve
