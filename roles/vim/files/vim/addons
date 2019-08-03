@@ -1,3 +1,4 @@
+'ack'
 'closetag'
 'dbext'
 'easytags'
@@ -5,7 +6,6 @@
 'github:ikirudennis/vim-scratch'
 'github:jistr/vim-nerdtree-tabs'
 'github:jnurmine/Zenburn'
-'github:mileszs/ack.vim'
 'Gundo'
 'hg:http://bitbucket.org/dburke/vim-autocomplpop'
 'hg:http://bitbucket.org/dburke/vim-l9'
