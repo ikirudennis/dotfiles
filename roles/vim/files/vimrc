@@ -2,27 +2,32 @@
 " i. Setup
 " ----------------------------------------------------------------------------
 
-source $HOME/.vim/addons.vim
-
 " VAM is a slightly neater way of setting up vim plugins.  Vundle and the like
 " make it easy to use up-to-date versions of plugins, but don't allow for
 " mercurial repos.  The documentation for VAM kind of sucks, but I've at least
 " got this working, and this will mean a lot fewer sub-repos.
-fun! SetupVAM(addons)
+fun! SetupVAM()
   let c = get(g:, 'vim_addon_manager', {})
+  let g:vim_addon_manager = c
   let c.plugin_root_dir = expand('$HOME', 1) . '/.vim/vim-addons'
-  let c.log_to_buf = 0
+
+  " Force your ~/.vim/after directory to be last in &rtp always:
+  let g:vim_addon_manager.rtp_list_hook = 'vam#ForceUsersAfterDirectoriesToBeLast'
+
+  " most used options you may want to use:
+  let c.log_to_buf = 1
   let c.auto_install = 1
   let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
   if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
-    let cmd = '/usr/bin/git clone --depth=1 git://github.com/MarcWeber/vim-addon-manager '
-    let cmd .= shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
-    call system(cmd)
+    execute '!git clone --depth=1 git://github.com/MarcWeber/vim-addon-manager '
+        \       shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
   endif
-  call vam#ActivateAddons(a:addons, {'auto_install' : 1})
-endfun
 
-call SetupVAM(g:my_addons)
+  " This provides the VAMActivate command, you could be passing plugin names, too
+  call vam#ActivateAddons([], {})
+endfun
+call SetupVAM()
+call vam#Scripts(expand('$HOME', 1) . '/.vim/addons', {'tag_regex': '.*'})
 
 " Oh, windows. Must you always be such a pain in the ass?
 if has('win32') || has('win64')
