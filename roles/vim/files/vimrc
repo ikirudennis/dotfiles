@@ -16,6 +16,7 @@ fun! SetupVAM()
 
   " most used options you may want to use:
   let c.log_to_buf = 1
+  let c.log_buffer_name = expand('$HOME', 1) . '/.vim_run/VAM_LOG.txt'
   let c.auto_install = 1
   let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
   if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
