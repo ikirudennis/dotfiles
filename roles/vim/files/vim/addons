@@ -3,6 +3,7 @@
 'closetag'
 'dbext'
 'easytags'
+'fugitive'
 'github:ctrlpvim/ctrlp.vim'
 'github:ikirudennis/vim-scratch'
 'github:jistr/vim-nerdtree-tabs'
