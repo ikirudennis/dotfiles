@@ -1,0 +1,3 @@
+roles/vim/files/vim/vim-addons
+roles/vim/files/vim/after/plugin/
+.vagrant
