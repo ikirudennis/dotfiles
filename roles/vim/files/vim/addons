@@ -9,8 +9,6 @@
 'github:jistr/vim-nerdtree-tabs'
 'github:jnurmine/Zenburn'
 'Gundo'
-'hg:http://bitbucket.org/dburke/vim-autocomplpop'
-'hg:http://bitbucket.org/dburke/vim-l9'
 'lightline'
 'rainbow_parentheses'
 'repeat'
