@@ -1,8 +1,8 @@
 ---
 - name: install hgflow plugin
   hg:
-    repo: https://bitbucket.org/yujiewu/hgflow
-    revision: hotfix/0.9.8.4
+    repo: https://hg.sr.ht/~wu/hgflow
+    revision: develop
     dest: ~/.hgext/hgflow
 - name: upgrade pip as user
   pip:
