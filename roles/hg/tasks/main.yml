@@ -1,13 +1,15 @@
 ---
+- name: upgrade pip and mercurial as user
+  pip:
+    name:
+      - pip
+      - mercurial
+    extra_args: --user --upgrade
 - name: install hgflow plugin
   hg:
     repo: https://hg.sr.ht/~wu/hgflow
     revision: develop
     dest: ~/.hgext/hgflow
-- name: upgrade pip as user
-  pip:
-    name: pip
-    extra_args: --user --upgrade
 - name: install hg-git via pip as user
   pip:
     name: hg-git
