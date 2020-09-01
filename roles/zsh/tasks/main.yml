@@ -8,6 +8,7 @@
   template:
     src: dotfiles_version.zsh.j2
     dest: ~/.zshrc_dotfiles_version
+    mode: 0664
 - name: symlink .zshrc_local
   file:
     path: ~/.zshrc_local
@@ -17,11 +18,13 @@
   file:
     path: ~/.zshrc_private
     state: touch
+    mode: 0664
     access_time: preserve
     modification_time: preserve
 - name: touch .zshrc_after
   file:
     path: ~/.zshrc_after
     state: touch
+    mode: 0664
     access_time: preserve
     modification_time: preserve
