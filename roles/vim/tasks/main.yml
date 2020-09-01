@@ -3,6 +3,7 @@
   file:
     path: ~/.vim_run
     state: directory
+    mode: 0775
 - name: symlink .vim directory
   file:
     path: ~/.vim
@@ -17,6 +18,7 @@
   file:
     path: ~/.vim/after/plugin
     state: directory
+    mode: 0775
 - name: symlink .gvimrc
   file:
     path: ~/.gvimrc
