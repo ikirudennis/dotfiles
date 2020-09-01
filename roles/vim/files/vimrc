@@ -215,6 +215,9 @@ function! LightlineFileformat()
   return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 
+let g:zenburn_italic_Comment=1
+let g:zenburn_enable_TagHighlight=1
+
 " ----------------------------------------------------------------------------
 " v. Custom commands
 " ----------------------------------------------------------------------------
