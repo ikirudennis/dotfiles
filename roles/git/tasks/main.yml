@@ -13,5 +13,6 @@
   file:
     path: ~/.gitconfig_local
     state: touch
+    mode: 0664
     access_time: preserve
     modification_time: preserve
