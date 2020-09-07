@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "centos/7"
+  config.vm.box = "centos/8"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -64,10 +64,10 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    yum --enablerepo=extras install -y epel-release
-    yum update
-    yum install -y git mercurial vim-enhanced ctags-etags unzip python-devel gcc zsh
-    yum install -y python-pip
+    dnf --enablerepo=extras install -y epel-release
+    dnf update
+    dnf install -y git mercurial vim-enhanced ctags unzip python36-devel gcc zsh util-linux-user \
+        python3-pip
     chsh -s $(which zsh) vagrant
   SHELL
 
@@ -77,5 +77,11 @@ Vagrant.configure("2") do |config|
     ansible.verbose = true
     ansible.install = true
     ansible.limit = "all"
+  end
+  config.vm.define :dotfiles do |dotfiles|
+    dotfiles.vm.network :public_network,
+      :dev => "virbr0",
+      :mode => "bridge",
+      :type => "bridge"
   end
 end
