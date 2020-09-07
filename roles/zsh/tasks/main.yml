@@ -28,3 +28,12 @@
     mode: 0664
     access_time: preserve
     modification_time: preserve
+- name: create ~/.zsh/func directory
+  file:
+    path: ~/.zsh/func
+    state: directory
+    mode: 0744
+- name: clone zsh-completions repo
+  git:
+    repo: https://github.com/zsh-users/zsh-completions.git
+    dest: ~/.zsh/zsh-completions
