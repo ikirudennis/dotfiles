@@ -20,9 +20,5 @@
   git:
     repo: https://github.com/petervanderdoes/gitflow-avh.git
     dest: ~/.cache/dburke/gitflow-avh
-  register: gitflow_repo
-- name: run installer # noqa 301 305
-  shell:
-    cmd: "PREFIX=~/.local REPO_NAME=../gitflow-avh sh ./contrib/gitflow-installer.sh install stable"
-    chdir: ~/.cache/dburke/gitflow-avh
-  when: gitflow_repo.changed
+    version: master
+  notify: run gitflow installer

@@ -1,2 +1,5 @@
 ---
-# handlers file for git
+- name: run gitflow installer # noqa 301 305
+  shell:
+    cmd: "PREFIX=~/.local REPO_NAME=../gitflow-avh sh ./contrib/gitflow-installer.sh install stable"
+    chdir: ~/.cache/dburke/gitflow-avh
