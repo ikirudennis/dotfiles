@@ -37,3 +37,4 @@
   git:
     repo: https://github.com/zsh-users/zsh-completions.git
     dest: ~/.zsh/zsh-completions
+    version: master
