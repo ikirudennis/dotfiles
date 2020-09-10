@@ -45,3 +45,11 @@ set guioptions-=T
 " 13 selecting text
 " ----------------------------------------------------------------------------
 set clipboard=unnamed
+
+" ----------------------------------------------------------------------------
+" 22 executing external commands
+" ----------------------------------------------------------------------------
+" in gvim, shell commands are not executed in an interactive shell by default,
+" so my $PATH and other zsh customizations are not included by default.
+" setting this to "-ic" makes the terminal interactive and solves the problem.
+set shellcmdflag=-ic
