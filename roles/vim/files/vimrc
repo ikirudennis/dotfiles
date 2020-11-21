@@ -221,14 +221,9 @@ let g:zenburn_enable_TagHighlight=1
 " ----------------------------------------------------------------------------
 " v. Custom commands
 " ----------------------------------------------------------------------------
-function! Helptab(search)
-	" open help file related to the argument in a new tab which is the only
-	" window in that tab
-	exec ':tabnew +:h\ '. a:search .' | only'
-endfunction
-" define a command ':H' which calls the function defined above.
-" completion for this command with be use arguments available to help.
-command! -complete=help -nargs=1 H call Helptab(<q-args>)
+" define a command ':H' which will open a help file in a new tab. completion
+" will use the same arguments available to a normal `:help` command
+command! -complete=help -nargs=1 H tab help <args>
 
 " ----------------------------------------------------------------------------
 " 1 important
