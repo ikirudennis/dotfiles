@@ -24,3 +24,5 @@
 	path = ~/.gitconfig_local
 [pull]
 	rebase = false
+[instaweb]
+    browser = xdg-open
