@@ -45,6 +45,12 @@ if &term =~ '256color'
    set t_ut=
 endif
 
+" Tell the `gx` command to use `xdg-open` to open urls, and files and things
+" in linux environments
+if has('linux')
+	let g:netrw_browsex_viewer="xdg-open"
+endif
+
 " ----------------------------------------------------------------------------
 " ii. Shortcuts
 " ----------------------------------------------------------------------------
