@@ -24,6 +24,7 @@
 'unimpaired'
 'vim-orgmode'
 'vim-snippets'
+'vim-terraform'
 'vim-webdevicons'
 'virtualenv'
 'xml'
