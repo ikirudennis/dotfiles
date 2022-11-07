@@ -1,5 +1,5 @@
 ---
-- name: run gitflow installer # noqa 301 305
+- name: Run gitflow installer  # noqa no-changed-when command-instead-of-shell
   shell:
     cmd: "PREFIX=~/.local REPO_NAME=../gitflow-avh sh ./contrib/gitflow-installer.sh install stable"
     chdir: ~/.cache/dburke/gitflow-avh
