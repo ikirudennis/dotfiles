@@ -1,26 +1,26 @@
 ---
 - name: create vim_run directory
-  file:
+  ansible.builtin.file:
     path: ~/.vim_run
     state: directory
     mode: 0775
 - name: symlink .vim directory
-  file:
+  ansible.builtin.file:
     path: ~/.vim
     src: "{{ ansible_env.PWD }}/roles/vim/files/vim"
     state: link
 - name: symlink .vimrc
-  file:
+  ansible.builtin.file:
     path: ~/.vimrc
     src: "{{ ansible_env.PWD }}/roles/vim/files/vimrc"
     state: link
 - name: create ~/.vim/after/plugin directory
-  file:
+  ansible.builtin.file:
     path: ~/.vim/after/plugin
     state: directory
     mode: 0775
 - name: symlink .gvimrc
-  file:
+  ansible.builtin.file:
     path: ~/.gvimrc
     src: "{{ ansible_env.PWD }}/roles/vim/files/gvimrc"
     state: link

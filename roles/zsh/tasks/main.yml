@@ -1,40 +1,40 @@
 ---
 - name: symlink .zshrc
-  file:
+  ansible.builtin.file:
     path: ~/.zshrc
     src: "{{ ansible_env.PWD }}/roles/zsh/files/zshrc"
     state: link
 - name: create .dotfiles_version.zsh from template
-  template:
+  ansible.builtin.template:
     src: dotfiles_version.zsh.j2
     dest: ~/.zshrc_dotfiles_version
     mode: 0664
 - name: symlink .zshrc_local
-  file:
+  ansible.builtin.file:
     path: ~/.zshrc_local
     src: "{{ ansible_env.PWD }}/roles/zsh/files/{{ ansible_distribution }}.zshrc"
     state: link
 - name: touch .zshrc_private
-  file:
+  ansible.builtin.file:
     path: ~/.zshrc_private
     state: touch
     mode: 0664
     access_time: preserve
     modification_time: preserve
 - name: touch .zshrc_after
-  file:
+  ansible.builtin.file:
     path: ~/.zshrc_after
     state: touch
     mode: 0664
     access_time: preserve
     modification_time: preserve
 - name: create ~/.zsh/func directory
-  file:
+  ansible.builtin.file:
     path: ~/.zsh/func
     state: directory
     mode: 0744
 - name: clone zsh-completions repo
-  git:
+  ansible.builtin.git:
     repo: https://github.com/zsh-users/zsh-completions.git
     dest: ~/.zsh/zsh-completions
     version: master
