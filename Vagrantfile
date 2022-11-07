@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "centos/8"
+  config.vm.box = "generic/fedora36"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -67,9 +67,8 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    dnf --enablerepo=extras install -y epel-release
-    dnf update
-    dnf install -y git mercurial vim-enhanced ctags unzip python36-devel gcc zsh util-linux-user \
+    dnf -y update
+    dnf -y install git mercurial vim-enhanced ctags unzip python3-devel gcc zsh util-linux-user \
         python3-pip
     chsh -s $(which zsh) vagrant
   SHELL
