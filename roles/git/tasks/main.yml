@@ -1,23 +1,23 @@
 ---
 - name: symlink .gitconfig
-  file:
+  ansible.builtin.file:
     path: ~/.gitconfig
     src: "{{ ansible_env.PWD }}/roles/git/files/gitconfig"
     state: link
 - name: symlink .gitignore
-  file:
+  ansible.builtin.file:
     path: ~/.gitignore
     src: "{{ ansible_env.PWD }}/roles/git/files/gitignore"
     state: link
 - name: touch .gitconfig_local
-  file:
+  ansible.builtin.file:
     path: ~/.gitconfig_local
     state: touch
     mode: 0664
     access_time: preserve
     modification_time: preserve
 - name: clone gitflow repo
-  git:
+  ansible.builtin.git:
     repo: https://github.com/petervanderdoes/gitflow-avh.git
     dest: ~/.cache/dburke/gitflow-avh
     version: master
