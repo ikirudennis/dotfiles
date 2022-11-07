@@ -33,6 +33,7 @@ Vagrant.configure("2") do |config|
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", type: "dhcp"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -80,11 +81,5 @@ Vagrant.configure("2") do |config|
     ansible.verbose = true
     ansible.install = true
     ansible.limit = "all"
-  end
-  config.vm.define :dotfiles do |dotfiles|
-    dotfiles.vm.network :public_network,
-      :dev => "virbr0",
-      :mode => "bridge",
-      :type => "bridge"
   end
 end
