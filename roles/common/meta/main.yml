@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Dennis Burke
-  description: Tasks common to all roles. (Nothing here yet, actually.)
+  description: Tasks common to all roles.
   # company: your company (optional)
 
   # If the issue tracker for your role is not on github, uncomment the

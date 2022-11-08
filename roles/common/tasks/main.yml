@@ -1,1 +1,6 @@
 ---
+- name: upgrade pip as user
+  ansible.builtin.pip:
+    name:
+      - pip
+    extra_args: --user --upgrade

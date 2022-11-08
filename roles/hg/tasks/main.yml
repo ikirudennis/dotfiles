@@ -1,8 +1,7 @@
 ---
-- name: upgrade pip and mercurial as user
+- name: upgrade mercurial as user
   ansible.builtin.pip:
     name:
-      - pip
       - mercurial
     extra_args: --user --upgrade
 - name: install hgflow plugin
