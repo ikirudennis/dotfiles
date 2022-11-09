@@ -1,5 +1,5 @@
 ---
-- name: update existing packages
+- name: update existing packages  # noqa package-latest
   ansible.builtin.dnf:
     name: "*"
     state: latest

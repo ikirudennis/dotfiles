@@ -1,5 +1,5 @@
 ---
-- name: "do {{ ansible_distribution }}-specific tasks"
+- name: "do OS-specific tasks: {{ ansible_distribution }}"
   ansible.builtin.include_tasks: "{{ item }}"
   with_first_found:
     - files:
