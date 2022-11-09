@@ -68,12 +68,9 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", inline: <<-SHELL
-    dnf -y update
-    dnf -y install git mercurial vim-enhanced ctags unzip python3-devel gcc zsh util-linux-user \
-        python3-pip
-    chsh -s $(which zsh) vagrant
-  SHELL
+  #config.vm.provision "shell", inline: <<-SHELL
+    # insert shell provisioning commands here
+  #SHELL
 
   # Run Ansible from the Vagrant VM
   config.vm.provision :ansible_local do |ansible|

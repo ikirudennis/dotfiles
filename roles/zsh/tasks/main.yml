@@ -1,4 +1,9 @@
 ---
+- name: change default shell to zsh
+  ansible.builtin.user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/bin/zsh
+  become: true
 - name: symlink .zshrc
   ansible.builtin.file:
     path: ~/.zshrc

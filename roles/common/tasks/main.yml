@@ -1,4 +1,11 @@
 ---
+- name: "do {{ ansible_distribution }}-specific tasks"
+  ansible.builtin.include_tasks: "{{ item }}"
+  with_first_found:
+    - files:
+        - "{{ ansible_distribution }}.yml"
+      skip: true
+
 - name: upgrade pip as user
   ansible.builtin.pip:
     name:
