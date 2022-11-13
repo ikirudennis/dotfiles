@@ -6,5 +6,5 @@
   become: true
 - name: install dotfiles-specific dnf packages
   ansible.builtin.dnf:
-    name: "{{ fedora_pkgs }}"
+    name: "{{ pkgs }}"
   become: true

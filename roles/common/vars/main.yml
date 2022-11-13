@@ -1,12 +1,2 @@
 ---
-fedora_pkgs:
-  - ctags
-  - gcc
-  - git
-  - mercurial
-  - python3-devel
-  - python3-pip
-  - unzip
-  - util-linux-user
-  - vim-enhanced
-  - zsh
+# vars file for common
