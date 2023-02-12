@@ -4,6 +4,10 @@
     path: ~/.tmux
     src: "{{ ansible_env.PWD }}/roles/tmux/files/tmux"
     state: link
+- name: create tmux cache dir to hold history file
+  ansible.builtin.file:
+    path: ~/.cache/tmux
+    state: directory
 - name: symlink .tmux.conf
   ansible.builtin.file:
     path: ~/.tmux.conf
