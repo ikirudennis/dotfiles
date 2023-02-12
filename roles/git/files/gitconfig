@@ -26,3 +26,5 @@
 	rebase = false
 [instaweb]
     browser = xdg-open
+[init]
+	defaultBranch = main
