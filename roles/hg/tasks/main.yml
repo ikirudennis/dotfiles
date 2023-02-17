@@ -5,7 +5,7 @@
       - mercurial
     extra_args: --user --upgrade
 - name: install hgflow plugin
-  community.general.source_control.hg:
+  community.general.hg:
     repo: https://hg.sr.ht/~wu/hgflow
     revision: develop
     dest: ~/.hgext/hgflow
