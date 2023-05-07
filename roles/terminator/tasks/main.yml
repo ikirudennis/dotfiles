@@ -1,4 +1,9 @@
 ---
+- name: ensure the terminator config directory exists
+  ansible.builtin.file:
+    path: ~/.config/terminator
+    state: directory
+    mode: "0755"
 - name: symlink terminator config
   ansible.builtin.file:
     path: ~/.config/terminator/config
