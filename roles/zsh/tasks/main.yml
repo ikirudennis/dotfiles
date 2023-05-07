@@ -2,7 +2,8 @@
 - name: change default shell to zsh
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
-    shell: "{% if ansible_distribution == 'MacOSX' %}/bin/zsh{% else %}/usr/bin/zsh{% endif %}"
+    shell: "{% if ansible_distribution == 'MacOSX' %}/bin/zsh{%
+               else %}/usr/bin/zsh{% endif %}"
   become: true
 - name: symlink .zshrc
   ansible.builtin.file:
@@ -17,6 +18,7 @@
 - name: symlink .zshrc_local
   ansible.builtin.file:
     path: ~/.zshrc_local
+    # yamllint disable-line rule:line-length
     src: "{{ ansible_env.PWD }}/roles/zsh/files/{{ ansible_distribution }}.zshrc"
     state: link
 - name: touch .zshrc_private
