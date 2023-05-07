@@ -1,0 +1,7 @@
+---
+- name: symlink terminator config
+  ansible.builtin.file:
+    path: ~/.config/terminator/config
+    src: "{{ ansible_env.PWD }}/roles/terminator/files/config"
+    state: link
+    mode: "0644"
