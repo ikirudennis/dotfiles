@@ -13,7 +13,7 @@
   ansible.builtin.template:
     src: dotfiles_version.zsh.j2
     dest: ~/.zshrc_dotfiles_version
-    mode: 0664
+    mode: "0664"
 - name: symlink .zshrc_local
   ansible.builtin.file:
     path: ~/.zshrc_local
@@ -23,21 +23,21 @@
   ansible.builtin.file:
     path: ~/.zshrc_private
     state: touch
-    mode: 0664
+    mode: "0664"
     access_time: preserve
     modification_time: preserve
 - name: touch .zshrc_after
   ansible.builtin.file:
     path: ~/.zshrc_after
     state: touch
-    mode: 0664
+    mode: "0664"
     access_time: preserve
     modification_time: preserve
 - name: create ~/.zsh/func directory
   ansible.builtin.file:
     path: ~/.zsh/func
     state: directory
-    mode: 0744
+    mode: "0744"
 - name: clone zsh-completions repo
   ansible.builtin.git:
     repo: https://github.com/zsh-users/zsh-completions.git

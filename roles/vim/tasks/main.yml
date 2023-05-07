@@ -3,7 +3,7 @@
   ansible.builtin.file:
     path: ~/.vim_run
     state: directory
-    mode: 0775
+    mode: "0775"
 - name: symlink .vim directory
   ansible.builtin.file:
     path: ~/.vim
@@ -18,7 +18,7 @@
   ansible.builtin.file:
     path: ~/.vim/after/plugin
     state: directory
-    mode: 0775
+    mode: "0775"
 - name: symlink .gvimrc
   ansible.builtin.file:
     path: ~/.gvimrc
