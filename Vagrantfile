@@ -34,6 +34,7 @@ Vagrant.configure("2") do |config|
   # using a specific IP.
   # config.vm.network "private_network", ip: "192.168.33.10"
   config.vm.network "private_network", type: "dhcp"
+  config.vm.network "forwarded_port", guest: 8000, host: 8080
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
