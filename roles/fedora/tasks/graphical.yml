@@ -1,0 +1,5 @@
+---
+- name: install graphical packages
+  ansible.builtin.dnf:
+    name: "{{ graphical_pkgs }}"
+  become: true

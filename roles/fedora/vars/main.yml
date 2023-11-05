@@ -10,3 +10,13 @@ pkgs:
   - util-linux-user
   - vim-enhanced
   - zsh
+graphical_pkgs:
+  - Thunar
+  - blueman
+  - conky
+  - dmenu
+  - neovim-qt
+  - openbox
+  - vim-X11
+  - volumeicon
+  - xfce-polkit
