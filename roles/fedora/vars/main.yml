@@ -20,3 +20,4 @@ graphical_pkgs:
   - vim-X11
   - volumeicon
   - xfce-polkit
+  - xset
