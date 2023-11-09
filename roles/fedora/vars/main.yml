@@ -1,5 +1,5 @@
 ---
-pkgs:
+fedora_pkgs:
   - ctags
   - gcc
   - git
@@ -10,7 +10,7 @@ pkgs:
   - util-linux-user
   - vim-enhanced
   - zsh
-graphical_pkgs:
+fedora_graphical_pkgs:
   - Thunar
   - blueman
   - conky

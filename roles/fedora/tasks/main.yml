@@ -6,7 +6,7 @@
   become: true
 - name: install dotfiles-specific dnf packages
   ansible.builtin.dnf:
-    name: "{{ pkgs }}"
+    name: "{{ fedora_pkgs }}"
   become: true
 
 - name: check if we're running in a graphical environment

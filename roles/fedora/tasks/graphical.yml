@@ -1,5 +1,5 @@
 ---
 - name: install graphical packages
   ansible.builtin.dnf:
-    name: "{{ graphical_pkgs }}"
+    name: "{{ fedora_graphical_pkgs }}"
   become: true
