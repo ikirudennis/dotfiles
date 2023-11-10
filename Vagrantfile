@@ -76,8 +76,8 @@ Vagrant.configure("2") do |config|
   # Run Ansible from the Vagrant VM
   config.vm.provision :ansible_local do |ansible|
     ansible.playbook = "install_dotfiles.yml"
-    ansible.verbose = true
-    ansible.install = true
-    ansible.limit = "all"
+    #ansible.verbose = true
+    #ansible.install = true
+    #ansible.limit = "all"
   end
 end
