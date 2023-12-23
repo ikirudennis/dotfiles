@@ -1,0 +1,28 @@
+# Launch a panel such as yambar or waybar.
+waybar >/dev/null 2>&1 &
+
+# begin with a grey desktop
+swww init && swww clear 888888 &
+
+# start keyring on login
+/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh &
+
+thunar --daemon &
+
+# xfce-polkit allows me to use pkexec to run gui apps as sudo. I'm not sure
+# why the existence of the below in /etc/xdg/autostart doesn't work.
+/usr/libexec/xfce-polkit &
+
+# run service to set dynamic desktop image
+systemctl start --user dburke_desktop_image.service &
+
+# run wayland's vnc program, wayvnc. Config file is in default location:
+# ~/.config/wayvnc/config
+wayvnc &
+
+# Lock screen after 5 minutes and turn off display after another 5 minutes
+swayidle -w \
+    timeout 300 'lock_screen' \
+    timeout 600 'wlopm --off \*' \
+    resume 'wlopm --on \*' \
+    before-sleep 'lock_screen' >/dev/null 2>&1 &

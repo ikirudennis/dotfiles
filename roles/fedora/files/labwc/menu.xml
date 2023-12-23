@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu>
+<!-- Note: for localization support of menu items "client-menu" has to be removed here -->
+<menu id="client-menu">
+  <!--
+    Any menu with the id "workspaces" will be hidden
+    if there is only a single workspace available.
+  -->
+  <menu id="workspaces" label="Send to Desktop">
+    <item label="1">
+      <action name="SendToDesktop" to="1" />
+    </item>
+    <item label="2">
+      <action name="SendToDesktop" to="2" />
+    </item>
+    <item label="3">
+      <action name="SendToDesktop" to="3" />
+    </item>
+    <item label="4">
+      <action name="SendToDesktop" to="4" />
+    </item>
+    <separator />
+    <item label="Toggle All Desktops">
+      <action name="ToggleOmnipresent" />
+    </item>
+  </menu>
+  <menu id="layer" label="Layer">
+    <item label="Always On Top">
+      <action name="ToggleAlwaysOnTop" />
+    </item>
+    <item label="Always On Bottom">
+      <action name="ToggleAlwaysOnBottom" />
+    </item>
+  </menu>
+  <item label="Minimize">
+    <action name="Iconify" />
+  </item>
+  <item label="Maximize">
+    <action name="ToggleMaximize" />
+  </item>
+  <item label="Fullscreen">
+    <action name="ToggleFullscreen" />
+  </item>
+  <item label="Decorations">
+    <action name="ToggleDecorations" />
+  </item>
+  <item label="Move">
+    <action name="Move" />
+  </item>
+  <item label="Resize">
+    <action name="Resize" />
+  </item>
+  <item label="Close">
+    <action name="Close" />
+  </item>
+</menu>
+
+<menu id="root-menu">
+  <menu id="applications" label="Applications">
+    <menu id="Accessories" label="Accessories" icon="/usr/share/icons/gnome/22x22/categories/applications-accessories.png">
+      <item label="AppImageLauncher Settings" icon="/usr/share/icons/hicolor/32x32/apps/AppImageLauncher.png">
+        <action name="Execute"><command>AppImageLauncherSettings</command></action>
+      </item>
+      <item label="Archive Manager">
+        <action name="Execute"><command>file-roller</command></action>
+      </item>
+      <item label="Bulk Rename" icon="/usr/share/icons/hicolor/48x48/apps/org.xfce.thunar.png">
+        <action name="Execute"><command>thunar --bulk-rename</command></action>
+      </item>
+      <item label="Calculator">
+        <action name="Execute"><command>gnome-calculator</command></action>
+      </item>
+      <item label="Catfish File Search" icon="/usr/share/icons/hicolor/48x48/apps/org.xfce.catfish.png">
+        <action name="Execute"><command>/usr/bin/catfish</command></action>
+      </item>
+      <item label="Characters">
+        <action name="Execute"><command>/usr/bin/gnome-characters</command></action>
+      </item>
+      <item label="Clocks">
+        <action name="Execute"><command>gnome-clocks</command></action>
+      </item>
+      <item label="Connections">
+        <action name="Execute"><command>gnome-connections</command></action>
+      </item>
+      <item label="Disks">
+        <action name="Execute"><command>gnome-disks</command></action>
+      </item>
+      <item label="Extensions">
+        <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/gnome-extensions-app org.gnome.Extensions --gapplication-service</command></action>
+      </item>
+      <item label="Files">
+        <action name="Execute"><command>nautilus --new-window</command></action>
+      </item>
+      <item label="Fonts">
+        <action name="Execute"><command>gnome-font-viewer</command></action>
+      </item>
+      <item label="gedit">
+        <action name="Execute"><command>gedit</command></action>
+      </item>
+      <item label="GVim" icon="/usr/share/icons/hicolor/32x32/apps/gvim.png">
+        <action name="Execute"><command>gvim -f</command></action>
+      </item>
+      <item label="Help">
+        <action name="Execute"><command>yelp</command></action>
+      </item>
+      <item label="Maps">
+        <action name="Execute"><command>gapplication launch org.gnome.Maps</command></action>
+      </item>
+      <item label="Neovim" icon="/usr/share/icons/hicolor/128x128/apps/nvim.png">
+        <action name="Execute"><command>xterm -title "Neovim" -e nvim</command></action>
+      </item>
+      <item label="Neovim-Qt" icon="/usr/share/icons/hicolor/192x192/apps/nvim-qt.png">
+        <action name="Execute"><command>nvim-qt --</command></action>
+      </item>
+      <item label="Parcellite" icon="/usr/share/icons/hicolor/22x22/apps/parcellite.png">
+        <action name="Execute"><command>parcellite</command></action>
+      </item>
+      <item label="Passwords and Keys">
+        <action name="Execute"><command>seahorse</command></action>
+      </item>
+      <item label="picom">
+        <action name="Execute"><command>picom</command></action>
+      </item>
+      <item label="Screenshot">
+        <action name="Execute"><command>gnome-screenshot --interactive</command></action>
+      </item>
+      <item label="Shutter" icon="/usr/share/icons/hicolor/22x22/apps/shutter.png">
+        <action name="Execute"><command>shutter</command></action>
+      </item>
+      <item label="Text Editor">
+        <action name="Execute"><command>gnome-text-editor</command></action>
+      </item>
+      <item label="Tour">
+        <action name="Execute"><command>gnome-tour</command></action>
+      </item>
+      <item label="Tweaks">
+        <action name="Execute"><command>gnome-tweaks</command></action>
+      </item>
+      <item label="Weather">
+        <action name="Execute"><command>gapplication launch org.gnome.Weather</command></action>
+      </item>
+      <item label="Xpad">
+        <action name="Execute"><command>xpad</command></action>
+      </item>
+    </menu>
+    <menu id="Chromium Apps" label="Chromium Apps" icon="/usr/share/icons/hicolor/24x24/apps/chromium-browser.png">
+      <item label="Google Chat" icon="/home/dburke/.local/share/icons/hicolor/32x32/apps/chrome-mdpkiolbdkhdjpekfbkbmhigcaggjagi-Default.png">
+        <action name="Execute"><command>/usr/lib64/chromium-browser/chromium-browser.sh --profile-directory=Default --app-id=mdpkiolbdkhdjpekfbkbmhigcaggjagi</command></action>
+      </item>
+      <item label="YouTube TV" icon="/home/dburke/.local/share/icons/hicolor/32x32/apps/chrome-nlmaamaoahjiilibgbafebhafkeccjac-Default.png">
+        <action name="Execute"><command>/usr/lib64/chromium-browser/chromium-browser.sh --profile-directory=Default --app-id=nlmaamaoahjiilibgbafebhafkeccjac</command></action>
+      </item>
+    </menu>
+    <menu id="Graphics" label="Graphics" icon="/usr/share/icons/gnome/22x22/categories/applications-graphics.png">
+      <item label="Document Scanner">
+        <action name="Execute"><command>simple-scan</command></action>
+      </item>
+      <item label="Document Viewer">
+        <action name="Execute"><command>evince</command></action>
+      </item>
+      <item label="Eye of GNOME">
+        <action name="Execute"><command>eog</command></action>
+      </item>
+      <item label="Flameshot" icon="/usr/share/icons/hicolor/48x48/apps/org.flameshot.Flameshot.png">
+        <action name="Execute"><command>flameshot</command></action>
+      </item>
+      <item label="GNU Image Manipulation Program" icon="/usr/share/icons/hicolor/22x22/apps/gimp.png">
+        <action name="Execute"><command>gimp-2.10</command></action>
+      </item>
+      <item label="Inkscape" icon="/usr/share/icons/hicolor/22x22/apps/org.inkscape.Inkscape.png">
+        <action name="Execute"><command>inkscape</command></action>
+      </item>
+      <item label="Photos">
+        <action name="Execute"><command>gnome-photos</command></action>
+      </item>
+    </menu>
+    <menu id="Internet" label="Internet" icon="/usr/share/icons/gnome/22x22/categories/applications-internet.png">
+      <item label="Chromium Web Browser" icon="/usr/share/icons/hicolor/24x24/apps/chromium-browser.png">
+        <action name="Execute"><command>/usr/bin/chromium-browser</command></action>
+      </item>
+      <item label="Connections">
+        <action name="Execute"><command>gnome-connections</command></action>
+      </item>
+      <item label="Firefox" icon="/usr/share/icons/hicolor/22x22/apps/firefox.png">
+        <action name="Execute"><command>firefox</command></action>
+      </item>
+      <item label="Firefox Beta" icon="/usr/share/icons/hicolor/22x22/apps/firefox.png">
+        <action name="Execute"><command>/opt/firefox/firefox</command></action>
+      </item>
+      <item label="Proton VPN">
+        <action name="Execute"><command>protonvpn-app</command></action>
+      </item>
+      <item label="Remmina" icon="/usr/share/icons/hicolor/22x22/apps/org.remmina.Remmina.png">
+        <action name="Execute"><command>remmina-file-wrapper</command></action>
+      </item>
+      <item label="Remote Viewer" icon="/usr/share/icons/hicolor/22x22/apps/virt-viewer.png">
+        <action name="Execute"><command>remote-viewer</command></action>
+      </item>
+    </menu>
+    <menu id="Office" label="Office" icon="/usr/share/icons/gnome/22x22/categories/applications-office.png">
+      <item label="Calendar">
+        <action name="Execute"><command>gnome-calendar</command></action>
+      </item>
+      <item label="Contacts">
+        <action name="Execute"><command>gnome-contacts</command></action>
+      </item>
+      <item label="Document Viewer">
+        <action name="Execute"><command>evince</command></action>
+      </item>
+      <item label="LibreOffice Calc" icon="/usr/share/icons/hicolor/24x24/apps/libreoffice-calc.png">
+        <action name="Execute"><command>libreoffice --calc</command></action>
+      </item>
+      <item label="LibreOffice Impress" icon="/usr/share/icons/hicolor/24x24/apps/libreoffice-impress.png">
+        <action name="Execute"><command>libreoffice --impress</command></action>
+      </item>
+      <item label="LibreOffice Writer" icon="/usr/share/icons/hicolor/24x24/apps/libreoffice-writer.png">
+        <action name="Execute"><command>libreoffice --writer</command></action>
+      </item>
+      <item label="Obsidian (1.4.16)" icon="/home/dburke/.local/share/icons/hicolor/32x32/apps/appimagekit_a2fbf7025130611fee06fb5ac951d4ca_obsidian.png">
+        <action name="Execute"><command>/home/dburke/.appimages/Obsidian-1.4.16_29d0c3bb9cc51aa534a708f223e88b9a.AppImage --no-sandbox</command></action>
+      </item>
+      </menu>
+      <menu id="Programming" label="Programming" icon="/usr/share/icons/gnome/22x22/categories/applications-development.png">
+        <item label="Beekeeper Studio" icon="/var/lib/snapd/snap/beekeeper-studio/226/meta/gui/icon.png">
+          <action name="Execute"><command>env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/beekeeper-studio_beekeeper-studio.desktop /var/lib/snapd/snap/bin/beekeeper-studio</command></action>
+        </item>
+        <item label="Git GUI" icon="/usr/share/git-gui/lib/git-gui.ico">
+          <action name="Execute"><command>git gui</command></action>
+        </item>
+        <item label="Podman Desktop" icon="/var/lib/flatpak/exports/share/icons/hicolor/32x32/apps/io.podman_desktop.PodmanDesktop.png">
+          <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=run.sh --file-forwarding io.podman_desktop.PodmanDesktop @@u @@</command></action>
+        </item>
+      </menu>
+      <menu id="Sound &amp; Video" label="Sound &amp; Video" icon="/usr/share/icons/gnome/22x22/categories/applications-multimedia.png">
+        <item label="Cheese">
+          <action name="Execute"><command>cheese</command></action>
+        </item>
+        <item label="Easy Effects">
+          <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=easyeffects com.github.wwmm.easyeffects</command></action>
+        </item>
+        <item label="mpv Media Player" icon="/usr/share/icons/hicolor/32x32/apps/mpv.png">
+          <action name="Execute"><command>mpv --player-operation-mode=pseudo-gui --</command></action>
+        </item>
+        <item label="OBS Studio" icon="/var/lib/flatpak/exports/share/icons/hicolor/256x256/apps/com.obsproject.Studio.png">
+          <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=obs com.obsproject.Studio</command></action>
+        </item>
+        <item label="Rhythmbox">
+          <action name="Execute"><command>rhythmbox</command></action>
+        </item>
+        <item label="Videos">
+          <action name="Execute"><command>totem</command></action>
+        </item>
+        <item label="VLC media player" icon="/usr/share/icons/hicolor/32x32/apps/vlc.png">
+          <action name="Execute"><command>/usr/bin/vlc --started-from-file</command></action>
+        </item>
+        <item label="YouTube Music Desktop App" icon="/var/lib/snapd/snap/youtube-music-desktop-app/6/meta/gui/icon.png">
+          <action name="Execute"><command>env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/youtube-music-desktop-app_youtube-music-desktop-app.desktop /var/lib/snapd/snap/bin/youtube-music-desktop-app</command></action>
+        </item>
+      </menu>
+      <menu id="System Tools" label="System Tools" icon="/usr/share/icons/gnome/22x22/categories/applications-system.png">
+        <item label="conky">
+          <action name="Execute"><command>conky --daemonize --pause=1</command></action>
+        </item>
+        <item label="dconf Editor">
+          <action name="Execute"><command>dconf-editor</command></action>
+        </item>
+        <item label="Disk Usage Analyzer">
+          <action name="Execute"><command>baobab</command></action>
+        </item>
+        <item label="Fedora Media Writer" icon="/usr/share/icons/hicolor/22x22/apps/org.fedoraproject.MediaWriter.png">
+          <action name="Execute"><command>mediawriter</command></action>
+        </item>
+        <item label="Foot" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+          <action name="Execute"><command>foot</command></action>
+        </item>
+        <item label="Foot Client" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+          <action name="Execute"><command>footclient</command></action>
+        </item>
+        <item label="Foot Server" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+          <action name="Execute"><command>foot --server</command></action>
+        </item>
+        <item label="GParted" icon="/usr/share/icons/hicolor/22x22/apps/gparted.png">
+          <action name="Execute"><command>/usr/bin/gparted</command></action>
+        </item>
+        <item label="Htop" icon="/usr/share/pixmaps/htop.png">
+          <action name="Execute"><command>xterm -title "Htop" -e htop</command></action>
+        </item>
+        <item label="Logs">
+          <action name="Execute"><command>gnome-logs</command></action>
+        </item>
+        <item label="Oracle VM VirtualBox" icon="/usr/share/icons/hicolor/32x32/apps/virtualbox.png">
+          <action name="Execute"><command>VirtualBox</command></action>
+        </item>
+        <item label="Power Statistics" icon="/usr/share/icons/hicolor/22x22/apps/org.gnome.PowerStats.png">
+          <action name="Execute"><command>gnome-power-statistics</command></action>
+        </item>
+        <item label="Problem Reporting">
+          <action name="Execute"><command>gnome-abrt</command></action>
+        </item>
+        <item label="Resources">
+          <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=resources net.nokyan.Resources</command></action>
+        </item>
+        <item label="rxvt-unicode" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
+          <action name="Execute"><command>urxvt</command></action>
+        </item>
+        <item label="Software">
+          <action name="Execute"><command>gnome-software</command></action>
+        </item>
+        <item label="System Monitor">
+          <action name="Execute"><command>gnome-system-monitor</command></action>
+        </item>
+        <item label="Terminal">
+          <action name="Execute"><command>gnome-terminal</command></action>
+        </item>
+        <item label="Terminator" icon="/usr/share/icons/hicolor/22x22/apps/terminator.png">
+          <action name="Execute"><command>terminator</command></action>
+        </item>
+        <item label="Thunar File Manager" icon="/usr/share/icons/hicolor/48x48/apps/org.xfce.thunar.png">
+          <action name="Execute"><command>thunar</command></action>
+        </item>
+        <item label="Tint2">
+          <action name="Execute"><command>tint2</command></action>
+        </item>
+        <item label="Virtual Machine Manager" icon="/usr/share/icons/hicolor/22x22/apps/virt-manager.png">
+          <action name="Execute"><command>virt-manager</command></action>
+        </item>
+      </menu>
+  </menu>
+  <menu id="preferences" label="Preferences">
+    <item label="AppImageLauncher Settings" icon="/usr/share/icons/hicolor/32x32/apps/AppImageLauncher.png">
+      <action name="Execute"><command>AppImageLauncherSettings</command></action>
+    </item>
+    <item label="ARandR">
+      <action name="Execute"><command>arandr</command></action>
+    </item>
+    <item label="Bluetooth Manager" icon="/usr/share/icons/hicolor/22x22/status/blueman.png">
+      <action name="Execute"><command>blueman-manager</command></action>
+    </item>
+    <item label="Customize Look and Feel" icon="/usr/share/icons/gnome/22x22/apps/preferences-desktop-theme.png">
+      <action name="Execute"><command>lxappearance</command></action>
+    </item>
+    <item label="File Manager Settings" icon="/usr/share/icons/hicolor/48x48/apps/org.xfce.thunar.png">
+      <action name="Execute"><command>thunar-settings</command></action>
+    </item>
+    <item label="PulseAudio Volume Control" icon="/org/gtk/libgtk/icons/16x16/actions/multimedia-volume-control.png">
+      <action name="Execute"><command>pavucontrol</command></action>
+    </item>
+    <item label="Qt5 Settings" icon="/usr/share/icons/gnome/22x22/apps/preferences-desktop-theme.png">
+      <action name="Execute"><command>qt5ct</command></action>
+    </item>
+    <item label="Qt6 Settings" icon="/usr/share/icons/gnome/22x22/apps/preferences-desktop-theme.png">
+      <action name="Execute"><command>qt6ct</command></action>
+    </item>
+    <item label="Settings">
+      <action name="Execute"><command>gnome-control-center</command></action>
+    </item>
+    <item label="Tint2 Settings">
+      <action name="Execute"><command>tint2conf</command></action>
+    </item>
+  </menu>
+  <menu id="administration" label="Administration">
+    <item label="dnfdragora" icon="/usr/share/icons/hicolor/32x32/apps/dnfdragora.png">
+      <action name="Execute"><command>dnfdragora</command></action>
+    </item>
+    <item label="dnfdragora-updater" icon="/usr/share/icons/hicolor/32x32/apps/dnfdragora.png">
+      <action name="Execute"><command>dnfdragora-updater</command></action>
+    </item>
+    <item label="Firewall" icon="/usr/share/icons/hicolor/22x22/apps/firewall-config.png">
+      <action name="Execute"><command>/usr/bin/firewall-config</command></action>
+    </item>
+    <item label="Grub Customizer">
+      <action name="Execute"><command>grub-customizer</command></action>
+    </item>
+  </menu>
+  <separator/>
+  <menu id="terminals" label="Terminals">
+    <item label="Foot" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+      <action name="Execute"><command>foot</command></action>
+    </item>
+    <item label="Foot Client" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+      <action name="Execute"><command>footclient</command></action>
+    </item>
+    <item label="Foot Server" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+      <action name="Execute"><command>foot --server</command></action>
+    </item>
+    <item label="rxvt-unicode" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
+      <action name="Execute"><command>urxvt</command></action>
+    </item>
+    <item label="Terminal">
+      <action name="Execute"><command>gnome-terminal</command></action>
+    </item>
+    <item label="Terminator" icon="/usr/share/icons/hicolor/22x22/apps/terminator.png">
+      <action name="Execute"><command>terminator</command></action>
+    </item>
+  </menu>
+  <menu id="commands" label="commands" title="commands title">
+    <item label="test command">
+      <action name="Execute">
+        <execute>/usr/bin/notify-send "hey, lookie here!"</execute>
+      </action>
+    </item>
+  </menu>
+  <separator/>
+  <item label="Web browser">
+    <action name="Execute" command="/opt/firefox/firefox" />
+  </item>
+  <item label="Terminal">
+    <action name="Execute" command="terminator" />
+  </item>
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+  <item label="Poweroff">
+    <action name="Execute" command="systemctl -i poweroff" />
+  </item>
+</menu>
+
+<menu id="some-custom-menu">
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+</menu>
+
+</openbox_menu>
