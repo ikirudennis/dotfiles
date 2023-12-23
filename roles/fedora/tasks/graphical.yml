@@ -1,8 +1,9 @@
 ---
 - name: enable copr repos
   community.general.copr:
-    name: "{{ fedora_copr_repos }}"
+    name: "{{ item }}"
   become: true
+  with_items: "{{ fedora_copr_repos }}"
 - name: install graphical packages
   ansible.builtin.dnf:
     name: "{{ fedora_graphical_pkgs }}"
