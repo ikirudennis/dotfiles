@@ -22,3 +22,8 @@
     path: ~/.config/waybar
     src: "{{ ansible_env.PWD }}/roles/fedora/files/waybar"
     state: link
+- name: symlink wlogout directory
+  ansible.builtin.file:
+    path: ~/.config/wlogout
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/wlogout"
+    state: link
