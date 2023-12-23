@@ -17,3 +17,8 @@
     path: ~/.config/swaylock
     src: "{{ ansible_env.PWD }}/roles/fedora/files/swaylock"
     state: link
+- name: symlink waybar directory
+  ansible.builtin.file:
+    path: ~/.config/waybar
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/waybar"
+    state: link
