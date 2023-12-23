@@ -12,3 +12,8 @@
     path: ~/.config/labwc
     src: "{{ ansible_env.PWD }}/roles/fedora/files/labwc"
     state: link
+- name: symlink swaylock directory
+  ansible.builtin.file:
+    path: ~/.config/swaylock
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/swaylock"
+    state: link
