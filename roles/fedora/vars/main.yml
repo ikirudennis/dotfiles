@@ -12,12 +12,34 @@ fedora_pkgs:
   - zsh
 fedora_graphical_pkgs:
   - Thunar
+  - bemenu
   - blueman
+  - brightnessctl
+  # - cliphist
+  # - chayang
   - conky
   - dmenu
+  - flameshot
+  - grim
+  - labwc
+  - kanshi
   - neovim-qt
   - openbox
+  - slurp
+  - swayidle
+  - swaylock
   - vim-X11
   - volumeicon
+  - waybar
+  - wayvnc
+  - wdisplays
+  - wl-clipboard
+  - wlogout
+  - wlroots
+  - wlr-randr
+  - xdg-desktop-portal-wlr
   - xfce-polkit
   - xset
+fedora_copr_repos:
+  # - wef/cliphist
+  - wef/wlogout
