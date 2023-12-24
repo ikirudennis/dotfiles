@@ -36,6 +36,7 @@ fedora_graphical_pkgs:
   - wdisplays
   - wl-clipboard
   - wlogout
+  - wlopm
   - wlroots
   - wlr-randr
   - xdg-desktop-portal-wlr
