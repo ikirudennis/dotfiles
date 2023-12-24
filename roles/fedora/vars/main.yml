@@ -28,6 +28,7 @@ fedora_graphical_pkgs:
   - slurp
   - swayidle
   - swaylock
+  - swww
   - vim-X11
   - volumeicon
   - waybar
@@ -41,5 +42,6 @@ fedora_graphical_pkgs:
   - xfce-polkit
   - xset
 fedora_copr_repos:
+  - alebastr/sway-extras
   # - wef/cliphist
   - wef/wlogout
