@@ -29,7 +29,7 @@
         "capslock": true,
         "format": "{name} {icon}",
         "format-icons": {
-            "locked": "",
+            "locked": "",
             "unlocked": ""
         }
     },
