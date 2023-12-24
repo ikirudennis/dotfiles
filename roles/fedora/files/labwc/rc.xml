@@ -93,6 +93,9 @@
   <resize
     popupShow="Always"
     />
+  <!-- When using Alt-Tab to switch windows, preview="yes" (the default) feels
+    like it's raising the window. -->
+  <windowSwitcher preview="no" />
   <keyboard>
     <!-- Use defaults... -->
     <default />
