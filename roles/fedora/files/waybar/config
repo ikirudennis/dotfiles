@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["wlr/taskbar"],
     "modules-center": ["wlr/workspaces"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "tray", "clock"],
+    "modules-right": ["idle_inhibitor", "mpd", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "tray", "clock"],
     // Modules configuration
     // wlr/workspace is waiting on https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/40
     "wlr/workspaces": {
@@ -52,6 +52,8 @@
         "consume-icons": {
             "on": " "
         },
+        "on-scroll-up": "mpc volume +1",
+        "on-scroll-down": "mpc volume -1",
         "random-icons": {
             "off": "<span color=\"#f53c3c\"></span> ",
             "on": " "
