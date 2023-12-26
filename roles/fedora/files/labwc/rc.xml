@@ -214,6 +214,7 @@
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
+      <action name="NextWindow"/>
     </keybind>
     <keybind key="A-space">
       <action name="ShowMenu">
