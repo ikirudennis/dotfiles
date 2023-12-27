@@ -8,6 +8,11 @@
   ansible.builtin.dnf:
     name: "{{ fedora_graphical_pkgs }}"
   become: true
+- name: symlink foot directory
+  ansible.builtin.file:
+    path: ~/.config/foot
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/foot"
+    state: link
 - name: symlink labwc directory
   ansible.builtin.file:
     path: ~/.config/labwc
