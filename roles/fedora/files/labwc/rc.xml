@@ -135,7 +135,7 @@
       <action name="GrowToEdge" direction="Up" />
     </keybind>
     <keybind key="XF86AudioMicMute">
-      <action name="Execute" command="amixer set Capture toggle" />
+      <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" />
     </keybind>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
