@@ -18,6 +18,7 @@ fedora_graphical_pkgs:
   # - cliphist
   # - chayang
   - conky
+  - copyq
   - dmenu
   - flameshot
   - grim
