@@ -16,9 +16,10 @@ thunar --daemon &
 # run service to set dynamic desktop image
 systemctl start --user dburke_desktop_image.service &
 
-# run wayland's vnc program, wayvnc. Config file is in default location:
-# ~/.config/wayvnc/config
-wayvnc &
+# run wayland's vnc program, wayvnc. It turns out that wayvnc and wlopm running
+# together have side-effects: wayvnc won't let wlopm turn off the screen:
+# https://github.com/any1/wayvnc/issues/283
+#wayvnc &
 
 # Lock screen after 5 minutes and turn off display after another 5 minutes
 swayidle -w \
