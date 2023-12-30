@@ -15,7 +15,6 @@ fedora_graphical_pkgs:
   - bemenu
   - blueman
   - brightnessctl
-  # - cliphist
   # - chayang
   - conky
   - copyq
@@ -46,5 +45,4 @@ fedora_graphical_pkgs:
   - xset
 fedora_copr_repos:
   - alebastr/sway-extras
-  # - wef/cliphist
   - wef/wlogout
