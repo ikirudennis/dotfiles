@@ -84,10 +84,23 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
-        "format": "{:%H:%M:%S}",
-        "interval": 1
+        "timezones": ["", "UTC"],
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "format-alt": "{:%H:%M:%S   }",
+        "format": "{:%I:%M:%S %p}",
+        "interval": 1,
+        "calendar": {
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click": "tz_up"
+        }
     },
     "cpu": {
         "format": "{usage}% ",
