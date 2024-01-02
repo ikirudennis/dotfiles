@@ -7,6 +7,10 @@ XKB_DEFAULT_OPTIONS=caps:swapescape,shift:both_capslock_cancel
 
 QT_QPA_PLATFORMTHEME=qt5ct
 
+# cursor size changes between X apps and wayland. Setting it here keeps it
+# consistent across apps
+XCURSOR_SIZE=24
+
 # The PATH doesn't use my zsh config. Adding the local bin to the front allows
 # commands installed there to show up in bemenu-run
 PATH=~/.local/bin:${PATH}
