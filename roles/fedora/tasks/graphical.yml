@@ -13,11 +13,37 @@
     path: ~/.config/foot
     src: "{{ ansible_env.PWD }}/roles/fedora/files/foot"
     state: link
-- name: symlink labwc directory
+- name: "run `labwc-menu-generator` and store output"
+  ansible.builtin.command:
+    cmd: labwc-menu-generator --bare
+  register: labwc_menu_generator
+  changed_when: false
+- name: is labwc directory a symlink?
+  ansible.builtin.stat:
+    path: ~/.config/labwc
+  register: labwc_dir_stat
+- name: rename labwc directory if it's a symlink
+  ansible.builtin.command:
+    cmd: mv ~/.config/labwc ~/.config/labwc_old_symlink
+    creates: ~/.config/labwc_old_symlink
+    removes: ~/.config/labwc
+  when: labwc_dir_stat.stat.islnk
+- name: create labwc directory
   ansible.builtin.file:
     path: ~/.config/labwc
-    src: "{{ ansible_env.PWD }}/roles/fedora/files/labwc"
+    state: directory
+    mode: "0755"
+- name: symlink labwc files
+  ansible.builtin.file:
+    path: "~/.config/labwc/{{ item }}"
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/labwc/{{ item }}"
     state: link
+  with_items: "{{ fedora_labwc_files }}"
+- name: generate labwc menu.xml from template
+  ansible.builtin.template:
+    src: "{{ ansible_env.PWD }}/roles/fedora/templates/labwc_menu.xml"
+    dest: ~/.config/labwc/menu.xml
+    mode: "0755"
 - name: symlink swaylock directory
   ansible.builtin.file:
     path: ~/.config/swaylock
