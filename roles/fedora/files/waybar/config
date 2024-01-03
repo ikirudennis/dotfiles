@@ -86,7 +86,7 @@
         // "timezone": "America/New_York",
         "timezones": ["", "UTC"],
         "tooltip-format": "<tt>{calendar}</tt>",
-        "format-alt": "{:%H:%M:%S   }",
+        "format-alt": "{:%H:%M:%S %Z}",
         "format": "{:%I:%M:%S %p}",
         "interval": 1,
         "calendar": {
