@@ -1,6 +1,9 @@
 # Launch a panel such as yambar or waybar.
 waybar >/dev/null 2>&1 &
 
+# start the ol' openbox xdg autostarter
+/usr/libexec/openbox-xdg-autostart &
+
 # begin with a grey desktop
 swww init && swww clear 888888 &
 
