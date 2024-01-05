@@ -3,7 +3,7 @@
 XDG_CURRENT_DESKTOP=wlroots:sway
 LC_COLLATE=C
 
-XKB_DEFAULT_OPTIONS=caps:swapescape,shift:both_capslock_cancel
+#XKB_DEFAULT_OPTIONS=caps:swapescape,shift:both_capslock_cancel
 
 QT_QPA_PLATFORMTHEME=qt5ct
 
