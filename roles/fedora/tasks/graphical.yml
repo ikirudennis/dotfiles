@@ -49,3 +49,8 @@
     path: ~/.config/wlogout
     src: "{{ ansible_env.PWD }}/roles/fedora/files/wlogout"
     state: link
+- name: symlink fuzzel directory
+  ansible.builtin.file:
+    path: ~/.config/fuzzel
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/fuzzel"
+    state: link
