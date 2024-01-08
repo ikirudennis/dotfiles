@@ -20,6 +20,7 @@ fedora_graphical_pkgs:
   - copyq
   - dmenu
   - flameshot
+  - fuzzel
   - grim
   - labwc
   - labwc-menu-generator
