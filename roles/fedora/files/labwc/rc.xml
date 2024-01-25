@@ -445,7 +445,7 @@
     <windowRule identifier="Conky">
       <action name="ToggleOmnipresent"/>
       <action name="Unfocus"/>
-      <action name="Lower"/>
+      <action name="ToggleAlwaysOnBottom"/>
       <serverDecoration>no</serverDecoration>
       <skipTaskbar>yes</skipTaskbar>
       <skipWindowSwitcher>yes</skipWindowSwitcher>
