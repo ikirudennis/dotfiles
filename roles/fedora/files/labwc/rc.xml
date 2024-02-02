@@ -372,6 +372,15 @@
         <command>~/.local/bin/lock_screen</command>
       </action>
     </keybind>
+    <keybind key="W-h">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>Htop system process</name>
+        </startupnotify>
+        <command>foot htop</command>
+      </action>
+    </keybind>
     <!-- dunst-related keybindings -->
     <keybind key="C-W-space">
       <action name="Execute">
