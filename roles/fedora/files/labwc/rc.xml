@@ -315,7 +315,7 @@
           <enabled>false</enabled>
           <name>Terminal</name>
         </startupnotify>
-        <command>terminator</command>
+        <command>foot</command>
       </action>
     </keybind>
     <keybind key="W-w">
