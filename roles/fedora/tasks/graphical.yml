@@ -1,5 +1,56 @@
 ---
+- name: enable copr repos
+  community.general.copr:
+    name: "{{ item }}"
+  become: true
+  with_items: "{{ fedora_copr_repos }}"
 - name: install graphical packages
   ansible.builtin.dnf:
     name: "{{ fedora_graphical_pkgs }}"
   become: true
+- name: symlink foot directory
+  ansible.builtin.file:
+    path: ~/.config/foot
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/foot"
+    state: link
+- name: "run `labwc-menu-generator` and store output"
+  ansible.builtin.command:
+    cmd: labwc-menu-generator --bare
+  register: labwc_menu_generator
+  changed_when: false
+- name: create labwc directory
+  ansible.builtin.file:
+    path: ~/.config/labwc
+    state: directory
+    mode: "0755"
+- name: symlink labwc files
+  ansible.builtin.file:
+    path: "~/.config/labwc/{{ item }}"
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/labwc/{{ item }}"
+    state: link
+  with_items: "{{ fedora_labwc_files }}"
+- name: generate labwc menu.xml from template
+  ansible.builtin.template:
+    src: "{{ ansible_env.PWD }}/roles/fedora/templates/labwc_menu.xml"
+    dest: ~/.config/labwc/menu.xml
+    mode: "0755"
+- name: symlink swaylock directory
+  ansible.builtin.file:
+    path: ~/.config/swaylock
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/swaylock"
+    state: link
+- name: symlink waybar directory
+  ansible.builtin.file:
+    path: ~/.config/waybar
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/waybar"
+    state: link
+- name: symlink wlogout directory
+  ansible.builtin.file:
+    path: ~/.config/wlogout
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/wlogout"
+    state: link
+- name: symlink fuzzel directory
+  ansible.builtin.file:
+    path: ~/.config/fuzzel
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/fuzzel"
+    state: link
