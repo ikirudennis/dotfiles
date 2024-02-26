@@ -17,7 +17,7 @@ it and that seems to work well.
 
 `ansible-playbook install_dotfiles.yml --ask-become-pass`
 
-Some tasks require sudo, thus the `-ask-become-pass` above
+Some tasks require sudo, thus the `--ask-become-pass` above
 
 ## Testing
 
