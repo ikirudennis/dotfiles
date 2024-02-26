@@ -1,2 +1,5 @@
 ---
-# handlers file for Fedora
+- name: reconfigure labwc
+  ansible.builtin.command:
+    cmd: labwc --reconfigure
+  changed_when: false

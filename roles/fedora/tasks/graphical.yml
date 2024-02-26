@@ -34,6 +34,8 @@
     src: "{{ ansible_env.PWD }}/roles/fedora/templates/labwc_menu.xml"
     dest: ~/.config/labwc/menu.xml
     mode: "0755"
+  notify:
+    reconfigure labwc
 - name: symlink swaylock directory
   ansible.builtin.file:
     path: ~/.config/swaylock
