@@ -24,3 +24,8 @@ Some tasks require sudo, thus the `--ask-become-pass` above
 This makes use of vagrant to test out changes, and hopefully make this easier
 to maintain. Run `vagrant up` and it should run all the tasks successfully. You
 can then `vagrant ssh` into the VM and test out any changes.
+
+To test tasks specific to graphical environments, it can be helpful to have
+a virtual machine of the target environment set up with a snapshot of the
+post-initialization state saved. Then you can test the full "install a brand
+new environment" process from start to finish.
