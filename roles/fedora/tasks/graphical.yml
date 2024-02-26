@@ -14,6 +14,8 @@
     src: "{{ ansible_env.PWD }}/roles/fedora/files/foot"
     state: link
 - name: "run `labwc-menu-generator` and store output"
+  # the registered labwc_menu_generator variable is used in the
+  # `labwc_menu.xml` template file
   ansible.builtin.command:
     cmd: labwc-menu-generator --bare
   register: labwc_menu_generator
