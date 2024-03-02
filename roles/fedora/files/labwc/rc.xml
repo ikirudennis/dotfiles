@@ -11,6 +11,10 @@
     <gap>0</gap>
   </core>
 
+  <placement>
+    <policy>automatic</policy>
+  </placement>
+
   <theme>
     <name>Onyx</name>
     <cornerRadius>8</cornerRadius>
