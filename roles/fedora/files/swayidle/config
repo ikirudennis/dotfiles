@@ -1,0 +1,3 @@
+timeout 300 'lock_screen'
+timeout 600 'wlopm --off \*' resume 'wlopm --on \*'
+before-sleep 'lock_screen'

@@ -38,6 +38,11 @@
     mode: "0755"
   notify:
     reconfigure labwc
+- name: symlink swayidle directory
+  ansible.builtin.file:
+    path: ~/.config/swayidle
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/swayidle"
+    state: link
 - name: symlink swaylock directory
   ansible.builtin.file:
     path: ~/.config/swaylock

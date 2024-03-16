@@ -25,8 +25,4 @@ systemctl start --user dburke_desktop_image.service &
 #wayvnc &
 
 # Lock screen after 5 minutes and turn off display after another 5 minutes
-swayidle -w \
-    timeout 300 'lock_screen' \
-    timeout 600 'wlopm --off \*' \
-    resume 'wlopm --on \*' \
-    before-sleep 'lock_screen' >/dev/null 2>&1 &
+swayidle -w >/dev/null 2>&1 &
