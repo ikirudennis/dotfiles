@@ -358,6 +358,15 @@
         <command>bemenu-run</command>
       </action>
     </keybind>
+    <keybind key="W-o">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>screen off</name>
+        </startupnotify>
+        <command>~/.local/bin/dburke_screen_control force_off</command>
+      </action>
+    </keybind>
     <keybind key="W-x">
       <action name="Execute">
         <startupnotify>
