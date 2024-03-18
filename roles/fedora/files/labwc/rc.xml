@@ -373,7 +373,7 @@
           <enabled>false</enabled>
           <name>lock screen</name>
         </startupnotify>
-        <command>~/.local/bin/lock_screen</command>
+        <command>~/.local/bin/dburke_screen_control lock</command>
       </action>
     </keybind>
     <keybind key="W-h">
