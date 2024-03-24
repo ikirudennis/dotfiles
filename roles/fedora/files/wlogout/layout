@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "lock_screen",
+    "action" : "dburke_screen_control lock",
     "text" : "Lock",
     "keybind" : "l"
 }
