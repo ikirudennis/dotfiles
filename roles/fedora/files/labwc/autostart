@@ -5,7 +5,7 @@ waybar >/dev/null 2>&1 &
 /usr/libexec/openbox-xdg-autostart &
 
 # begin with a grey desktop
-swww init && swww clear 888888 &
+swww-daemon && swww clear 888888 &
 
 # start keyring on login
 /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh &
