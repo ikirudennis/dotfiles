@@ -1,0 +1,6 @@
+---
+- name: symlink neovim directory
+  ansible.builtin.file:
+    path: ~/.config/nvim
+    src: "{{ ansible_env.PWD }}/roles/neovim/files"
+    state: link
