@@ -91,7 +91,8 @@ if has("autocmd")
 	au FileType html,htmldjango nnoremap <buffer> <leader>ft Vatzf
 
 	" default settings for working with a python file.
-	autocmd FileType python setlocal foldcolumn=1|setlocal foldmethod=indent|setlocal textwidth=79
+	autocmd FileType python setlocal tabstop=4|setlocal shiftwidth=4|setlocal expandtab|setlocal softtabstop=4|setlocal foldcolumn=1|setlocal foldmethod=indent|setlocal textwidth=79
+	autocmd BufNewFile,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class|let python_highlight_all = 1
 
 	" default settings for working in javascript
 	autocmd FileType javascript setlocal tabstop=2|setlocal shiftwidth=2|setlocal expandtab|setlocal softtabstop=2|setlocal foldcolumn=1|setlocal foldmethod=syntax|setlocal textwidth=79|setlocal foldlevelstart=0|let javaScript_fold=1
