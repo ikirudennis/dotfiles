@@ -4,3 +4,8 @@
     path: ~/.config/nvim
     src: "{{ ansible_env.PWD }}/roles/neovim/files"
     state: link
+- name: create nvim cache directory
+  ansible.builtin.file:
+    path: ~/.cache/nvim
+    state: directory
+    mode: "0775"

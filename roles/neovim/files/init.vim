@@ -16,7 +16,7 @@ fun! SetupVAM()
 
   " most used options you may want to use:
   let c.log_to_buf = 1
-  let c.log_buffer_name = expand('$HOME', 1) . '/.local/tmp/nvim_run/VAM_LOG.txt'
+  let c.log_buffer_name = expand('$HOME', 1) . '/.cache/nvim/VAM_LOG.txt'
   let c.auto_install = 1
   let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
   if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
@@ -138,7 +138,7 @@ let g:scratch_filename='hiya, buddy'
 let g:scratch_bufclose=2
 
 " gotta store the history somewhere
-let yankring_history_dir='$HOME/.local/tmp/nvim_run'
+let yankring_history_dir='$HOME/.cache/nvim'
 
 " Toggle rainbow parentheses
 map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:RainbowParenthesesLoadSquare<cr>
