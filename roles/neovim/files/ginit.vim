@@ -17,7 +17,8 @@ set columns=120
 " 7 multiple tab pages
 " ----------------------------------------------------------------------------
 " tab bar niceties
-set gtl=%t\ %m gtt=%F
+"set gtl=%t\ %m
+"set gtt=%F
 
 " ----------------------------------------------------------------------------
 " 10 GUI
@@ -53,7 +54,7 @@ else
 endif
 
 " hide toolbar
-set guioptions-=T
+"set guioptions-=T
 
 " ----------------------------------------------------------------------------
 " 13 selecting text
