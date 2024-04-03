@@ -383,24 +383,22 @@ set autoread
 " that's bad.
 set binary noeol
 
-" ----------------------------------------------------------------------------
-" 21 command line editing
-" ----------------------------------------------------------------------------
-" wildmenu is the enhanced version of command completion
-set wildmenu
-" When more than one match, list all matches and complete till longest common
-" string.
-set wildmode=list:longest
-" ignore files with these extensions in wildmenu
-set wildignore=*.swo,*.swp,.DS_Store,*.pyc
-
-if has("persistent_undo")
-	" use an undofile
-	set undofile
-endif
-
 ]]
 local set = vim.opt
+
+----------------------------------------------------------------------------
+-- 21 command line editing
+----------------------------------------------------------------------------
+-- wildmenu is the enhanced version of command completion
+set.wildmenu = true
+-- When more than one match, list all matches and complete till longest common
+-- string.
+set.wildmode='list:longest'
+-- ignore files with these extensions in wildmenu
+set.wildignore="*.swo,*.swp,.DS_Store,*.pyc"
+
+-- use an undofile
+set.undofile = true
 
 ----------------------------------------------------------------------------
 -- 26 various
