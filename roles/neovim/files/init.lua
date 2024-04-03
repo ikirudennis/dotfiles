@@ -387,6 +387,13 @@ set binary noeol
 local set = vim.opt
 
 ----------------------------------------------------------------------------
+-- 12 editing text
+----------------------------------------------------------------------------
+
+-- use an undofile
+set.undofile = true
+
+----------------------------------------------------------------------------
 -- 19 command line editing
 ----------------------------------------------------------------------------
 
@@ -395,9 +402,6 @@ local set = vim.opt
 set.wildmode='list:longest'
 -- ignore files with these extensions in wildmenu
 set.wildignore="*.swo,*.swp,.DS_Store,*.pyc"
-
--- use an undofile
-set.undofile = true
 
 ----------------------------------------------------------------------------
 -- 24 various
