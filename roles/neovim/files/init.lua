@@ -401,7 +401,8 @@ set.wildignore="*.swo,*.swp,.DS_Store,*.pyc"
 set.undofile = true
 
 ----------------------------------------------------------------------------
--- 26 various
+-- 24 various
 ----------------------------------------------------------------------------
---treat substitutions as if g is specified as the default
+
+-- treat substitutions as if g is specified as the default
 set.gdefault = true
