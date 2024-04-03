@@ -389,8 +389,6 @@ local set = vim.opt
 ----------------------------------------------------------------------------
 -- 21 command line editing
 ----------------------------------------------------------------------------
--- wildmenu is the enhanced version of command completion
-set.wildmenu = true
 -- When more than one match, list all matches and complete till longest common
 -- string.
 set.wildmode='list:longest'
