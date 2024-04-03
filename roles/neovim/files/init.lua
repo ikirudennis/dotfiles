@@ -405,9 +405,11 @@ endif
 " setting encoding allows utf-8 characters in vimrc to work.
 set encoding=utf-8
 
-" ----------------------------------------------------------------------------
-" 26 various
-" ----------------------------------------------------------------------------
-" treat substitutions as if g is specified as the default
-set gdefault
 ]]
+local set = vim.opt
+
+----------------------------------------------------------------------------
+-- 26 various
+----------------------------------------------------------------------------
+--treat substitutions as if g is specified as the default
+set.gdefault = true
