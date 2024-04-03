@@ -387,8 +387,9 @@ set binary noeol
 local set = vim.opt
 
 ----------------------------------------------------------------------------
--- 21 command line editing
+-- 19 command line editing
 ----------------------------------------------------------------------------
+
 -- When more than one match, list all matches and complete till longest common
 -- string.
 set.wildmode='list:longest'
