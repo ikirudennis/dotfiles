@@ -399,12 +399,6 @@ if has("persistent_undo")
 	set undofile
 endif
 
-" ----------------------------------------------------------------------------
-" 25 multi-byte characters
-" ----------------------------------------------------------------------------
-" setting encoding allows utf-8 characters in vimrc to work.
-set encoding=utf-8
-
 ]]
 local set = vim.opt
 
