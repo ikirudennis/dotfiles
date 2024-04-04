@@ -351,19 +351,6 @@ set showcmd
 set ruler
 set rulerformat=%25(%=%l,%c%<%V\/\ %L\ %P%)
 
-" ----------------------------------------------------------------------------
-" 14 editing text
-" ----------------------------------------------------------------------------
-" set default textwidth to a reasonable value
-set textwidth=80
-" define how to automatically format comments.  See :help fo-table for
-" explanation.
-set formatoptions=qcan1
-" automatically show matching brackets. Works like it does in bbedit.
-set showmatch
-" make that backspace key work the way it should
-set backspace=indent,eol,start
-
 ]]
 local set = vim.opt
 
@@ -371,6 +358,13 @@ local set = vim.opt
 -- 12 editing text
 ----------------------------------------------------------------------------
 
+-- set default textwidth to a reasonable value
+set.textwidth = 80
+-- define how to automatically format comments.  See :help fo-table for
+-- explanation.
+set.formatoptions = "qcan1"
+-- automatically show matching brackets. Works like it does in bbedit.
+set.showmatch = true
 -- use an undofile
 set.undofile = true
 
