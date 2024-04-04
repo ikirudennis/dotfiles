@@ -387,8 +387,6 @@ set.undofile = true
 -- 17 reading and writing files
 ----------------------------------------------------------------------------
 
--- update the buffer to reflect changes made to a file outside of vim.
-set.autoread = true
 -- do NOT put a carriage return at the end of the last line! If you are
 -- programming for the web the default will cause http headers to be sent.
 -- that's bad.
