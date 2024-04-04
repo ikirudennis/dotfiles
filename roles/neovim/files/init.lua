@@ -364,15 +364,6 @@ set showmatch
 " make that backspace key work the way it should
 set backspace=indent,eol,start
 
-" ----------------------------------------------------------------------------
-" 15 tabs and indenting
-" ----------------------------------------------------------------------------
-" set auto-indenting on for programming
-set autoindent
-" set our tabs to four spaces
-set tabstop=4
-set shiftwidth=4
-
 ]]
 local set = vim.opt
 
@@ -382,6 +373,15 @@ local set = vim.opt
 
 -- use an undofile
 set.undofile = true
+
+----------------------------------------------------------------------------
+-- 13 tabs and indenting
+----------------------------------------------------------------------------
+
+-- set our tabs to four spaces
+local tabwidth = 4
+set.tabstop = tabwidth
+set.shiftwidth = tabwidth
 
 ----------------------------------------------------------------------------
 -- 17 reading and writing files
