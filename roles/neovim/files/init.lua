@@ -334,25 +334,22 @@ set ttyfast
 " When to not ring a bell: never
 set belloff=
 
-" ----------------------------------------------------------------------------
-" 12 messages and info
-" ----------------------------------------------------------------------------
-" display the current mode and partially-typed commands in the status line:
-set showmode
-set showcmd
-" define the display of the ruler.
-" NOTES:
-" 	- %25 sets the width of the ruler format area to 25 characters.  Seems
-" 	  like a high enough number.  That allows me to see information on
-" 	  insane files, i.e.: 826,1619-2983/ 827 Bot
-" 	- it needs those parentheses immediately after to work right.
-" 	- A good way of testing these settings is to use the :sandbox command.
-" 	  A la :san[dbox] :set rulerform...
-set ruler
-set rulerformat=%25(%=%l,%c%<%V\/\ %L\ %P%)
-
 ]]
 local set = vim.opt
+
+----------------------------------------------------------------------------
+-- 10 messages and info
+----------------------------------------------------------------------------
+
+-- define the display of the ruler.
+-- NOTES:
+-- - %25 sets the width of the ruler format area to 25 characters.  Seems
+--   like a high enough number.  That allows me to see information on
+--   insane files, i.e.: 826,1619-2983/ 827 Bot
+-- - it needs those parentheses immediately after to work right.
+-- - A good way of testing these settings is to use the :sandbox command.
+--   A la :san[dbox] :set rulerform...
+set.rulerformat ="%25(%=%l,%c%<%V/ %L %P%)"
 
 ----------------------------------------------------------------------------
 -- 12 editing text
