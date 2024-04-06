@@ -322,12 +322,6 @@ set splitright
 " always display the status line
 set laststatus=2
 
-" ----------------------------------------------------------------------------
-" 8 terminal
-" ----------------------------------------------------------------------------
-" this is a legacy option, more or less.
-set ttyfast
-
 ]]
 local set = vim.opt
 
