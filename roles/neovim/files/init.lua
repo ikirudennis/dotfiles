@@ -309,21 +309,18 @@ set hlsearch
 highlight WhitespaceEOL ctermbg=lightgray guibg=lightgray
 match WhitespaceEOL /s+$/
 
-" ----------------------------------------------------------------------------
-" 6 multiple windows
-" ----------------------------------------------------------------------------
-" set hidden allows switching between buffers without vim complaining about
-" unsaved changes
-set hidden
-" not exactly sure why I felt the need to add these two, however, it seems
-" like a more sensible default
-set splitbelow
-set splitright
-" always display the status line
-set laststatus=2
-
 ]]
 local set = vim.opt
+
+----------------------------------------------------------------------------
+-- 6 multiple windows
+----------------------------------------------------------------------------
+
+-- when splitting a window horizontally, put the new one below the current
+set.splitbelow = true
+-- when splitting a window vertically, put the new one to the right of the
+-- current
+set.splitright = true
 
 ----------------------------------------------------------------------------
 -- 10 messages and info
