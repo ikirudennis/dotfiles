@@ -328,12 +328,6 @@ set laststatus=2
 " this is a legacy option, more or less.
 set ttyfast
 
-" ----------------------------------------------------------------------------
-" 10 messages and info
-" ----------------------------------------------------------------------------
-" When to not ring a bell: never
-set belloff=
-
 ]]
 local set = vim.opt
 
@@ -350,6 +344,8 @@ local set = vim.opt
 -- - A good way of testing these settings is to use the :sandbox command.
 --   A la :san[dbox] :set rulerform...
 set.rulerformat ="%25(%=%l,%c%<%V/ %L %P%)"
+-- When to not ring a bell: never
+set.belloff = ''
 
 ----------------------------------------------------------------------------
 -- 12 editing text
