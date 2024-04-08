@@ -288,29 +288,24 @@ set linebreak
 " set colorscheme to zenburn
 colorscheme zenburn
 
-" ----------------------------------------------------------------------------
-" 5 syntax, highlighting and spelling
-" ----------------------------------------------------------------------------
-if has('syntax')
-	if exists('+colorcolumn')
-		" show a vertical indication of the column which is one character
-		" beyond the textwidth setting
-		set colorcolumn=+1
-	endif
-	" turn syntax highlighting on by default
-	syntax on
-endif
-
-" highlight the text that matches the last search
-" see Shortcuts below to find out how to easily turn off search highlighting
-" with comma-space
-set hlsearch
-" show whitespace at end of lines
-highlight WhitespaceEOL ctermbg=lightgray guibg=lightgray
-match WhitespaceEOL /s+$/
-
 ]]
 local set = vim.opt
+
+----------------------------------------------------------------------------
+-- 5 syntax, highlighting and spelling
+----------------------------------------------------------------------------
+
+-- show a vertical indication of the column which is one character beyond the
+-- textwidth setting
+set.colorcolumn = "+1"
+
+-- highlight the text that matches the last search
+-- see Shortcuts below to find out how to easily turn off search highlighting
+-- with comma-space
+set.hlsearch = true
+-- show whitespace at end of lines
+vim.api.nvim_set_hl(0, 'WhitespaceEOL', { ctermbg=lightgray, guibg=lightgray })
+vim.cmd [[ match WhitespaceEOL /s+$/ ]]
 
 ----------------------------------------------------------------------------
 -- 6 multiple windows
