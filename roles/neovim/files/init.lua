@@ -260,36 +260,27 @@ set incsearch
 " to easytags being more responsive
  set tags=./.tags;,~/.vimtags
  
-" ----------------------------------------------------------------------------
-" 4 displaying text
-" ----------------------------------------------------------------------------
-" relativenumber is a vim 7.3+ feature and can only be used in conjunction
-" with number in vim 7.4+
-if version >= 704
-	" show relative numbers and current line number
-	set relativenumber
-	set number
-elseif version == 703
-	" line numbers are shown relative to the current line
-	set relativenumber
-else
-	" use regular line numbers instead
-	set number
-endif
-" wrap long lines
-set wrap
-" display characters to indicate non-printing characters
-set list
-set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
-" with set wrap, this character shows that a soft line-break has occurred
-set showbreak=…
-" sane line breaks -- to turn off for individual files, run set nolbr
-set linebreak
-" set colorscheme to zenburn
-colorscheme zenburn
-
 ]]
 local set = vim.opt
+
+----------------------------------------------------------------------------
+-- 4 displaying text
+----------------------------------------------------------------------------
+
+-- show relative numbers and current line number
+set.relativenumber = true
+set.number = true
+-- wrap long lines
+set.wrap = true
+-- display characters to indicate non-printing characters
+set.list = true
+set.listchars='tab:▸ ,eol:¬,extends:❯,precedes:❮'
+-- with set wrap, this character shows that a soft line-break has occurred
+set.showbreak='…'
+-- sane line breaks -- to turn off for individual files, run set nolbr
+set.linebreak = true
+-- set colorscheme to zenburn
+vim.cmd 'colorscheme zenburn'
 
 ----------------------------------------------------------------------------
 -- 5 syntax, highlighting and spelling
