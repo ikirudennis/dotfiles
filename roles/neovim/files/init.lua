@@ -234,15 +234,16 @@ let g:snipMate = { 'snippet_version' : 1 }
 " will use the same arguments available to a normal `:help` command
 command! -complete=help -nargs=1 H tab help <args>
 
-" ----------------------------------------------------------------------------
-" 1 important
-" ----------------------------------------------------------------------------
-" toggle pastemode
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
-
 ]]
 local set = vim.opt
+
+----------------------------------------------------------------------------
+-- 1 important
+----------------------------------------------------------------------------
+
+-- toggle pastemode
+vim.api.nvim_set_keymap('n', '<F2>', '<cmd>set paste!<CR>', {
+	noremap = true, silent = true })
 
 ----------------------------------------------------------------------------
 -- 2 moving around, searching and patterns
