@@ -241,24 +241,23 @@ command! -complete=help -nargs=1 H tab help <args>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
-" ----------------------------------------------------------------------------
-" 2 moving around, searching and patterns
-" ----------------------------------------------------------------------------
-" when searching, ignore the case sensitivity in the search string, unless the
-" case is specified.
-set ignorecase
-set smartcase
-" keys that wrap to the next line
-set whichwrap=<,>,b
-" searches as you type in the search term
-set incsearch
-
 ]]
 local set = vim.opt
 
-------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+-- 2 moving around, searching and patterns
+----------------------------------------------------------------------------
+
+-- when searching, ignore the case sensitivity in the search string, unless the
+-- case is specified.
+set.ignorecase = true
+set.smartcase = true
+-- keys that wrap to the next line
+set.whichwrap = "<,>,b"
+
+----------------------------------------------------------------------------
 -- 3 tags
-------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 -- Hopefully this reduces the size of the global vimtags file and contributes
 -- to easytags being more responsive
