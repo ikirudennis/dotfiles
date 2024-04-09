@@ -253,16 +253,17 @@ set whichwrap=<,>,b
 " searches as you type in the search term
 set incsearch
 
- " ----------------------------------------------------------------------------
- " 3 tags
- " ----------------------------------------------------------------------------
-" Hopefully this reduces the size of the global vimtags file and contributes
-" to easytags being more responsive
- set tags=./.tags;,~/.vimtags
- 
 ]]
 local set = vim.opt
 
+------------------------------------------------------------------------------
+-- 3 tags
+------------------------------------------------------------------------------
+
+-- Hopefully this reduces the size of the global vimtags file and contributes
+-- to easytags being more responsive
+set.tags = "./.tags;,~/.vimtags"
+ 
 ----------------------------------------------------------------------------
 -- 4 displaying text
 ----------------------------------------------------------------------------
