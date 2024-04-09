@@ -227,15 +227,18 @@ let g:zenburn_enable_TagHighlight=1
 
 let g:snipMate = { 'snippet_version' : 1 }
 
-" ----------------------------------------------------------------------------
-" v. Custom commands
-" ----------------------------------------------------------------------------
-" define a command ':H' which will open a help file in a new tab. completion
-" will use the same arguments available to a normal `:help` command
-command! -complete=help -nargs=1 H tab help <args>
-
 ]]
 local set = vim.opt
+
+----------------------------------------------------------------------------
+-- v. Custom commands
+----------------------------------------------------------------------------
+
+-- define a command ':H' which will open a help file in a new tab. completion
+-- will use the same arguments available to a normal `:help` command
+vim.api.nvim_create_user_command('H', "tab help",
+	{ bang=true, complete='help', nargs=1 }
+)
 
 ----------------------------------------------------------------------------
 -- 1 important
