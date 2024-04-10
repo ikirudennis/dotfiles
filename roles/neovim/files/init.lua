@@ -235,7 +235,9 @@ local set = vim.opt
 ----------------------------------------------------------------------------
 
 -- define a command ':H' which will open a help file in a new tab. completion
--- will use the same arguments available to a normal `:help` command
+-- will use the same arguments available to a normal `:help` command. The
+-- argument is automatically added to the end of the "tab help" portion of the
+-- command.
 vim.api.nvim_create_user_command('H', "tab help",
 	{ bang=true, complete='help', nargs=1 }
 )
