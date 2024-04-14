@@ -99,7 +99,7 @@ if has("autocmd")
 	autocmd BufRead *.vim setlocal modeline|setlocal modelines=1
 
 	" Source the vimrc file after saving it
-	autocmd! BufWritePost $MYVIMRC source $MYVIMRC|call lightline#disable()|call lightline#enable()
+	" autocmd! BufWritePost $MYVIMRC source $MYVIMRC|call lightline#disable()|call lightline#enable()
 
 	" don't let auto-format options clobber crontab files
 	autocmd FileType crontab setlocal formatoptions-=a
