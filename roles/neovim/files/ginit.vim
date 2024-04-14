@@ -49,7 +49,7 @@ elseif exists('g:GuiLoaded')
 	GuiTabline 1
 else
 	" fallback
-	set gfn=FiraMono\ Nerd\ Font\ Mono 11
+	set gfn=FiraMono\ Nerd\ Font\ Mono:h11
 	set linespace=-2
 endif
 
