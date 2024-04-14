@@ -1,56 +1,40 @@
+-- -------------------------------------------------------------------------
+-- i. Setup
+----------------------------------------------------------------------------
+
+-- use comma instead of backslash for commands. mapleader needs to be set early
+-- in this file so that later commands may use it.
+vim.g.mapleader = ","
+
+-- lazy.nvim setup. addons will be stored locally in ~/.local/share/nvim/lazy
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+-- "plugins" below refers to ~/.config/nvim/lua/plugins.lua
+require("lazy").setup("plugins")
+
+-- -----------------------------------------------------------------------------
+-- v. Custom commands
+--------------------------------------------------------------------------------
+
+-- define a command ':H' which will open a help file in a new tab. completion
+-- will use the same arguments available to a normal `:help` command. The
+-- argument is automatically added to the end of the "tab help" portion of the
+-- command.
+vim.api.nvim_create_user_command('H', "tab help",
+	{ bang=true, complete='help', nargs=1 }
+)
+
 vim.cmd [[
-" ----------------------------------------------------------------------------
-" i. Setup
-" ----------------------------------------------------------------------------
-
-" VAM is a slightly neater way of setting up vim plugins.  Vundle and the like
-" make it easy to use up-to-date versions of plugins, but don't allow for
-" mercurial repos.  The documentation for VAM kind of sucks, but I've at least
-" got this working, and this will mean a lot fewer sub-repos.
-fun! SetupVAM()
-  let c = get(g:, 'vim_addon_manager', {})
-  let g:vim_addon_manager = c
-  let c.plugin_root_dir = expand('$HOME', 1) . '/.config/nvim/vim-addons'
-
-  " Force your ~/.vim/after directory to be last in &rtp always:
-  let g:vim_addon_manager.rtp_list_hook = 'vam#ForceUsersAfterDirectoriesToBeLast'
-
-  " most used options you may want to use:
-  let c.log_to_buf = 1
-  let c.log_buffer_name = expand('$HOME', 1) . '/.cache/nvim/VAM_LOG.txt'
-  let c.auto_install = 1
-  let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
-  if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
-    execute '!git clone --depth=1 https://github.com/MarcWeber/vim-addon-manager '
-        \       shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
-  endif
-
-  " This provides the VAMActivate command, you could be passing plugin names, too
-  call vam#ActivateAddons([], {})
-endfun
-call SetupVAM()
-call vam#Scripts(expand('$HOME', 1) . '/.config/nvim/addons', {'tag_regex': '.*'})
-
-" Oh, windows. Must you always be such a pain in the ass?
-if has('win32') || has('win64')
-    " Make windows use ~/.vim too, I don't want to use _vimfiles
-    set runtimepath^=~/.vim
-    set encoding=utf-8
-endif
-
-" use comma instead of backslash for commands
-let mapleader = ","
-
-" fix background color erase in terminal
-if &term =~ '256color'
-   set t_ut=
-endif
-
-" Tell the `gx` command to use `xdg-open` to open urls, and files and things
-" in linux environments
-if has('linux')
-	let g:netrw_browsex_viewer="xdg-open"
-endif
 
 " ----------------------------------------------------------------------------
 " ii. Shortcuts
@@ -230,17 +214,6 @@ let g:snipMate = { 'snippet_version' : 1 }
 ]]
 local set = vim.opt
 
-----------------------------------------------------------------------------
--- v. Custom commands
-----------------------------------------------------------------------------
-
--- define a command ':H' which will open a help file in a new tab. completion
--- will use the same arguments available to a normal `:help` command. The
--- argument is automatically added to the end of the "tab help" portion of the
--- command.
-vim.api.nvim_create_user_command('H', "tab help",
-	{ bang=true, complete='help', nargs=1 }
-)
 
 ----------------------------------------------------------------------------
 -- 1 important
