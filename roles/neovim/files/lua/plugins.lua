@@ -24,7 +24,7 @@ return {
 	--'Toggle',
 	'tpope/vim-unimpaired',
 	'jceb/vim-orgmode',
-	--'vim-terraform',
+	'hashivim/vim-terraform',
 	'ryanoasis/vim-webdevicons',
 	'jmcantrell/vim-virtualenv',
 	'othree/xml.vim',
