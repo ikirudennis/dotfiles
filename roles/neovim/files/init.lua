@@ -34,6 +34,22 @@ vim.api.nvim_create_user_command('H', "tab help <args>",
 	{ bang=true, complete='help', nargs=1 }
 )
 
+-- telescope keymaps
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- treesitter config
+local treesitter = require('nvim-treesitter.configs')
+treesitter.setup({
+	ensure_installed = { "bash", "lua", "python", "query", "terraform", "vim",
+	"vimdoc", "yaml" },
+	highlight = { enable = true },
+	indent = { enable = true },
+})
+
 vim.cmd [[
 
 " ----------------------------------------------------------------------------
@@ -143,11 +159,6 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 " file becoming exceptionally large.  This will force easytags to use a tags
 " file relative to a project instead of using a global tagsfile.
 let g:easytags_dynamic_files = 2
-
-" bind ctrlp to <Leader>p
-let g:ctrlp_map = '<Leader>p'
-" make ctrlp show hidden files
-let g:ctrlp_show_hidden = 1
 
 " gundo was being wonky with regard to python 2 and 3. prefer py3k if available
 if has('python3')

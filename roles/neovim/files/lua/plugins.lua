@@ -4,12 +4,11 @@ return {
 	--'closetag',
 	--'dbext',
 	'tpope/vim-fugitive',
-	'ctrlpvim/ctrlp.vim',
 	'dense-analysis/ale',
 	'ikirudennis/vim-scratch',
 	'jistr/vim-nerdtree-tabs',
 	'jnurmine/Zenburn',
-	'nvim-treesitter/nvim-treesitter',
+	{'nvim-treesitter/nvim-treesitter', build = ":TSUpdate"},
 	'sjl/gundo.vim',
 	'tree-sitter-grammars/tree-sitter-markdown',
 	'itchyny/lightline.vim',
@@ -32,4 +31,6 @@ return {
 	{'L3MON4D3/LuaSnip', build = "make install_jsregexp"},
 	'hrsh7th/nvim-cmp',
 	'saadparwaiz1/cmp_luasnip',
+	{'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' },
+    }
 }
