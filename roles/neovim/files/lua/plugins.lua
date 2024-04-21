@@ -24,7 +24,7 @@ return {
 	'tpope/vim-unimpaired',
 	'jceb/vim-orgmode',
 	'hashivim/vim-terraform',
-	'ryanoasis/vim-webdevicons',
+	'nvim-tree/nvim-web-devicons',
 	'jmcantrell/vim-virtualenv',
 	'othree/xml.vim',
 	--'YankRing',

@@ -199,7 +199,7 @@ function! LightlineFiletype()
     return l:llft_string
   endif
   if strlen(&filetype)
-    let l:llft_string = &filetype . ' ' . WebDevIconsGetFileTypeSymbol()
+    let l:llft_string = &filetype
   else
     let l:llft_string = "\uf15c"
   endif
@@ -214,7 +214,7 @@ function! LightlineVirtualenv()
 endfunction
 
 function! LightlineFileformat()
-  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+  return winwidth(0) > 70 ? (&fileformat) : ''
 endfunction
 
 let g:zenburn_italic_Comment=1
