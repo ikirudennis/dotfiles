@@ -18,7 +18,6 @@
   "sparkup": { "branch": "master", "commit": "6fbfceef890e705c47b42b27be743ffed6f9296e" },
   "supertab": { "branch": "master", "commit": "f0093ae12a9115498f887199809a6114659fc858" },
   "telescope.nvim": { "branch": "master", "commit": "7d1698f3d88b448e0639974248cc17f49b7b8acf" },
-  "tree-sitter-markdown": { "branch": "split_parser", "commit": "7fe453beacecf02c86f7736439f238f5bb8b5c9b" },
   "vim-fugitive": { "branch": "master", "commit": "dac8e5c2d85926df92672bf2afb4fc48656d96c7" },
   "vim-nerdtree-tabs": { "branch": "master", "commit": "07d19f0299762669c6f93fbadb8249da6ba9de62" },
   "vim-orgmode": { "branch": "master", "commit": "83982349e45e6d27d186ad82050f86c3233a16f0" },
