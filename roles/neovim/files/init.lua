@@ -41,14 +41,6 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
--- treesitter config
-local treesitter = require('nvim-treesitter.configs')
-treesitter.setup({
-	ensure_installed = { "bash", "lua", "python", "query", "terraform", "vim",
-	"vimdoc", "yaml" },
-	highlight = { enable = true },
-	indent = { enable = true },
-})
 
 vim.cmd [[
 

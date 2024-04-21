@@ -1,5 +1,5 @@
 {
-  "LuaSnip": { "branch": "master", "commit": "03c8e67eb7293c404845b3982db895d59c0d1538" },
+  "LuaSnip": { "branch": "master", "commit": "72eea98b1900013e0cb214f29b898c8d91564930" },
   "Zenburn": { "branch": "master", "commit": "8df765342b2a33c728ce147d6c8e66359378f9d5" },
   "ack.vim": { "branch": "master", "commit": "36e40f9ec91bdbf6f1adf408522a73a6925c3042" },
   "ale": { "branch": "master", "commit": "adee52fba040428264aee956d99033572fc405a3" },
@@ -11,12 +11,13 @@
   "nerdcommenter": { "branch": "master", "commit": "e361a44230860d616f799a337bc58f5218ab6e9c" },
   "nerdtree": { "branch": "master", "commit": "f3a4d8eaa8ac10305e3d53851c976756ea9dc8e8" },
   "nvim-cmp": { "branch": "main", "commit": "ce16de5665c766f39c271705b17fff06f7bcb84f" },
-  "nvim-treesitter": { "branch": "master", "commit": "ea4f6d5175812a3f48302d638a766bc18fcbb04a" },
+  "nvim-treesitter": { "branch": "master", "commit": "28aebb7308a3b3070d38d7041f692469b7f37e6c" },
+  "nvim-web-devicons": { "branch": "master", "commit": "beb6367ab8496c9e43f22e0252735fdadae1872d" },
   "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
   "rainbow_parentheses.vim": { "branch": "master", "commit": "eb8baa5428bde10ecc1cb14eed1d6e16f5f24695" },
   "sparkup": { "branch": "master", "commit": "6fbfceef890e705c47b42b27be743ffed6f9296e" },
   "supertab": { "branch": "master", "commit": "f0093ae12a9115498f887199809a6114659fc858" },
-  "telescope.nvim": { "branch": "master", "commit": "a4432dfb9b0b960c4cbc8765a42dc4fe2e029e8f" },
+  "telescope.nvim": { "branch": "master", "commit": "7d1698f3d88b448e0639974248cc17f49b7b8acf" },
   "tree-sitter-markdown": { "branch": "split_parser", "commit": "7fe453beacecf02c86f7736439f238f5bb8b5c9b" },
   "vim-fugitive": { "branch": "master", "commit": "dac8e5c2d85926df92672bf2afb4fc48656d96c7" },
   "vim-nerdtree-tabs": { "branch": "master", "commit": "07d19f0299762669c6f93fbadb8249da6ba9de62" },
@@ -28,6 +29,5 @@
   "vim-terraform": { "branch": "master", "commit": "21f756b933cd11ac5990a6046fdc7c4e2a6c0aee" },
   "vim-unimpaired": { "branch": "master", "commit": "6d44a6dc2ec34607c41ec78acf81657248580bf1" },
   "vim-virtualenv": { "branch": "master", "commit": "b81912f090918ec63b98d0f41117fb44c0afe646" },
-  "vim-webdevicons": { "branch": "master", "commit": "71f239af28b7214eebb60d4ea5bd040291fb7e33" },
   "xml.vim": { "branch": "master", "commit": "03e79568e67573eed976d1fc80c2b1d9e418fdfa" }
 }
