@@ -13,7 +13,7 @@
   "nerdtree": { "branch": "master", "commit": "f3a4d8eaa8ac10305e3d53851c976756ea9dc8e8" },
   "nvim-cmp": { "branch": "main", "commit": "ce16de5665c766f39c271705b17fff06f7bcb84f" },
   "nvim-lspconfig": { "branch": "master", "commit": "ed8b8a15acc441aec669f97d75f2c1f2ac8c8aa5" },
-  "nvim-treesitter": { "branch": "master", "commit": "28aebb7308a3b3070d38d7041f692469b7f37e6c" },
+  "nvim-treesitter": { "branch": "master", "commit": "1e20226231add3f8fad4e28fd66a68e3ae370b93" },
   "nvim-web-devicons": { "branch": "master", "commit": "beb6367ab8496c9e43f22e0252735fdadae1872d" },
   "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
   "rainbow_parentheses.vim": { "branch": "master", "commit": "eb8baa5428bde10ecc1cb14eed1d6e16f5f24695" },
