@@ -200,6 +200,15 @@ set.showbreak='…'
 set.linebreak = true
 -- set colorscheme to zenburn
 vim.cmd 'colorscheme zenburn'
+-- the old zenburn had the following to allow some settings tweaks
+-- - https://github.com/jnurmine/Zenburn/blob/master/colors/zenburn.vim#L246
+-- - https://github.com/jnurmine/Zenburn/blob/master/colors/zenburn.vim#L479
+-- 
+-- the below was taken from https://stackoverflow.com/a/75113677, but doesn't
+-- quite work right for the comment italic
+-- - vim.api.nvim_set_hl(0, 'Comment', { italic = true })
+--
+-- the taghighlight thing might not be very important
 
 ----------------------------------------------------------------------------
 -- 5 syntax, highlighting and spelling
