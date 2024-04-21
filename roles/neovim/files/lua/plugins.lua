@@ -29,6 +29,4 @@ return {
 	{'L3MON4D3/LuaSnip', build = "make install_jsregexp"},
 	'hrsh7th/nvim-cmp',
 	'saadparwaiz1/cmp_luasnip',
-	{'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' },
-    }
 }
