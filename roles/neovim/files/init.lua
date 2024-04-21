@@ -149,58 +149,6 @@ if has('python3')
 	let g:gundo_prefer_python3 = 1
 endif
 
-" lightline configuration
-let g:lightline = {
-	\ 'colorscheme': 'Tomorrow_Night',
-	\ 'active': {
-	\   'left':  [ [ 'mode', 'paste' ],
-	\            [ 'readonly', 'filename', 'modified' ],
-	\            [ 'bufnum' ] ],
-	\   'right': [ [ 'lineinfo', 'numlines'],
-	\            [ 'percent'] , [ 'virtualenv', 'filetype' ] ]
-	\ },
-	\ 'component': {
-	\   'readonly': '%{&readonly?"\ue0a2":""}',
-	\   'modified': '%{&filetype=="help"?"[HELP]":&modified?"+":&modifiable?"":"-"}',
-	\   'numlines': "\ue0a1 %L"
-	\ },
-	\ 'component_function': {
-	\   'filetype': 'LightlineFiletype',
-	\   'fileformat': 'LightlineFileformat',
-	\   'virtualenv': 'LightlineVirtualenv', 
-	\ },
-	\ 'component_visible_condition': {
-	\   'readonly': '(&filetype!="help"&& &readonly)',
-	\   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
-	\ },
-	\ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-	\ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
-\ }
-
-function! LightlineFiletype()
-  let l:llft_string = ''
-  if winwidth(0) < 70
-    return l:llft_string
-  endif
-  if strlen(&filetype)
-    let l:llft_string = &filetype
-  else
-    let l:llft_string = "\uf15c"
-  endif
-  return l:llft_string
-endfunction
-
-function! LightlineVirtualenv()
-  if strlen(virtualenv#statusline())
-    return virtualenv#statusline() . " \u24d4 "
-  endif
-  return ''
-endfunction
-
-function! LightlineFileformat()
-  return winwidth(0) > 70 ? (&fileformat) : ''
-endfunction
-
 let g:zenburn_italic_Comment=1
 let g:zenburn_enable_TagHighlight=1
 

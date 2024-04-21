@@ -9,7 +9,6 @@ return {
 	'jistr/vim-nerdtree-tabs',
 	'jnurmine/Zenburn',
 	'sjl/gundo.vim',
-	'itchyny/lightline.vim',
 	'kien/rainbow_parentheses.vim',
 	'tpope/vim-repeat',
 	'chrisgeo/sparkup',
