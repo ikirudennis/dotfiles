@@ -4,7 +4,6 @@ return {
 	--'closetag',
 	--'dbext',
 	'tpope/vim-fugitive',
-	'dense-analysis/ale',
 	'ikirudennis/vim-scratch',
 	'jistr/vim-nerdtree-tabs',
 	'sjl/gundo.vim',
