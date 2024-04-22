@@ -1,15 +1,12 @@
 return {
-	'nvim-treesitter/nvim-treesitter',
+	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	config = function()
-		local configs = require('nvim-treesitter.configs')
+		local configs = require("nvim-treesitter.configs")
 		configs.setup({
-			ensure_installed = {
-				"bash", "gitcommit", "lua", "markdown", "python", "query",
-				"terraform", "vim", "vimdoc", "yaml"
-			},
+			auto_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
-	end
+	end,
 }
