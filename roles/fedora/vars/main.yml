@@ -1,6 +1,8 @@
 ---
 fedora_pkgs:
   - ctags
+  - fd-find
+  - ripgrep
   - gcc
   - git
   - mercurial
@@ -19,7 +21,6 @@ fedora_graphical_pkgs:
   - conky
   - copyq
   - dmenu
-  - fd-find
   - flameshot
   - fuzzel
   - grim
@@ -28,7 +29,6 @@ fedora_graphical_pkgs:
   - kanshi
   - neovim-qt
   - openbox
-  - ripgrep
   - slurp
   - swayidle
   - swaylock
