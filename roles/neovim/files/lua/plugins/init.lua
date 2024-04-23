@@ -1,6 +1,5 @@
 return {
 	'mileszs/ack.vim',
-	'pearofducks/ansible-vim',
 	--'closetag',
 	--'dbext',
 	'tpope/vim-fugitive',
