@@ -1,4 +1,11 @@
 ---
+# in non-graphical environments, ~/.config won't exist. make sure it does exist
+# before we try to symlink anything into it
+- name: ensure ~/.config dir exists
+  ansible.builtin.file:
+    path: ~/.config
+    state: directory
+    mode: "0755"
 - name: symlink neovim directory
   ansible.builtin.file:
     path: ~/.config/nvim
