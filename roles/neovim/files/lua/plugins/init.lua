@@ -15,7 +15,6 @@ return {
 	--'Toggle',
 	'tpope/vim-unimpaired',
 	'jceb/vim-orgmode',
-	'hashivim/vim-terraform',
 	'jmcantrell/vim-virtualenv',
 	'othree/xml.vim',
 	--'YankRing',
