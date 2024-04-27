@@ -123,9 +123,6 @@ map <leader><tab> :Scratch<cr>
 let g:scratch_filename='hiya, buddy'
 let g:scratch_bufclose=2
 
-" gotta store the history somewhere
-let yankring_history_dir='$HOME/.cache/nvim'
-
 let g:slime_send_key = '<leader>slime'
 let g:slime_target = 'tmux'
 

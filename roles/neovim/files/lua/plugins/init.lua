@@ -15,5 +15,4 @@ return {
 	'jceb/vim-orgmode',
 	'jmcantrell/vim-virtualenv',
 	'othree/xml.vim',
-	--'YankRing',
 }
