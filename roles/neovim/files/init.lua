@@ -216,7 +216,7 @@ set.colorcolumn = "+1"
 -- with comma-space
 set.hlsearch = true
 -- show whitespace at end of lines
-vim.api.nvim_set_hl(0, 'WhitespaceEOL', { ctermbg=lightgray, guibg=lightgray })
+vim.api.nvim_set_hl(0, 'WhitespaceEOL', { ctermbg="lightgray", bg="lightgray" })
 vim.cmd [[ match WhitespaceEOL /s+$/ ]]
 
 ----------------------------------------------------------------------------
