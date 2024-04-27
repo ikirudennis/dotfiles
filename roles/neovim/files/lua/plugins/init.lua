@@ -11,7 +11,6 @@ return {
 	'tpope/vim-surround',
 	'scrooloose/nerdcommenter',
 	'scrooloose/nerdtree',
-	--'Toggle',
 	'tpope/vim-unimpaired',
 	'jceb/vim-orgmode',
 	'jmcantrell/vim-virtualenv',
