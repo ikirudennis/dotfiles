@@ -5,7 +5,6 @@ return {
 	'tpope/vim-fugitive',
 	'ikirudennis/vim-scratch',
 	'jistr/vim-nerdtree-tabs',
-	'sjl/gundo.vim',
 	'kien/rainbow_parentheses.vim',
 	'tpope/vim-repeat',
 	'chrisgeo/sparkup',

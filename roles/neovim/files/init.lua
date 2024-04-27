@@ -129,9 +129,6 @@ let yankring_history_dir='$HOME/.cache/nvim'
 " Toggle rainbow parentheses
 map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:RainbowParenthesesLoadSquare<cr>
 
-" gundo plugin shortcut
-nnoremap <F5> :GundoToggle<CR>
-
 let g:slime_send_key = '<leader>slime'
 let g:slime_target = 'tmux'
 
@@ -144,10 +141,6 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 " file relative to a project instead of using a global tagsfile.
 let g:easytags_dynamic_files = 2
 
-" gundo was being wonky with regard to python 2 and 3. prefer py3k if available
-if has('python3')
-	let g:gundo_prefer_python3 = 1
-endif
 
 let g:snipMate = { 'snippet_version' : 1 }
 
