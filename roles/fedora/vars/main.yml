@@ -6,6 +6,7 @@ fedora_pkgs:
   - gcc
   - git
   - mercurial
+  - neovim
   - python3-devel
   - python3-pip
   - unzip
