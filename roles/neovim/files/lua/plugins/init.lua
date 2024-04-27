@@ -10,7 +10,6 @@ return {
 	'tpope/vim-repeat',
 	'chrisgeo/sparkup',
 	'tpope/vim-speeddating',
-	'ervandew/supertab',
 	'tpope/vim-surround',
 	'scrooloose/nerdcommenter',
 	'scrooloose/nerdtree',
