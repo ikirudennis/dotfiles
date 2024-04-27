@@ -174,7 +174,7 @@ set.whichwrap = "<,>,b"
 -- Hopefully this reduces the size of the global vimtags file and contributes
 -- to easytags being more responsive
 set.tags = "./.tags;,~/.vimtags"
- 
+
 ----------------------------------------------------------------------------
 -- 4 displaying text
 ----------------------------------------------------------------------------
