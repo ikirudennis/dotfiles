@@ -126,9 +126,6 @@ let g:scratch_bufclose=2
 " gotta store the history somewhere
 let yankring_history_dir='$HOME/.cache/nvim'
 
-" Toggle rainbow parentheses
-map <leader>r :RainbowParenthesesToggle<cr>:RainbowParenthesesLoadBraces<cr>:RainbowParenthesesLoadSquare<cr>
-
 let g:slime_send_key = '<leader>slime'
 let g:slime_target = 'tmux'
 
