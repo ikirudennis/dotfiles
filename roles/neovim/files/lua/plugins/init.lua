@@ -2,7 +2,6 @@ return {
 	'mileszs/ack.vim',
 	--'closetag',
 	--'dbext',
-	'tpope/vim-fugitive',
 	'ikirudennis/vim-scratch',
 	'jistr/vim-nerdtree-tabs',
 	'tpope/vim-repeat',
