@@ -115,11 +115,6 @@ endif
 " some snippets will insert the author's name
 let g:snips_author='Dennis Burke'
 
-" quickly open a scratch document with the filename, 'hiya, buddy'
-map <leader><tab> :Scratch<cr>
-let g:scratch_filename='hiya, buddy'
-let g:scratch_bufclose=2
-
 let g:slime_send_key = '<leader>slime'
 let g:slime_target = 'tmux'
 

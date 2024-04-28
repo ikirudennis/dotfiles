@@ -1,7 +1,6 @@
 return {
 	--'closetag',
 	--'dbext',
-	'ikirudennis/vim-scratch',
 	'jistr/vim-nerdtree-tabs',
 	'tpope/vim-repeat',
 	'chrisgeo/sparkup',
