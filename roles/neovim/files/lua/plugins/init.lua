@@ -7,7 +7,6 @@ return {
 	'tpope/vim-repeat',
 	'chrisgeo/sparkup',
 	'tpope/vim-speeddating',
-	'tpope/vim-surround',
 	'scrooloose/nerdcommenter',
 	'scrooloose/nerdtree',
 	'tpope/vim-unimpaired',
