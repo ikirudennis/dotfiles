@@ -115,9 +115,6 @@ endif
 " some snippets will insert the author's name
 let g:snips_author='Dennis Burke'
 
-" shortcut to Ack command
-map <leader>a :Ack<space>
-
 " quickly open a scratch document with the filename, 'hiya, buddy'
 map <leader><tab> :Scratch<cr>
 let g:scratch_filename='hiya, buddy'

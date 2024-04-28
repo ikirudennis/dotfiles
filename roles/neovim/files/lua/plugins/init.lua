@@ -1,5 +1,4 @@
 return {
-	'mileszs/ack.vim',
 	--'closetag',
 	--'dbext',
 	'ikirudennis/vim-scratch',
