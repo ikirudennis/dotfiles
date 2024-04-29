@@ -63,25 +63,6 @@ vnoremap / /\v
 " ----------------------------------------------------------------------------
 filetype plugin indent on
 if has("autocmd")
-	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-	autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-	autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-	autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
-	autocmd FileType c setlocal omnifunc=ccomplete#Complete
-	autocmd FileType sql setlocal omnifunc=sqlcomplete#Complete
-
-	" HTML fold tag
-	au FileType html,htmldjango nnoremap <buffer> <leader>ft Vatzf
-
-	" default settings for working with a python file.
-	autocmd FileType python setlocal tabstop=4|setlocal shiftwidth=4|setlocal expandtab|setlocal softtabstop=4|setlocal foldcolumn=1|setlocal foldmethod=indent|setlocal textwidth=79
-	autocmd BufNewFile,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class|let python_highlight_all = 1
-
-	" default settings for working in javascript
-	autocmd FileType javascript setlocal tabstop=2|setlocal shiftwidth=2|setlocal expandtab|setlocal softtabstop=2|setlocal foldcolumn=1|setlocal foldmethod=syntax|setlocal textwidth=79|setlocal foldlevelstart=0|let javaScript_fold=1
-
 	" allow txt files to utilize modelines to specify local settings
 	autocmd BufRead *.txt setlocal modeline|setlocal modelines=1
 
