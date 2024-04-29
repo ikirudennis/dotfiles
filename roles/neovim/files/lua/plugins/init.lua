@@ -10,5 +10,4 @@ return {
 	'tpope/vim-unimpaired',
 	'jceb/vim-orgmode',
 	'jmcantrell/vim-virtualenv',
-	'othree/xml.vim',
 }
