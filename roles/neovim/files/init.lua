@@ -98,14 +98,8 @@ if has("autocmd")
 	" use modelines in *.vim files
 	autocmd BufRead *.vim setlocal modeline|setlocal modelines=1
 
-	" Source the vimrc file after saving it
-	" autocmd! BufWritePost $MYVIMRC source $MYVIMRC|call lightline#disable()|call lightline#enable()
-
 	" don't let auto-format options clobber crontab files
 	autocmd FileType crontab setlocal formatoptions-=a
-
-	" yaml defaults
-	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 endif
 
