@@ -112,8 +112,6 @@ endif
 " ----------------------------------------------------------------------------
 " iv. Plugin settings and shortcuts
 " ----------------------------------------------------------------------------
-" some snippets will insert the author's name
-let g:snips_author='Dennis Burke'
 
 let g:slime_send_key = '<leader>slime'
 let g:slime_target = 'tmux'
@@ -121,14 +119,6 @@ let g:slime_target = 'tmux'
 " hide nerdtree-tabs by default
 let g:nerdtree_tabs_open_on_gui_startup=0
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
-
-" by default, easytags stores tags in ~/.vimtags.  This contributes to that
-" file becoming exceptionally large.  This will force easytags to use a tags
-" file relative to a project instead of using a global tagsfile.
-let g:easytags_dynamic_files = 2
-
-
-let g:snipMate = { 'snippet_version' : 1 }
 
 ]]
 local set = vim.opt
@@ -152,14 +142,6 @@ set.ignorecase = true
 set.smartcase = true
 -- keys that wrap to the next line
 set.whichwrap = "<,>,b"
-
-----------------------------------------------------------------------------
--- 3 tags
-----------------------------------------------------------------------------
-
--- Hopefully this reduces the size of the global vimtags file and contributes
--- to easytags being more responsive
-set.tags = "./.tags;,~/.vimtags"
 
 ----------------------------------------------------------------------------
 -- 4 displaying text
