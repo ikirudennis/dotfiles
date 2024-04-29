@@ -113,9 +113,6 @@ endif
 " iv. Plugin settings and shortcuts
 " ----------------------------------------------------------------------------
 
-let g:slime_send_key = '<leader>slime'
-let g:slime_target = 'tmux'
-
 " hide nerdtree-tabs by default
 let g:nerdtree_tabs_open_on_gui_startup=0
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
