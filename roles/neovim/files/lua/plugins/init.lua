@@ -1,5 +1,4 @@
 return {
-	--'closetag',
 	--'dbext',
 	'jistr/vim-nerdtree-tabs',
 	'tpope/vim-repeat',
