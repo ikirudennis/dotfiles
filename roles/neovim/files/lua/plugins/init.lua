@@ -5,7 +5,6 @@ return {
 	'tpope/vim-repeat',
 	'chrisgeo/sparkup',
 	'tpope/vim-speeddating',
-	'scrooloose/nerdcommenter',
 	'scrooloose/nerdtree',
 	'tpope/vim-unimpaired',
 	'jceb/vim-orgmode',
