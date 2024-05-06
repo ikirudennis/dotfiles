@@ -12,6 +12,7 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
+		event = {"InsertEnter", "CmdlineEnter" },
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
@@ -67,7 +68,7 @@ return {
 					end, { "i", "s" }),
 				}),
 				sources = cmp.config.sources({
-					--{ name = "nvim_lsp" },
+					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
 				}, {
 					{ name = "buffer" },
