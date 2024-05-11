@@ -1,0 +1,1 @@
+autocmd BufNewFile,BufRead ~/.config/systemd/user/.#* setlocal noundofile

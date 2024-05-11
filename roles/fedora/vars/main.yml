@@ -1,9 +1,12 @@
 ---
 fedora_pkgs:
   - ctags
+  - fd-find
+  - ripgrep
   - gcc
   - git
   - mercurial
+  - neovim
   - python3-devel
   - python3-pip
   - unzip
@@ -15,7 +18,7 @@ fedora_graphical_pkgs:
   - bemenu
   - blueman
   - brightnessctl
-  # - chayang
+  - chayang
   - conky
   - copyq
   - dmenu
