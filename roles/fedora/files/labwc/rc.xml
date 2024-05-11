@@ -18,6 +18,7 @@
   <theme>
     <name>Onyx</name>
     <cornerRadius>8</cornerRadius>
+    <dropShadows>yes</dropShadows>
     <font place="ActiveWindow">
       <name>sans</name>
       <size>8</size>
