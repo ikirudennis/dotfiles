@@ -10,7 +10,7 @@ return {
 		config = function ()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"lua_ls", "ansiblels"
+					"lua_ls", "ansiblels", "bashls"
 				}
 			})
 		end
@@ -24,6 +24,9 @@ return {
 				capabilities = capabilities
 			})
 			lspconfig.ansiblels.setup({
+				capabilities = capabilities
+			})
+			lspconfig.bashls.setup({
 				capabilities = capabilities
 			})
 			vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
