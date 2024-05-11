@@ -220,6 +220,7 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
       <action name="NextWindow"/>
+      <action name="PreviousWindow"/>
     </keybind>
     <keybind key="A-space">
       <action name="ShowMenu">
