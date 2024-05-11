@@ -25,12 +25,22 @@
     path: ~/.config/labwc
     state: directory
     mode: "0755"
+- name: create labwc environment.d directory
+  ansible.builtin.file:
+    path: ~/.config/labwc/environment.d
+    state: directory
+    mode: "0755"
 - name: symlink labwc files
   ansible.builtin.file:
     path: "~/.config/labwc/{{ item }}"
     src: "{{ ansible_env.PWD }}/roles/fedora/files/labwc/{{ item }}"
     state: link
   with_items: "{{ fedora_labwc_files }}"
+- name: symlink labwc environment file
+  ansible.builtin.file:
+    path: "~/.config/labwc/environment.d/default.env"
+    src: "{{ ansible_env.PWD }}/roles/fedora/files/labwc/default.env"
+    state: link
 - name: generate labwc menu.xml from template
   ansible.builtin.template:
     src: "{{ ansible_env.PWD }}/roles/fedora/templates/labwc_menu.xml"

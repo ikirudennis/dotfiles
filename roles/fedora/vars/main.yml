@@ -53,5 +53,4 @@ fedora_copr_repos:
   - wef/wlogout
 fedora_labwc_files:
   - autostart
-  - environment
   - rc.xml
