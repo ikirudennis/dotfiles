@@ -57,7 +57,7 @@
 </menu>
 
 <menu id="root-menu">
-{{ labwc_menu_generator.stdout }}
+  <menu id="pipemenu" label="Applications" execute="labwc-menu-generator --pipemenu" />
   <menu id="administration" label="Administration">
     <item label="dnfdragora" icon="dnfdragora">
       <action name="Execute"><command>dnfdragora</command></action>

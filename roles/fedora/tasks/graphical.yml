@@ -13,13 +13,6 @@
     path: ~/.config/foot
     src: "{{ ansible_env.PWD }}/roles/fedora/files/foot"
     state: link
-- name: "run `labwc-menu-generator` and store output"
-  # the registered labwc_menu_generator variable is used in the
-  # `labwc_menu.xml` template file
-  ansible.builtin.command:
-    cmd: labwc-menu-generator --bare
-  register: labwc_menu_generator
-  changed_when: false
 - name: create labwc directory
   ansible.builtin.file:
     path: ~/.config/labwc
@@ -41,13 +34,6 @@
     path: "~/.config/labwc/environment.d/default.env"
     src: "{{ ansible_env.PWD }}/roles/fedora/files/labwc/default.env"
     state: link
-- name: generate labwc menu.xml from template
-  ansible.builtin.template:
-    src: "{{ ansible_env.PWD }}/roles/fedora/templates/labwc_menu.xml"
-    dest: ~/.config/labwc/menu.xml
-    mode: "0755"
-  notify:
-    reconfigure labwc
 - name: symlink swayidle directory
   ansible.builtin.file:
     path: ~/.config/swayidle
