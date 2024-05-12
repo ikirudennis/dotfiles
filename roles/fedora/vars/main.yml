@@ -55,4 +55,4 @@ fedora_labwc_files:
   - autostart
   - menu.xml
   - rc.xml
-  - themerc
+  - themerc-override
