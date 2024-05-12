@@ -56,19 +56,7 @@ vim.api.nvim_create_user_command('H', "tab help <args>",
 	{ bang=true, complete='help', nargs=1 }
 )
 
-vim.cmd [[
-
-" ----------------------------------------------------------------------------
-" iv. Plugin settings and shortcuts
-" ----------------------------------------------------------------------------
-
-" hide nerdtree-tabs by default
-let g:nerdtree_tabs_open_on_gui_startup=0
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
-
-]]
 local set = vim.opt
-
 
 ----------------------------------------------------------------------------
 -- 1 important
