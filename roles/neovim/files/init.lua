@@ -59,32 +59,6 @@ vim.api.nvim_create_user_command('H', "tab help <args>",
 vim.cmd [[
 
 " ----------------------------------------------------------------------------
-" iii. Settings for specific file types
-" ----------------------------------------------------------------------------
-filetype plugin indent on
-if has("autocmd")
-	" allow txt files to utilize modelines to specify local settings
-	autocmd BufRead *.txt setlocal modeline|setlocal modelines=1
-
-	" tab filetype is for guitar tabs
-	autocmd BufRead *.tab setfiletype=tab
-
-	" Upon opening a file that has previously been opened, go to the position
-	" the cursor was in the last time it was opened. From :help restore-cursor
-	autocmd BufReadPost *
-	    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-	    \   exe "normal! g`\"" |
-		\ endif
-
-	" use modelines in *.vim files
-	autocmd BufRead *.vim setlocal modeline|setlocal modelines=1
-
-	" don't let auto-format options clobber crontab files
-	autocmd FileType crontab setlocal formatoptions-=a
-
-endif
-
-" ----------------------------------------------------------------------------
 " iv. Plugin settings and shortcuts
 " ----------------------------------------------------------------------------
 
