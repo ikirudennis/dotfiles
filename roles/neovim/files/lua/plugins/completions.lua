@@ -1,10 +1,5 @@
 return {
 	{
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
-	},
-	{
 		"L3MON4D3/LuaSnip",
 		build = "make install_jsregexp",
 		dependencies = {
@@ -72,11 +67,17 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
-				}, {
 					{ name = "buffer" },
 					{ name = "path" },
 				}),
 			})
 		end,
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			dependencies = {
+				"hrsh7th/cmp-buffer",
+				"hrsh7th/cmp-path",
+			}
+		},
 	},
 }
