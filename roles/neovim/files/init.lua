@@ -1,6 +1,6 @@
--- -------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 -- i. Setup
-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 -- use comma instead of backslash for commands. mapleader needs to be set early
 -- in this file so that later commands may use it.
@@ -19,8 +19,30 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
--- "plugins" below refers to ~/.config/nvim/lua/init.lua
+-- "plugins" below refers to lua files in ~/.config/nvim/lua/plugins/
 require("lazy").setup("plugins")
+
+-- ----------------------------------------------------------------------------
+-- ii. Shortcuts
+-- ----------------------------------------------------------------------------
+
+-- edit neovim init.lua
+vim.keymap.set("n", "<leader>ev", ":tabe $MYVIMRC<cr>", { desc = "edit neovim init.lua" })
+-- Select recently-pasted text
+vim.keymap.set("n", "<leader>v", "V`]", { desc = "select recently-pasted text" })
+-- reformat a paragraph
+vim.keymap.set("n", "<leader>q", "gqip", { desc = "reformat text" })
+-- jj is easier to type than escape
+vim.keymap.set("i", "jj", "<Esc>", { desc = "jj works as another esc" })
+-- easily turn off search highlighting with comma-space
+vim.keymap.set("n", "<leader><space>", ":noh<cr>", { desc = "toggle search highlighting", silent = true })
+-- in both normal and visual modes, use tab key as a synonym for % which jumps
+-- to corresponding parentheses, braces and brackets
+vim.keymap.set({ "n", "v" }, "<tab>", "%", { desc = "also use <tab> for %-style jumping" })
+
+-- in both normal and visual modes, use the 'very magic' search setting.  Makes
+-- search behave sanely.  See :help /magic for more info
+vim.keymap.set({ "n", "v" }, "/", "/\\v", { desc = "default to very magic search" })
 
 -- -----------------------------------------------------------------------------
 -- v. Custom commands
@@ -35,28 +57,6 @@ vim.api.nvim_create_user_command('H', "tab help <args>",
 )
 
 vim.cmd [[
-
-" ----------------------------------------------------------------------------
-" ii. Shortcuts
-" ----------------------------------------------------------------------------
-" edit .vimrc
-nnoremap <leader>ev :tabe $MYVIMRC<cr>
-" Select recently-pasted text
-nnoremap <leader>v V`]
-" reformat a paragraph
-nnoremap <leader>q gqip
-" jj is easier to type than escape 
-inoremap jj <Esc>
-" easily turn off search highlighting with comma-space
-nnoremap <silent> <leader><space> :noh<cr>
-" in both normal and visual modes, use tab key as a synonym for % which jumps
-" to corresponding parentheses, braces and brackets
-nnoremap <tab> %
-vnoremap <tab> %
-" in both normal and visual modes, use the 'very magic' search setting.  Makes
-" search behave sanely.  See :help /magic for more info
-nnoremap / /\v
-vnoremap / /\v
 
 " ----------------------------------------------------------------------------
 " iii. Settings for specific file types
