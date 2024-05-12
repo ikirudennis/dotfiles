@@ -117,9 +117,6 @@ set.colorcolumn = "+1"
 -- see Shortcuts below to find out how to easily turn off search highlighting
 -- with comma-space
 set.hlsearch = true
--- show whitespace at end of lines
-vim.api.nvim_set_hl(0, 'WhitespaceEOL', { ctermbg="lightgray", bg="lightgray" })
-vim.cmd [[ match WhitespaceEOL /s+$/ ]]
 
 ----------------------------------------------------------------------------
 -- 6 multiple windows
