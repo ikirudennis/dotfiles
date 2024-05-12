@@ -45,7 +45,7 @@ vim.keymap.set({ "n", "v" }, "<tab>", "%", { desc = "also use <tab> for %-style 
 vim.keymap.set({ "n", "v" }, "/", "/\\v", { desc = "default to very magic search" })
 
 -- -----------------------------------------------------------------------------
--- v. Custom commands
+-- iii. Custom commands
 --------------------------------------------------------------------------------
 
 -- define a command ':H' which will open a help file in a new tab. completion
