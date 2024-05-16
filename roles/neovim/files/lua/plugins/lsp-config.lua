@@ -35,6 +35,16 @@ return {
 			vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 			vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, {})
+
+			-- on hovering for more than 250 msec, show a floating display of
+			-- the diagnostic information
+			vim.o.updatetime = 250
+			vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
+				group = vim.api.nvim_create_augroup("float_diagnostic", {clear = true}),
+				callback = function ()
+					vim.diagnostic.open_float(nil, {focus=false})
+				end
+			})
 		end
 	},
 }
