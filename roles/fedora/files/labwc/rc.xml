@@ -223,7 +223,7 @@
       <action name="PreviousWindow"/>
     </keybind>
     <keybind key="A-space">
-      <action name="ShowMenu">
+      <action name="ShowMenu" atCursor="no">
         <menu>client-menu</menu>
       </action>
     </keybind>
