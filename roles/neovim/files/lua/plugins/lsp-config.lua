@@ -10,7 +10,7 @@ return {
 		config = function ()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"lua_ls", "ansiblels", "bashls", "pyright",
+					"lua_ls", "ansiblels", "bashls", "pyright", "terraformls",
 				}
 			})
 		end
@@ -30,6 +30,9 @@ return {
 				capabilities = capabilities
 			})
 			lspconfig.pyright.setup({
+				capabilities = capabilities
+			})
+			lspconfig.terraformls.setup({
 				capabilities = capabilities
 			})
 			vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
