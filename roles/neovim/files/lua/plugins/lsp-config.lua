@@ -1,19 +1,23 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		config = function ()
+		config = function()
 			require("mason").setup()
-		end
+		end,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		config = function ()
+		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"lua_ls", "ansiblels", "bashls", "pyright", "terraformls",
-				}
+					"lua_ls",
+					"ansiblels",
+					"bashls",
+					"pyright",
+					"terraformls",
+				},
 			})
-		end
+		end,
 	},
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -32,29 +36,28 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		config = function ()
+		config = function()
 			local lspconfig = require("lspconfig")
-			local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.ansiblels.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.bashls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.terraformls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
-			vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {})
-			vim.keymap.set('n', '<leader>gg', vim.lsp.buf.hover, {})
-			vim.keymap.set('n', '<leader>gl', vim.diagnostic.open_float, {})
-			vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, {})
-
-		end
+			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+			vim.keymap.set("n", "<leader>gg", vim.lsp.buf.hover, {})
+			vim.keymap.set("n", "<leader>gl", vim.diagnostic.open_float, {})
+			vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
+		end,
 	},
 }
