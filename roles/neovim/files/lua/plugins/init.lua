@@ -1,6 +1,5 @@
 return {
 	--'dbext',
-	'jistr/vim-nerdtree-tabs',
 	'tpope/vim-repeat',
 	'chrisgeo/sparkup',
 	'tpope/vim-speeddating',
