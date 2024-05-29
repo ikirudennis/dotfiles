@@ -54,6 +54,9 @@ return {
 			lspconfig.terraformls.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.tflint.setup({
+				capabilities = capabilities,
+			})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>gg", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gl", vim.diagnostic.open_float, {})
