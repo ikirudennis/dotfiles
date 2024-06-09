@@ -8,14 +8,6 @@
   ansible.builtin.dnf:
     name: "{{ fedora_pkgs }}"
   become: true
-
-- name: check if we're running in a graphical environment
-  # the systemctl module doesn't allow running this specific command:
-  # https://github.com/ansible/ansible/issues/65785
-  ansible.builtin.command:  # noqa: command-instead-of-module
-    cmd: systemctl get-default
-  register: systemctl_getdefault
-  changed_when: "systemctl_getdefault.rc != 0"
 - name: run graphical environment tasks
   ansible.builtin.include_tasks: graphical.yml
-  when: systemctl_getdefault.stdout == 'graphical.target'
+  when: graphical_environment | bool
