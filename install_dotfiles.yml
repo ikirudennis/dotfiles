@@ -1,6 +1,10 @@
 ---
 - name: install dotfiles
   hosts: all
+  vars:
+    # Assume we're not in a graphical environment, but the graphical role will
+    # set this to the correct value if we are
+    graphical_environment: false
   roles:
     - role: common
       tags: common
