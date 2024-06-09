@@ -51,8 +51,3 @@ fedora_graphical_pkgs:
 fedora_copr_repos:
   - alebastr/sway-extras
   - wef/wlogout
-fedora_labwc_files:
-  - autostart
-  - menu.xml
-  - rc.xml
-  - themerc-override

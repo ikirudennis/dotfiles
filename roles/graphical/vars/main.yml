@@ -1,0 +1,6 @@
+---
+graphical_labwc_files:
+  - autostart
+  - menu.xml
+  - rc.xml
+  - themerc-override
