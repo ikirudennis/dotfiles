@@ -3,7 +3,9 @@ exclude_paths:
   - roles/common/tests/
   - roles/fedora/tests/
   - roles/git/tests/
+  - roles/graphical/tests/
   - roles/hg/tests/
+  - roles/neovim/tests/
   - roles/pip/tests/
   - roles/terminator/tests/
   - roles/tmux/tests/
