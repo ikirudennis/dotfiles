@@ -57,6 +57,8 @@ galaxy_info:
   #       Maximum 20 tags per role.
 
 dependencies:
+  - role: graphical
+    tags: graphical
   - role: fedora
     when: ansible_distribution == 'Fedora'
   - role: pip
