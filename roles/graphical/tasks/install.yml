@@ -35,6 +35,17 @@
     path: ~/.config/swaylock
     src: "{{ ansible_env.PWD }}/roles/graphical/files/swaylock"
     state: link
+- name: ensure the terminator config directory exists
+  ansible.builtin.file:
+    path: ~/.config/terminator
+    state: directory
+    mode: "0755"
+- name: symlink terminator config
+  ansible.builtin.file:
+    path: ~/.config/terminator/config
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/terminator/config"
+    state: link
+    mode: "0644"
 - name: symlink waybar directory
   ansible.builtin.file:
     path: ~/.config/waybar

@@ -16,8 +16,6 @@
       tags: neovim
     - role: vim
       tags: vim
-    - role: terminator
-      tags: terminator
     - role: tmux
       tags: tmux
     - role: git
