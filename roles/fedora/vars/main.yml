@@ -22,6 +22,7 @@ fedora_graphical_pkgs:
   - conky
   - copyq
   - dmenu
+  - dunst
   - flameshot
   - fuzzel
   - grim

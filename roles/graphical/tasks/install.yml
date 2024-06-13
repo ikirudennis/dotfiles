@@ -1,4 +1,9 @@
 ---
+- name: symlink dunst directory
+  ansible.builtin.file:
+    path: ~/.config/dunst
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/dunst"
+    state: link
 - name: symlink foot directory
   ansible.builtin.file:
     path: ~/.config/foot
