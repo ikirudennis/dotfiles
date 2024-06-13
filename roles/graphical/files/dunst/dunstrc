@@ -411,6 +411,11 @@
     timeout = 0
     script = ~/.local/bin/dunst_calendar_audio_alert
 
+# check on this periodically to see if it's still needed
+[slack]
+    appname = Slack
+    new_icon = /usr/share/pixmaps/slack.png
+
 #[twitter]
 #    appname = Pidgin
 #    summary = *twitter.com*
