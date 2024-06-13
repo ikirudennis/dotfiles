@@ -387,6 +387,11 @@
     #format = "<b>backlight level:</b> %p"
 
 [dnfdragora]
+    # dnfdragora uses pystray to display notifications, and it does things
+    # a bit wonky. So it has a hard-coded 7-second timeout which ignores
+    # dunst's ability to override it. We'll have to wait until dnfdragora
+    # decides to implement some better way to handle notification timeouts
+    # before the below config can become more usable
     summary = dnfdragora-update
     timeout = 0
     override_dbus_timeout = 0
