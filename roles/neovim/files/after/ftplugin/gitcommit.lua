@@ -15,4 +15,4 @@ vim.opt_local.cc = "+1"
 
 -- in insert mode, use the `git jiraticket` command to insert the jira ticket
 -- derived from the current branch name
-vim.keymap.set("i", "<leader>j", "<C-R>=trim(system('git jiraticket'))<C-M>")
+vim.keymap.set("i", "<leader>j", "<C-R>=trim(system('git jiraticket'))<C-M> ")
