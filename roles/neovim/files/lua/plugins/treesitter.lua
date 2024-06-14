@@ -11,5 +11,5 @@ return {
 			indent = { enable = true },
 		})
 	end,
-	dependencies = { "gbprod/tree-sitter-gitcommit", "windwp/nvim-ts-autotag" },
+	dependencies = { "gbprod/tree-sitter-gitcommit", "windwp/nvim-ts-autotag", "tadmccorkle/markdown.nvim" },
 }
