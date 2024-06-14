@@ -13,6 +13,7 @@ return {
 					"lua_ls",
 					"ansiblels",
 					"bashls",
+					"marksman",
 					"pyright",
 					"terraformls",
 				},

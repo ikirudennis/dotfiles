@@ -6,7 +6,7 @@ return {
 		configs.setup({
 			auto_install = true,
 			autotag = { enable = true },
-			ensure_installed = { "diff", "gitcommit", "git_rebase" },
+			ensure_installed = { "diff", "gitcommit", "git_rebase", "markdown", "markdown_inline" },
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
