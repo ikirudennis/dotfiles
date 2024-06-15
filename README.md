@@ -54,3 +54,9 @@ like normal):
 cd /vagrant
 ansible-playbook install_dotfiles.yml
 ```
+
+> [!NOTE]
+> It's likely the case that the resulting virtual machine might not be too
+useable. It's probably pretty strangled as it's just intended as a minimal
+virtual machine, but at the very least, you'll be able to test that the tools
+get installed and that the configurations are all in the correct spots.
