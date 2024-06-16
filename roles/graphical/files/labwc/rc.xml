@@ -443,6 +443,15 @@
         <command>fuzzel</command>
       </action>
     </keybind>
+    <keybind key="W-A-v">
+      <action name="VirtualOutputAdd" output_name="ScreenCasting" />
+      <action name="Execute">
+        <command>~/.local/bin/dburke_cast_screen</command>
+      </action>
+    </keybind>
+    <keybind key="W-A-c">
+      <action name="VirtualOutputRemove" output_name="ScreenCasting" />
+    </keybind>
   </keyboard>
 
   <mouse>
