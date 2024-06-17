@@ -43,7 +43,7 @@ sudo dnf -y group install "Basic Desktop" GNOME
 # change the default target so that it will start a graphical login screen.
 sudo systemctl set-default graphical.target
 ```
-> ![NOTE]
+> [!NOTE]
 > It will be worthwhile to use Virtual Machine Manager to log into the virtual
 machine with Gnome once, just so that the directories are set up as a normal
 graphical environment would be.
