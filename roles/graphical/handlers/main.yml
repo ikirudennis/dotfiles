@@ -3,7 +3,7 @@
   ansible.builtin.find:
     paths: ~/.local/share/fonts/NerdFonts/
     patterns:
-      - '(?!FiraMono_v{{ graphical_nerdfont_version }})'
+      - 'FiraMono_(?!v{{ graphical_nerdfont_version }})'
     file_type: directory
     use_regex: true
   register: nerdfonts_to_delete
