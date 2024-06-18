@@ -1,2 +1,19 @@
 ---
-# handlers file for graphical
+- name: search for old nerdfonts versions
+  ansible.builtin.find:
+    paths: ~/.local/share/fonts/NerdFonts/
+    patterns:
+      - '(?!FiraMono_v{{ graphical_nerdfont_version }})'
+    file_type: directory
+    use_regex: true
+  register: nerdfonts_to_delete
+  listen: clean up old nerdfonts
+
+- name: delete old nerdfonts
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    state: absent
+  loop: "{{ nerdfonts_to_delete.files }}"
+  loop_control:
+    label: "{{ item.path }}"
+  listen: clean up old nerdfonts

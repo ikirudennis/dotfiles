@@ -30,6 +30,17 @@
     path: "~/.config/labwc/environment.d/default.env"
     src: "{{ ansible_env.PWD }}/roles/graphical/files/labwc/default.env"
     state: link
+- name: ensure nerdfont directory exists before we put files in it
+  ansible.builtin.file:
+    dest: "{{ graphical_nerdfont_dest }}"
+    state: directory
+    mode: "0755"
+- name: install nerdfont
+  ansible.builtin.unarchive:
+    src: "{{ graphical_nerdfont_download_url }}"
+    dest: "{{ graphical_nerdfont_dest }}"
+    remote_src: true
+  notify: clean up old nerdfonts
 - name: symlink swayidle directory
   ansible.builtin.file:
     path: ~/.config/swayidle
