@@ -24,6 +24,7 @@ fedora_graphical_pkgs:
   - dmenu
   - dunst
   - flameshot
+  - foot
   - fuzzel
   - grim
   - labwc
