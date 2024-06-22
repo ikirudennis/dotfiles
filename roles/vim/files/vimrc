@@ -2,27 +2,33 @@
 " i. Setup
 " ----------------------------------------------------------------------------
 
-source $HOME/.vim/addons.vim
-
 " VAM is a slightly neater way of setting up vim plugins.  Vundle and the like
 " make it easy to use up-to-date versions of plugins, but don't allow for
 " mercurial repos.  The documentation for VAM kind of sucks, but I've at least
 " got this working, and this will mean a lot fewer sub-repos.
-fun! SetupVAM(addons)
+fun! SetupVAM()
   let c = get(g:, 'vim_addon_manager', {})
+  let g:vim_addon_manager = c
   let c.plugin_root_dir = expand('$HOME', 1) . '/.vim/vim-addons'
-  let c.log_to_buf = 0
+
+  " Force your ~/.vim/after directory to be last in &rtp always:
+  let g:vim_addon_manager.rtp_list_hook = 'vam#ForceUsersAfterDirectoriesToBeLast'
+
+  " most used options you may want to use:
+  let c.log_to_buf = 1
+  let c.log_buffer_name = expand('$HOME', 1) . '/.vim_run/VAM_LOG.txt'
   let c.auto_install = 1
   let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
   if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
-    let cmd = '/usr/bin/git clone --depth=1 git://github.com/MarcWeber/vim-addon-manager '
-    let cmd .= shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
-    call system(cmd)
+    execute '!git clone --depth=1 https://github.com/MarcWeber/vim-addon-manager '
+        \       shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
   endif
-  call vam#ActivateAddons(a:addons, {'auto_install' : 1})
-endfun
 
-call SetupVAM(g:my_addons)
+  " This provides the VAMActivate command, you could be passing plugin names, too
+  call vam#ActivateAddons([], {})
+endfun
+call SetupVAM()
+call vam#Scripts(expand('$HOME', 1) . '/.vim/addons', {'tag_regex': '.*'})
 
 " Oh, windows. Must you always be such a pain in the ass?
 if has('win32') || has('win64')
@@ -37,6 +43,12 @@ let mapleader = ","
 " fix background color erase in terminal
 if &term =~ '256color'
    set t_ut=
+endif
+
+" Tell the `gx` command to use `xdg-open` to open urls, and files and things
+" in linux environments
+if has('linux')
+	let g:netrw_browsex_viewer="xdg-open"
 endif
 
 " ----------------------------------------------------------------------------
@@ -209,23 +221,21 @@ function! LightlineFileformat()
   return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 
+let g:zenburn_italic_Comment=1
+let g:zenburn_enable_TagHighlight=1
+
+let g:snipMate = { 'snippet_version' : 1 }
+
 " ----------------------------------------------------------------------------
 " v. Custom commands
 " ----------------------------------------------------------------------------
-function! Helptab(search)
-	" open help file related to the argument in a new tab which is the only
-	" window in that tab
-	exec ':tabnew +:h\ '. a:search .' | only'
-endfunction
-" define a command ':H' which calls the function defined above.
-" completion for this command with be use arguments available to help.
-command! -complete=help -nargs=1 H call Helptab(<q-args>)
+" define a command ':H' which will open a help file in a new tab. completion
+" will use the same arguments available to a normal `:help` command
+command! -complete=help -nargs=1 H tab help <args>
 
 " ----------------------------------------------------------------------------
 " 1 important
 " ----------------------------------------------------------------------------
-" turn off compatibility with the old vi
-set nocompatible
 " toggle pastemode
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>

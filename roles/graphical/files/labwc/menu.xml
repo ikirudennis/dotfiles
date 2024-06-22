@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu>
+<!-- Note: for localization support of menu items "client-menu" has to be removed here -->
+<menu id="client-menu">
+  <!--
+    Any menu with the id "workspaces" will be hidden
+    if there is only a single workspace available.
+  -->
+  <menu id="workspaces" label="Send to Desktop">
+    <item label="1">
+      <action name="SendToDesktop" to="1" />
+    </item>
+    <item label="2">
+      <action name="SendToDesktop" to="2" />
+    </item>
+    <item label="3">
+      <action name="SendToDesktop" to="3" />
+    </item>
+    <item label="4">
+      <action name="SendToDesktop" to="4" />
+    </item>
+    <separator />
+    <item label="Toggle All Desktops">
+      <action name="ToggleOmnipresent" />
+    </item>
+  </menu>
+  <menu id="layer" label="Layer">
+    <item label="Always On Top">
+      <action name="ToggleAlwaysOnTop" />
+    </item>
+    <item label="Always On Bottom">
+      <action name="ToggleAlwaysOnBottom" />
+    </item>
+  </menu>
+  <item label="Minimize">
+    <action name="Iconify" />
+  </item>
+  <item label="Maximize">
+    <action name="ToggleMaximize" />
+  </item>
+  <item label="Fullscreen">
+    <action name="ToggleFullscreen" />
+  </item>
+  <item label="Decorations">
+    <action name="ToggleDecorations" />
+  </item>
+  <item label="Move">
+    <action name="Move" />
+  </item>
+  <item label="Resize">
+    <action name="Resize" />
+  </item>
+  <item label="Close">
+    <action name="Close" />
+  </item>
+</menu>
+
+<menu id="root-menu">
+  <menu id="pipemenu" label="Applications" execute="labwc-menu-generator --pipemenu" />
+  <menu id="administration" label="Administration">
+    <item label="dnfdragora" icon="dnfdragora">
+      <action name="Execute"><command>dnfdragora</command></action>
+    </item>
+    <item label="dnfdragora-updater" icon="dnfdragora">
+      <action name="Execute"><command>dnfdragora-updater</command></action>
+    </item>
+    <item label="Firewall" icon="firewall-config">
+      <action name="Execute"><command>/usr/bin/firewall-config</command></action>
+    </item>
+    <item label="Grub Customizer" icon="grub-customizer">
+      <action name="Execute"><command>grub-customizer</command></action>
+    </item>
+  </menu>
+  <separator/>
+  <menu id="terminals" label="Terminals">
+    <item label="Foot" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+      <action name="Execute"><command>foot</command></action>
+    </item>
+    <item label="Foot Client" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+      <action name="Execute"><command>footclient</command></action>
+    </item>
+    <item label="Foot Server" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+      <action name="Execute"><command>foot --server</command></action>
+    </item>
+    <item label="rxvt-unicode" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
+      <action name="Execute"><command>urxvt</command></action>
+    </item>
+    <item label="Terminal">
+      <action name="Execute"><command>gnome-terminal</command></action>
+    </item>
+    <item label="Terminator" icon="/usr/share/icons/hicolor/22x22/apps/terminator.png">
+      <action name="Execute"><command>terminator</command></action>
+    </item>
+  </menu>
+  <menu id="commands" label="commands" title="commands title">
+    <item label="test command">
+      <action name="Execute">
+        <execute>/usr/bin/notify-send "hey, lookie here!"</execute>
+      </action>
+    </item>
+  </menu>
+  <separator/>
+  <item label="Web browser">
+    <action name="Execute" command="/opt/firefox/firefox" />
+  </item>
+  <item label="Terminal">
+    <action name="Execute" command="terminator" />
+  </item>
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+  <item label="Poweroff">
+    <action name="Execute" command="systemctl -i poweroff" />
+  </item>
+</menu>
+
+<menu id="some-custom-menu">
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+</menu>
+
+</openbox_menu>

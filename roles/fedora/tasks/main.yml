@@ -1,0 +1,13 @@
+---
+- name: update existing packages  # noqa: package-latest
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+  become: true
+- name: install dotfiles-specific dnf packages
+  ansible.builtin.dnf:
+    name: "{{ fedora_pkgs }}"
+  become: true
+- name: run graphical environment tasks
+  ansible.builtin.include_tasks: graphical.yml
+  when: graphical_environment | bool

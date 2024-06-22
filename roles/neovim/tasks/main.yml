@@ -1,0 +1,18 @@
+---
+# pynvim is a requirement for neovim's `checkhealth` to return healthy status
+- name: ensure pynvim has been installed
+  ansible.builtin.pip:
+    name:
+      - pynvim
+# in non-graphical environments, ~/.config won't exist. make sure it does exist
+# before we try to symlink anything into it
+- name: ensure ~/.config dir exists
+  ansible.builtin.file:
+    path: ~/.config
+    state: directory
+    mode: "0755"
+- name: symlink neovim directory
+  ansible.builtin.file:
+    path: ~/.config/nvim
+    src: "{{ ansible_env.PWD }}/roles/neovim/files"
+    state: link

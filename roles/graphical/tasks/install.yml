@@ -1,0 +1,79 @@
+---
+- name: symlink dunst directory
+  ansible.builtin.file:
+    path: ~/.config/dunst
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/dunst"
+    state: link
+- name: symlink foot directory
+  ansible.builtin.file:
+    path: ~/.config/foot
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/foot"
+    state: link
+- name: create labwc directory
+  ansible.builtin.file:
+    path: ~/.config/labwc
+    state: directory
+    mode: "0755"
+- name: create labwc environment.d directory
+  ansible.builtin.file:
+    path: ~/.config/labwc/environment.d
+    state: directory
+    mode: "0755"
+- name: symlink labwc files
+  ansible.builtin.file:
+    path: "~/.config/labwc/{{ item }}"
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/labwc/{{ item }}"
+    state: link
+  with_items: "{{ graphical_labwc_files }}"
+- name: symlink labwc environment file
+  ansible.builtin.file:
+    path: "~/.config/labwc/environment.d/default.env"
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/labwc/default.env"
+    state: link
+- name: ensure nerdfont directory exists before we put files in it
+  ansible.builtin.file:
+    dest: "{{ graphical_nerdfont_dest }}"
+    state: directory
+    mode: "0755"
+- name: install nerdfont
+  ansible.builtin.unarchive:
+    src: "{{ graphical_nerdfont_download_url }}"
+    dest: "{{ graphical_nerdfont_dest }}"
+    remote_src: true
+  notify: clean up old nerdfonts
+- name: symlink swayidle directory
+  ansible.builtin.file:
+    path: ~/.config/swayidle
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/swayidle"
+    state: link
+- name: symlink swaylock directory
+  ansible.builtin.file:
+    path: ~/.config/swaylock
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/swaylock"
+    state: link
+- name: ensure the terminator config directory exists
+  ansible.builtin.file:
+    path: ~/.config/terminator
+    state: directory
+    mode: "0755"
+- name: symlink terminator config
+  ansible.builtin.file:
+    path: ~/.config/terminator/config
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/terminator/config"
+    state: link
+    mode: "0644"
+- name: symlink waybar directory
+  ansible.builtin.file:
+    path: ~/.config/waybar
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/waybar"
+    state: link
+- name: symlink wlogout directory
+  ansible.builtin.file:
+    path: ~/.config/wlogout
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/wlogout"
+    state: link
+- name: symlink fuzzel directory
+  ansible.builtin.file:
+    path: ~/.config/fuzzel
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/fuzzel"
+    state: link

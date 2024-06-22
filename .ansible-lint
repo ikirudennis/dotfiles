@@ -1,0 +1,17 @@
+---
+exclude_paths:
+  - roles/common/tests/
+  - roles/fedora/tests/
+  - roles/git/tests/
+  - roles/graphical/tests/
+  - roles/hg/tests/
+  - roles/neovim/tests/
+  - roles/pip/tests/
+  - roles/terminator/tests/
+  - roles/tmux/tests/
+  - roles/vim/tests/
+  - roles/vim/files/vim/vim-addons/
+  - roles/zsh/tests/
+skip_list:  # or 'skip_list' to silence them completely
+  - yaml[new-line-at-end-of-file]  # Violations reported by yamllint.
+  - name[casing]

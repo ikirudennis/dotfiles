@@ -1,0 +1,15 @@
+---
+graphical_labwc_files:
+  - autostart
+  - menu.xml
+  - rc.xml
+  - themerc-override
+graphical_nerdfont_version: "3.2.1"
+graphical_nerdfont_url_parts:
+  - https://github.com/ryanoasis/nerd-fonts/releases/download/
+  - "v{{ graphical_nerdfont_version }}/FiraMono.tar.xz"
+graphical_nerdfont_download_url: "{{ graphical_nerdfont_url_parts | join('') }}"
+graphical_nerdfont_dir:
+  - ~/.local/share/fonts/NerdFonts/FiraMono_v
+  - "{{ graphical_nerdfont_version }}"
+graphical_nerdfont_dest: "{{ graphical_nerdfont_dir | join('') }}"

@@ -1,0 +1,28 @@
+# Launch a panel such as yambar or waybar.
+waybar >/dev/null 2>&1 &
+
+# start the ol' openbox xdg autostarter
+/usr/libexec/openbox-xdg-autostart &
+
+# begin with a grey desktop
+swww-daemon && swww clear 888888 &
+
+# start keyring on login
+/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh &
+
+thunar --daemon &
+
+# xfce-polkit allows me to use pkexec to run gui apps as sudo. I'm not sure
+# why the existence of the below in /etc/xdg/autostart doesn't work.
+/usr/libexec/xfce-polkit &
+
+# run service to set dynamic desktop image
+systemctl start --user dburke_desktop_image.service &
+
+# run wayland's vnc program, wayvnc. It turns out that wayvnc and wlopm running
+# together have side-effects: wayvnc won't let wlopm turn off the screen:
+# https://github.com/any1/wayvnc/issues/283
+#wayvnc &
+
+# Lock screen after 5 minutes and turn off display after another 5 minutes
+swayidle -w >/dev/null 2>&1 &

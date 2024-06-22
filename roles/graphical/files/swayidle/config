@@ -1,0 +1,3 @@
+timeout 300 'dburke_screen_control lock' resume 'dburke_screen_control notifications_on'
+timeout 600 'dburke_screen_control off' resume 'dburke_screen_control on'
+before-sleep 'dburke_screen_control lock'

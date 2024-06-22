@@ -1,0 +1,18 @@
+---
+- name: check if we're running a systemd-based system
+  when: ansible_service_mgr == 'systemd'
+  block:
+    - name: check if we're running in a graphical environment
+      # the systemctl module doesn't allow running this specific command:
+      # https://github.com/ansible/ansible/issues/65785
+      ansible.builtin.command:  # noqa: command-instead-of-module
+        cmd: systemctl get-default
+      register: systemctl_getdefault
+      changed_when: "systemctl_getdefault.rc != 0"
+    - name: set graphical_environment fact to true
+      ansible.builtin.set_fact:
+        graphical_environment: true
+      when: systemctl_getdefault.stdout == 'graphical.target'
+- name: run install tasks
+  ansible.builtin.include_tasks: install.yml
+  when: graphical_environment | bool

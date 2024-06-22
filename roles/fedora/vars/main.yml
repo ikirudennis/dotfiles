@@ -1,0 +1,56 @@
+---
+fedora_pkgs:
+  - ctags
+  - fd-find
+  - ripgrep
+  - gcc
+  - git
+  - mercurial
+  - neovim
+  - python3-devel
+  - python3-pip
+  - unzip
+  - util-linux-user
+  - vim-enhanced
+  - zsh
+fedora_graphical_pkgs:
+  - Thunar
+  - bemenu
+  - blueman
+  - brightnessctl
+  - chayang
+  - conky
+  - copyq
+  - dmenu
+  - dunst
+  - flameshot
+  - foot
+  - fuzzel
+  - grim
+  - labwc
+  - labwc-menu-generator
+  - kanshi
+  - neovim-qt
+  - openbox
+  - slurp
+  - swayidle
+  - swaylock
+  - swww
+  - terminator
+  - vim-X11
+  - volumeicon
+  - waybar
+  - wayvnc
+  - wdisplays
+  - wev
+  - wl-clipboard
+  - wlogout
+  - wlopm
+  - wlroots
+  - wlr-randr
+  - xdg-desktop-portal-wlr
+  - xfce-polkit
+  - xset
+fedora_copr_repos:
+  - alebastr/sway-extras
+  - wef/wlogout

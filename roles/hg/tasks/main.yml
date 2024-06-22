@@ -1,24 +1,25 @@
 ---
-- name: install hgflow plugin
-  hg:
-    repo: https://bitbucket.org/yujiewu/hgflow
-    revision: hotfix/0.9.8.4
-    dest: ~/.hgext/hgflow
-- name: upgrade pip as user
-  pip:
-    name: pip
+- name: upgrade mercurial as user
+  ansible.builtin.pip:
+    name:
+      - mercurial
     extra_args: --user --upgrade
+- name: install hgflow plugin
+  community.general.hg:
+    repo: https://hg.sr.ht/~wu/hgflow
+    revision: develop
+    dest: ~/.hgext/hgflow
 - name: install hg-git via pip as user
-  pip:
+  ansible.builtin.pip:
     name: hg-git
     extra_args: --user
 - name: symlink hgconfig directory
-  file:
+  ansible.builtin.file:
     path: ~/.hgconfig
     src: "{{ ansible_env.PWD }}/roles/hg/files/hgconfig"
     state: link
 - name: symlink hgrc file
-  file:
+  ansible.builtin.file:
     path: ~/.hgrc
     src: "{{ ansible_env.PWD }}/roles/hg/files/hgrc"
     state: link

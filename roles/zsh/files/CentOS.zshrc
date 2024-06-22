@@ -5,10 +5,6 @@
 #
 # turn on colors in ls
 
-# COMPLETION SETTINGS
-# add custom completion scripts
-fpath=(~/.zsh/completion $fpath)
-
 ## keep background processes at full speed
 #setopt NOBGNICE
 ## restart running processes on exit
@@ -32,8 +28,8 @@ function pyng () {
     python ~/ping27.py $@
 }
 
-#PATH=$PATH:$HOME/bin
-#export PATH
+PATH=$HOME/.local/bin:$PATH:$HOME/bin
+export PATH
 
 PYTHONPATH=$HOME/lib/python2.7:$PYTHONPATH
 export PYTHONPATH

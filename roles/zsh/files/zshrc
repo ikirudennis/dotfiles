@@ -124,6 +124,8 @@ alias vi=/usr/bin/vim
 alias zcp=zmv -C
 alias zls=zmv -L
 
+fpath=($HOME/.zsh/zsh-completions/src $HOME/.zsh/func $fpath)
+
 # usually a symlink to one of the system-specific zshrcs in this dotfiles
 # repository.
 if [[ -s $HOME/.zshrc_local ]] ; then
@@ -135,6 +137,9 @@ fi
 if [[ -s $HOME/.zshrc_private ]] ; then
     source $HOME/.zshrc_private ;
 fi
+
+# add completion for custom git commands
+zstyle ':completion:*:*:git:*' user-commands ${${(M)${(k)commands}:#git-*}/git-/}
 
 # this needs to be last to load completions in ~/.zsh/func/  It allows
 # .zshrc_local and .zshrc_private to specify their own fpath, if need be.

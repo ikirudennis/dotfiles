@@ -1,0 +1,8 @@
+# yes, daemonize. We'll configure swayidle to run a command on resume for so
+# that dunst can be paused before lock and then appropriately unpaused after
+# unlock. Although turning off daemonize would have been a good solution for
+# this, it meant that subsequent screen off timeout settings would not run,
+# because swayidle was still waiting for swaylock to exit
+daemonize
+show-failed-attempts
+indicator-idle-visible

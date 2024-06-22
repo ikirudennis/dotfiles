@@ -16,9 +16,16 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
+	commentChar = "#"
 [github]
 	user = ikirudennis
 [push]
 	default = simple
 [include]
 	path = ~/.gitconfig_local
+[pull]
+	rebase = false
+[instaweb]
+	browser = xdg-open
+[init]
+	defaultBranch = main
