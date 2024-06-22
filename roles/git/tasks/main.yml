@@ -18,7 +18,7 @@
     modification_time: preserve
 - name: clone gitflow repo
   ansible.builtin.git:
-    repo: https://github.com/petervanderdoes/gitflow-avh.git
-    dest: ~/.cache/dburke/gitflow-avh
+    repo: https://github.com/CJ-Systems/gitflow-cjs.git
+    dest: ~/.cache/dburke/gitflow-cjs
     version: master
   notify: run gitflow installer
