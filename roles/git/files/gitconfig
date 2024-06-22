@@ -26,6 +26,6 @@
 [pull]
 	rebase = false
 [instaweb]
-    browser = xdg-open
+	browser = xdg-open
 [init]
 	defaultBranch = main
