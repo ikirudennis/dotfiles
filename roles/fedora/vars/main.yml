@@ -24,6 +24,7 @@ fedora_graphical_pkgs:
   - dmenu
   - dunst
   - flameshot
+  - fontconfig-font-replacements
   - foot
   - fuzzel
   - grim
@@ -53,4 +54,5 @@ fedora_graphical_pkgs:
   - xset
 fedora_copr_repos:
   - alebastr/sway-extras
+  - chriscowleyunix/better_fonts
   - wef/wlogout
