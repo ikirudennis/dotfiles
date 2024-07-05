@@ -12,6 +12,12 @@ graphical_lst_path_parts:
   - labwc
   - labwc-session.target
 graphical_lst_path: "{{ graphical_lst_path_parts | join('/') }}"
+graphical_conky_service_parts:
+  - roles
+  - graphical
+  - files
+  - conky.service
+graphical_conky_service_path: "{{ graphical_conky_service_parts | join('/') }}"
 graphical_nerdfont_version: "3.2.1"
 graphical_nerdfont_url_parts:
   - https://github.com/ryanoasis/nerd-fonts/releases/download/

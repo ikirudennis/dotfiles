@@ -14,4 +14,5 @@
     scope: user
     enabled: true
   with_items:
+    - conky
     - waybar
