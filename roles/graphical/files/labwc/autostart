@@ -14,7 +14,8 @@ swww-daemon && swww clear 888888 &
 # start keyring on login
 /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh &
 
-thunar --daemon &
+# start thunar daemon
+systemctl --user start thunar.service &
 
 # xfce-polkit allows me to use pkexec to run gui apps as sudo. I'm not sure
 # why the existence of the below in /etc/xdg/autostart doesn't work.
