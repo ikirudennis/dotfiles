@@ -30,6 +30,13 @@
     path: "~/.config/labwc/environment.d/default.env"
     src: "{{ ansible_env.PWD }}/roles/graphical/files/labwc/default.env"
     state: link
+- name: link labwc-session.target systemd unit file
+  # noqa command-instead-of-module command-instead-of-shell
+  ansible.builtin.shell:
+    cmd: "systemctl --user link {{ ansible_env.PWD }}/{{ graphical_lst_path }}"
+    creates: "~/.config/systemd/user/labwc-session.target"
+  register: systemctl_result
+  changed_when: "systemctl_result.rc != 0"
 - name: ensure nerdfont directory exists before we put files in it
   ansible.builtin.file:
     dest: "{{ graphical_nerdfont_dest }}"

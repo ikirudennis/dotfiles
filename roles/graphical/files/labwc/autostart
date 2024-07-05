@@ -1,5 +1,9 @@
-# Launch a panel such as yambar or waybar.
-waybar >/dev/null 2>&1 &
+# start labwc-session.target to start off some other systemd-based units:
+# - graphical-session.target
+# - kanshi.service (optional, if you need it, enable it with:
+#   `systemctl --user enable kanshi.service`)
+# - waybar.service (enabled as part of fedora role)
+systemctl --user start labwc-session.target &
 
 # start the ol' openbox xdg autostarter
 /usr/libexec/openbox-xdg-autostart &

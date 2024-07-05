@@ -8,3 +8,10 @@
   ansible.builtin.dnf:
     name: "{{ fedora_graphical_pkgs }}"
   become: true
+- name: enable systemctl user services
+  ansible.builtin.systemd_service:
+    name: "{{ item }}"
+    scope: user
+    enabled: true
+  with_items:
+    - waybar
