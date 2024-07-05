@@ -1,4 +1,18 @@
 ---
+- name: symlink conky directory
+  ansible.builtin.file:
+    path: ~/.config/conky
+    src: "{{ ansible_env.PWD }}/roles/graphical/files/conky"
+    state: link
+- name: enable conky.service systemd unit file
+  vars:
+    service_path: "{{ graphical_conky_service_path }}"
+  # noqa command-instead-of-module command-instead-of-shell
+  ansible.builtin.shell:
+    cmd: "systemctl --user link {{ ansible_env.PWD }}/{{ service_path }}"
+    creates: "~/.config/systemd/user/conky.service"
+  register: conky_systemctl_result
+  changed_when: "conky_systemctl_result.rc != 0"
 - name: symlink dunst directory
   ansible.builtin.file:
     path: ~/.config/dunst
@@ -30,6 +44,13 @@
     path: "~/.config/labwc/environment.d/default.env"
     src: "{{ ansible_env.PWD }}/roles/graphical/files/labwc/default.env"
     state: link
+- name: link labwc-session.target systemd unit file
+  # noqa command-instead-of-module command-instead-of-shell
+  ansible.builtin.shell:
+    cmd: "systemctl --user link {{ ansible_env.PWD }}/{{ graphical_lst_path }}"
+    creates: "~/.config/systemd/user/labwc-session.target"
+  register: lst_systemctl_result
+  changed_when: "lst_systemctl_result.rc != 0"
 - name: ensure nerdfont directory exists before we put files in it
   ansible.builtin.file:
     dest: "{{ graphical_nerdfont_dest }}"

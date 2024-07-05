@@ -1,5 +1,9 @@
-# Launch a panel such as yambar or waybar.
-waybar >/dev/null 2>&1 &
+# start labwc-session.target to start off some other systemd-based units:
+# - graphical-session.target
+# - kanshi.service (optional, if you need it, enable it with:
+#   `systemctl --user enable kanshi.service`)
+# - waybar.service (enabled as part of fedora role)
+systemctl --user start labwc-session.target &
 
 # start the ol' openbox xdg autostarter
 /usr/libexec/openbox-xdg-autostart &
@@ -10,7 +14,8 @@ swww-daemon && swww clear 888888 &
 # start keyring on login
 /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh &
 
-thunar --daemon &
+# start thunar daemon
+systemctl --user start thunar.service &
 
 # xfce-polkit allows me to use pkexec to run gui apps as sudo. I'm not sure
 # why the existence of the below in /etc/xdg/autostart doesn't work.
