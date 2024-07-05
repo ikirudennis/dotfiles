@@ -5,6 +5,7 @@ fedora_pkgs:
   - ripgrep
   - gcc
   - git
+  - htop
   - mercurial
   - neovim
   - python3-devel
