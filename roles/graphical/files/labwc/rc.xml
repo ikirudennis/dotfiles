@@ -452,6 +452,9 @@
     <keybind key="W-A-c">
       <action name="VirtualOutputRemove" output_name="ScreenCasting" />
     </keybind>
+    <keybind key="W-S-c">
+      <action name="AutoPlace" policy="center" />
+    </keybind>
   </keyboard>
 
   <mouse>
