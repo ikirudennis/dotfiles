@@ -19,6 +19,14 @@ button:focus, button:active, button:hover {
     outline-style: none;
 }
 
+button:focus {
+    opacity: 0.75;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
 #lock {
     background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
 }
