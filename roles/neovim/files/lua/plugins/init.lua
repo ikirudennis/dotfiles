@@ -5,4 +5,5 @@ return {
 	'tpope/vim-unimpaired',
 	'jceb/vim-orgmode',
 	'jmcantrell/vim-virtualenv',
+	'MeanderingProgrammer/render-markdown.nvim',
 }
