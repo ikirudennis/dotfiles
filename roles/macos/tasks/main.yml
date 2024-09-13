@@ -1,9 +1,14 @@
 ---
-- name: Install homebrew formulae
+- name: install homebrew formulae
   community.general.homebrew:
     name: "{{ macos_homebrew_formulae }}"
     update_homebrew: true
     upgrade_all: true
-- name: Install homebrew casks
+- name: install homebrew casks
   community.general.homebrew_cask:
     name: "{{ macos_homebrew_casks }}"
+- name: symlink ~/.zshenv
+  ansible.builtin.file:
+    path: ~/.zshenv
+    src: "{{ ansible_env.PWD }}/roles/macos/files/zshenv"
+    state: link
