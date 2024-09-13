@@ -1,0 +1,17 @@
+---
+macos_homebrew_formulae:
+  - ack
+  - coreutils
+  - ctags
+  - htop
+  - lpeg
+  - luajit
+  - neovim
+  - node
+  - ripgrep
+  - tmux
+  - tree-sitter
+macos_homebrew_casks:
+  - flameshot
+  - macvim
+  - font-fira-mono-nerd-font
