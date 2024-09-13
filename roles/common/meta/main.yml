@@ -61,5 +61,7 @@ dependencies:
     tags: graphical
   - role: fedora
     when: ansible_distribution == 'Fedora'
+  - role: macos
+    when: ansible_distribution == 'MacOSX'
   - role: pip
     tags: pip

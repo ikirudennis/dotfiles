@@ -1,0 +1,9 @@
+---
+- name: Install homebrew formulae
+  community.general.homebrew:
+    name: "{{ macos_homebrew_formulae }}"
+    update_homebrew: true
+    upgrade_all: true
+- name: Install homebrew casks
+  community.general.homebrew_cask:
+    name: "{{ macos_homebrew_casks }}"
