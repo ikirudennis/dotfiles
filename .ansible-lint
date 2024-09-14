@@ -5,6 +5,7 @@ exclude_paths:
   - roles/git/tests/
   - roles/graphical/tests/
   - roles/hg/tests/
+  - roles/macos/tests/
   - roles/neovim/tests/
   - roles/pip/tests/
   - roles/terminator/tests/
