@@ -12,7 +12,7 @@
 - name: install hg-git via pip as user
   ansible.builtin.pip:
     name: hg-git
-    extra_args: --user
+    extra_args: --user --upgrade
 - name: symlink hgconfig directory
   ansible.builtin.file:
     path: ~/.hgconfig
