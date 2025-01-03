@@ -1,1 +1,11 @@
 ---
+- name: copy KvLibadwaita Colors files
+  ansible.builtin.command:
+    cmd: cp -r ~/.cache/dburke/KvLibadwaita/src/Colors ~/.config/Kvantum/
+    creates: ~/.config/Kvantum/Colors
+  listen: copy KvLibadwaita files
+- name: copy KvLibadwaita theme files
+  ansible.builtin.command:
+    cmd: cp -r ~/.cache/dburke/KvLibadwaita/src/KvLibadwaita ~/.config/Kvantum/
+    creates: ~/.config/Kvantum/KvLibadwaita
+  listen: copy KvLibadwaita files

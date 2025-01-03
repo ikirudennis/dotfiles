@@ -32,6 +32,7 @@ fedora_graphical_pkgs:
   - labwc
   - labwc-menu-generator
   - kanshi
+  - kvantum
   - neovim-qt
   - openbox
   - slurp
