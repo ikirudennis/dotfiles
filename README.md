@@ -39,7 +39,7 @@ sudo dnf -y install python3-pip
 # install pip and ansible as user
 pip install --user --upgrade pip ansible
 # install gnome
-sudo dnf -y group install "Basic Desktop" GNOME
+sudo dnf -y install @gnome-desktop
 # change the default target so that it will start a graphical login screen.
 sudo systemctl set-default graphical.target
 ```
