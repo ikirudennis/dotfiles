@@ -19,6 +19,11 @@ export CLICOLOR=1
 export LESS="R"
 export PAGER=less
 
+# systemd tools which use a pager typically default to using less, with
+# `FRSXMK`. The `X` means that it remains on screen after closing the pager.
+# I prefer it without `X`
+export SYSTEMD_LESS=FRSMK
+
 # load zsh modules
 autoload -U colors && colors
 autoload -U promptinit && promptinit
