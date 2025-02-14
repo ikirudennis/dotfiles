@@ -58,3 +58,5 @@ fedora_copr_repos:
   - alebastr/sway-extras
   - chriscowleyunix/better_fonts
   - wef/wlogout
+fedora_flatpaks:
+  - com.saivert.pwvucontrol

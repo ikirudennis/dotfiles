@@ -8,6 +8,15 @@
   ansible.builtin.dnf:
     name: "{{ fedora_graphical_pkgs }}"
   become: true
+- name: install flathub flatpak repo
+  community.general.flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+  become: true
+- name: install flatpaks
+  community.general.flatpak:
+    name: "{{ fedora_flatpaks }}"
+  become: true
 - name: enable systemctl user services
   ansible.builtin.systemd_service:
     name: "{{ item }}"
