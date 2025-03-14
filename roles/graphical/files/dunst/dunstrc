@@ -169,7 +169,7 @@
     max_icon_size = 128
 
     # Paths to default icons.
-    icon_path = /home/dburke/.local/share/icons/dburke/scalable/status-extra/:/home/dburke/.local/share/icons/dburke/scalable/status/:/home/dburke/.local/share/icons/dburke/22x22/:/usr/share/icons/Adwaita/scalable/status/:/usr/share/icons/Adwaita/scalable/emotes/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/HighContrast/scalable/status-extra/:/usr/share/icons/hicolor/22x22/apps/
+    icon_path = /home/dburke/.local/share/icons/dburke/scalable/status-extra/:/home/dburke/.local/share/icons/dburke/scalable/status/:/home/dburke/.local/share/icons/dburke/22x22/:/usr/share/icons/Adwaita/scalable/status/:/usr/share/icons/Adwaita/scalable/emotes/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/symbolic/status/:/usr/share/icons/HighContrast/scalable/status-extra/:/usr/share/icons/hicolor/22x22/apps/
     #:/home/dburke/.local/share/icons/fallback/22x22/
 
     ### History ###
