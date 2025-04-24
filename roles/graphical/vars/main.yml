@@ -18,7 +18,7 @@ graphical_conky_service_parts:
   - files
   - conky.service
 graphical_conky_service_path: "{{ graphical_conky_service_parts | join('/') }}"
-graphical_nerdfont_version: "3.3.0"
+graphical_nerdfont_version: "3.4.0"
 graphical_nerdfont_url_parts:
   - https://github.com/ryanoasis/nerd-fonts/releases/download/
   - "v{{ graphical_nerdfont_version }}/FiraMono.tar.xz"
