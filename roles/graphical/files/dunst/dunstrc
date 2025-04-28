@@ -373,11 +373,6 @@
 #    summary = "foobar"
 #    skip_display = yes
 
-#[volumeicon]
-    #appname = "Volume Icon"
-    #timeout = 3
-    #format = "<b>Volume Level:</b> %p"
-
 #[xfce4-power-manager]
     #appname = "xfce4-power-manager"
     #body = "Brightness*"

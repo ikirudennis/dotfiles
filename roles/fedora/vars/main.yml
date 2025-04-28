@@ -41,7 +41,6 @@ fedora_graphical_pkgs:
   - swww
   - terminator
   - vim-X11
-  - volumeicon
   - waybar
   - wayvnc
   - wdisplays
