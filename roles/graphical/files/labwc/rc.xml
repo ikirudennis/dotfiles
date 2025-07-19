@@ -126,7 +126,6 @@
     <keybind key="A-Down">
       <action name="None" />
     </keybind>
-      <action name="None" />
     <keybind key="W-Right">
       <action name="GrowToEdge" direction="Right" />
     </keybind>
