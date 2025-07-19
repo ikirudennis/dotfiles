@@ -123,6 +123,10 @@
     <keybind key="W-Up">
       <action name="GrowToEdge" direction="Up" />
     </keybind>
+    <keybind key="A-W-h">
+      <action name="HideCursor" />
+      <action name="WarpCursor" x="-1" y="-1" />
+    </keybind>
     <keybind key="XF86AudioMicMute">
       <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" />
     </keybind>
