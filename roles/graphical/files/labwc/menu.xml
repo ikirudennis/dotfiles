@@ -105,7 +105,7 @@
     <action name="Execute" command="/opt/firefox/firefox" />
   </item>
   <item label="Terminal">
-    <action name="Execute" command="terminator" />
+    <action name="Execute" command="lab-sensible-terminal" />
   </item>
   <item label="Reconfigure">
     <action name="Reconfigure" />
