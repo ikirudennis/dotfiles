@@ -443,6 +443,9 @@
     <keybind key="W-c">
       <action name="AutoPlace" policy="center" />
     </keybind>
+    <keybind key="W-A-m">
+      <action name="ToggleMagnify"/>
+    </keybind>
   </keyboard>
 
   <mouse>
