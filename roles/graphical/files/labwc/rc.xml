@@ -125,7 +125,8 @@
     </keybind>
     <keybind key="A-W-h">
       <action name="HideCursor" />
-      <action name="WarpCursor" x="-1" y="-1" />
+      <!-- labwc recommended the warpcursor below, but I think I prefer it without -->
+      <!-- <action name="WarpCursor" x="-1" y="-1" /> -->
     </keybind>
     <keybind key="XF86AudioMicMute">
       <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" />
