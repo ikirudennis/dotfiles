@@ -6,6 +6,7 @@ fedora_pkgs:
   - gcc
   - git
   - htop
+  - luarocks
   - mercurial
   - neovim
   - python3-devel
