@@ -1,6 +1,5 @@
 return {
 	--'dbext',
-	'chrisgeo/sparkup',
 	'tpope/vim-speeddating',
 	'tpope/vim-unimpaired',
 	'jceb/vim-orgmode',
