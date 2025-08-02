@@ -32,6 +32,7 @@ fedora_graphical_pkgs:
   - grim
   - labwc
   - labwc-menu-generator
+  - labwc-session
   - kanshi
   - kvantum
   - neovim-qt
