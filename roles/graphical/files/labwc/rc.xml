@@ -480,6 +480,9 @@
       <skipWindowSwitcher>yes</skipWindowSwitcher>
       <ignoreFocusRequests>yes</ignoreFocusRequests>
     </windowRule>
+    <windowRule identifier="JetBrains Toolbox" title="Toolbox">
+      <serverDecoration>no</serverDecoration>
+    </windowRule>
   </windowRules>
 
 </labwc_config>
