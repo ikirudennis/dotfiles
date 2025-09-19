@@ -9,7 +9,7 @@ systemctl --user start labwc-session.target &
 /usr/libexec/openbox-xdg-autostart &
 
 # start swww-daemon
-swww-daemon
+swww-daemon &
 
 # start keyring on login
 /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh &
