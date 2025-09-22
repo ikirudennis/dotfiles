@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "alvistack/fedora-41"
+  config.vm.box = "alvistack/fedora-42"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -64,6 +64,9 @@ Vagrant.configure("2") do |config|
   # information on available options.
   config.vm.provider :libvirt do |libvirt|
     libvirt.qemu_use_session = false
+    libvirt.video_type = 'vga'
+    libvirt.memory = 4096
+    libvirt.cpus = 2
   end
 
   # Enable provisioning with a shell script. Additional provisioners such as
