@@ -10,6 +10,9 @@ systemctl --user start labwc-session.target &
 
 # start swww-daemon
 swww-daemon &
+# if swww query shows that the desktop background is black, set it to 50% grey
+# instead.
+(swww query | grep 'color: 000000') && swww clear 888888 &
 
 # start keyring on login
 /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh &
