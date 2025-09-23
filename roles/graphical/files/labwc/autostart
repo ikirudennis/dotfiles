@@ -24,10 +24,5 @@ systemctl --user start thunar.service &
 # why the existence of the below in /etc/xdg/autostart doesn't work.
 /usr/libexec/xfce-polkit &
 
-# run wayland's vnc program, wayvnc. It turns out that wayvnc and wlopm running
-# together have side-effects: wayvnc won't let wlopm turn off the screen:
-# https://github.com/any1/wayvnc/issues/283
-#wayvnc &
-
 # Lock screen after 5 minutes and turn off display after another 5 minutes
 swayidle -w >/dev/null 2>&1 &
