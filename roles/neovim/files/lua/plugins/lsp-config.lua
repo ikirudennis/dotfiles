@@ -62,6 +62,7 @@ return {
 			vim.keymap.set("n", "<leader>gg", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gl", vim.diagnostic.open_float, {})
 			vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<leader>gq", vim.diagnostic.setqflist, { desc = "Add diagnostics to quickfix list" })
 		end,
 	},
 }
