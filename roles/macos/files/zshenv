@@ -1,1 +1,7 @@
-export PATH=~/.local/bin:~/Library/Python/3.9/bin:${PATH}
+export PATH=~/.local/bin:~/Library/Python/3.13/bin:${PATH}
+# pip is installed by hoebrew python and it installs both python and pip as
+# python3 and pip3 respectively. Adding aliases for both ease-of-use and also
+# because ~/.zshrc loads autocompletion assuming that pip is the command's
+# name.
+alias python=python3
+alias pip=pip3
