@@ -38,24 +38,23 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			lspconfig.lua_ls.setup({
+			vim.lsp.config('lua_ls', {
 				capabilities = capabilities,
 			})
-			lspconfig.ansiblels.setup({
+			vim.lsp.config('ansiblels', {
 				capabilities = capabilities,
 			})
-			lspconfig.bashls.setup({
+			vim.lsp.config('bashls', {
 				capabilities = capabilities,
 			})
-			lspconfig.pyright.setup({
+			vim.lsp.config('pyright', {
 				capabilities = capabilities,
 			})
-			lspconfig.terraformls.setup({
+			vim.lsp.config('terraformls', {
 				capabilities = capabilities,
 			})
-			lspconfig.tflint.setup({
+			vim.lsp.config('tflint', {
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
