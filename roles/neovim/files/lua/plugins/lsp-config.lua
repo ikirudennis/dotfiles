@@ -39,6 +39,9 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			-- extend bashls lsp's filetypes to include zsh
+			local bashls_filetypes = vim.lsp.config.bashls.filetypes
+			table.insert(bashls_filetypes, 'zsh')
 			vim.lsp.config('lua_ls', {
 				capabilities = capabilities,
 			})
@@ -47,6 +50,7 @@ return {
 			})
 			vim.lsp.config('bashls', {
 				capabilities = capabilities,
+				filetypes = bashls_filetypes,
 			})
 			vim.lsp.config('pyright', {
 				capabilities = capabilities,
