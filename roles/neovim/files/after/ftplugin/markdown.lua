@@ -1,3 +1,6 @@
+-- start treesitter upon loading a markdown file
+vim.treesitter.start()
+
 -- don't fight the autoformat settings
 vim.opt_local.formatoptions:remove({ "a" })
 
