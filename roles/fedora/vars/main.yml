@@ -10,12 +10,15 @@ fedora_pkgs:
   - mercurial
   - neovim
   - perl-App-cpanminus
+  - perl-local-lib
   - python3-devel
   - python3-pip
+  - tree-sitter-cli
   - unzip
   - util-linux-user
   - vim-enhanced
   - wget
+  - wl-clipboard
   - zsh
 fedora_graphical_pkgs:
   - Thunar

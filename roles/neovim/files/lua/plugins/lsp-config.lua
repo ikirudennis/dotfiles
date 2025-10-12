@@ -15,6 +15,7 @@ return {
 					"bashls",
 					"marksman",
 					"pyright",
+					"stylua",
 					"terraformls",
 				},
 			})

@@ -9,6 +9,21 @@
     name: Neovim::Ext
     locallib: ~/.local/perl5
     notest: true
+- name: clone tfenv
+  ansible.builtin.git:
+    repo: https://github.com/tfutils/tfenv.git
+    dest: ~/.local/share/tfenv
+    version: master
+- name: symlink tfenv
+  ansible.builtin.file:
+    path: ~/.local/bin/tfenv
+    src: ~/.local/share/tfenv/bin/tfenv
+    state: link
+- name: symlink terraform
+  ansible.builtin.file:
+    path: ~/.local/bin/terraform
+    src: ~/.local/share/tfenv/bin/terraform
+    state: link
 # in non-graphical environments, ~/.config won't exist. make sure it does exist
 # before we try to symlink anything into it
 - name: ensure ~/.config dir exists
