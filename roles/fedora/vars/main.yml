@@ -9,11 +9,13 @@ fedora_pkgs:
   - luarocks
   - mercurial
   - neovim
+  - perl-App-cpanminus
   - python3-devel
   - python3-pip
   - unzip
   - util-linux-user
   - vim-enhanced
+  - wget
   - zsh
 fedora_graphical_pkgs:
   - Thunar

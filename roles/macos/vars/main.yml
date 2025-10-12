@@ -2,6 +2,7 @@
 macos_homebrew_formulae:
   - ack
   - coreutils
+  - cpanminus
   - ctags
   - htop
   - lpeg
@@ -11,6 +12,7 @@ macos_homebrew_formulae:
   - ripgrep
   - tmux
   - tree-sitter
+  - tree-sitter-cli
 macos_homebrew_casks:
   - flameshot
   - macvim

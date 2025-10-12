@@ -1,9 +1,14 @@
 ---
-# pynvim is a requirement for neovim's `checkhealth` to return healthy status
+# requirements for neovim's `checkhealth` to return healthy status
 - name: ensure pynvim has been installed
   ansible.builtin.pip:
     name:
       - pynvim
+- name: ensure perl neovim module has been installed
+  community.general.cpanm:
+    name: Neovim::Ext
+    locallib: ~/.local/perl5
+    notest: true
 # in non-graphical environments, ~/.config won't exist. make sure it does exist
 # before we try to symlink anything into it
 - name: ensure ~/.config dir exists
