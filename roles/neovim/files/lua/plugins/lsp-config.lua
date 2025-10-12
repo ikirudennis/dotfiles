@@ -26,6 +26,7 @@ return {
 		config = function()
 			require("mason-tool-installer").setup({
 				ensure_installed = {
+					"ansible-lint",
 					"black",
 					"debugpy",
 					"flake8",
