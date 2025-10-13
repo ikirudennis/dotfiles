@@ -9,6 +9,7 @@ macos_homebrew_formulae:
   - luajit
   - neovim
   - node
+  - perl
   - ripgrep
   - tmux
   - tree-sitter

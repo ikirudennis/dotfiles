@@ -14,3 +14,7 @@
     path: ~/.zshenv
     src: "{{ ansible_env.PWD }}/roles/macos/files/zshenv"
     state: link
+- name: ensure perl locallib is set up correctly
+  community.general.cpanm:
+    name: local::lib
+    locallib: ~/.local/perl5
