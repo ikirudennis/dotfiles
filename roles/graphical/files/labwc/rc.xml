@@ -100,7 +100,7 @@
     />
   <!-- When using Alt-Tab to switch windows, preview="yes" (the default) feels
     like it's raising the window. -->
-  <windowSwitcher preview="no" />
+  <windowSwitcher preview="no" style="thumbnail" />
   <keyboard>
     <!-- Use defaults... -->
     <default />
