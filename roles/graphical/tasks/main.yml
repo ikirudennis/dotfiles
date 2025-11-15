@@ -7,12 +7,12 @@
       # https://github.com/ansible/ansible/issues/65785
       ansible.builtin.command:  # noqa: command-instead-of-module
         cmd: systemctl get-default
-      register: systemctl_getdefault
-      changed_when: "systemctl_getdefault.rc != 0"
+      register: graphical_systemctl_getdefault
+      changed_when: "graphical_systemctl_getdefault.rc != 0"
     - name: set graphical_environment fact to true
       ansible.builtin.set_fact:
         graphical_environment: true
-      when: systemctl_getdefault.stdout == 'graphical.target'
+      when: graphical_systemctl_getdefault.stdout == 'graphical.target'
 - name: run install tasks
   ansible.builtin.include_tasks: install.yml
   when: graphical_environment | bool
