@@ -9,7 +9,7 @@
     service_path: "{{ graphical_conky_service_path }}"
   # noqa command-instead-of-module command-instead-of-shell
   ansible.builtin.shell:
-    cmd: "systemctl --user link {{ ansible_facts['env'].PWD }}/{{ service_path }}"
+    cmd: "systemctl --user link {{ ansible_facts['env'].PWD }}/{{ service_path }}" # noqa: yaml[line-length]
     creates: "~/.config/systemd/user/conky.service"
   register: graphical_conky_systemctl_result
   changed_when: "graphical_conky_systemctl_result.rc != 0"
@@ -42,12 +42,12 @@
 - name: symlink labwc environment file
   ansible.builtin.file:
     path: "~/.config/labwc/environment.d/default.env"
-    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/labwc/default.env"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/labwc/default.env" # noqa: yaml[line-length]
     state: link
 - name: link labwc-session.target systemd unit file
   # noqa command-instead-of-module command-instead-of-shell
   ansible.builtin.shell:
-    cmd: "systemctl --user link {{ ansible_facts['env'].PWD }}/{{ graphical_lst_path }}"
+    cmd: "systemctl --user link {{ ansible_facts['env'].PWD }}/{{ graphical_lst_path }}" # noqa: yaml[line-length]
     creates: "~/.config/systemd/user/labwc-session.target"
   register: graphical_lst_systemctl_result
   changed_when: "graphical_lst_systemctl_result.rc != 0"
@@ -80,7 +80,7 @@
 - name: symlink terminator config
   ansible.builtin.file:
     path: ~/.config/terminator/config
-    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/terminator/config"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/terminator/config" # noqa: yaml[line-length]
     state: link
     mode: "0644"
 - name: symlink waybar directory
