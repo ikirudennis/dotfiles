@@ -1,6 +1,6 @@
 ---
 - name: check if we're running a systemd-based system
-  when: ansible_service_mgr == 'systemd'
+  when: ansible_facts['service_mgr'] == 'systemd'
   block:
     - name: check if we're running in a graphical environment
       # the systemctl module doesn't allow running this specific command:

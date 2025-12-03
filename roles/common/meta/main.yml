@@ -60,8 +60,8 @@ dependencies:
   - role: graphical
     tags: graphical
   - role: fedora
-    when: ansible_distribution == 'Fedora'
+    when: ansible_facts['distribution'] == 'Fedora'
   - role: macos
-    when: ansible_distribution == 'MacOSX'
+    when: ansible_facts['distribution'] == 'MacOSX'
   - role: pip
     tags: pip

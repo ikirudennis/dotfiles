@@ -2,26 +2,26 @@
 - name: symlink conky directory
   ansible.builtin.file:
     path: ~/.config/conky
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/conky"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/conky"
     state: link
 - name: enable conky.service systemd unit file
   vars:
     service_path: "{{ graphical_conky_service_path }}"
   # noqa command-instead-of-module command-instead-of-shell
   ansible.builtin.shell:
-    cmd: "systemctl --user link {{ ansible_env.PWD }}/{{ service_path }}"
+    cmd: "systemctl --user link {{ ansible_facts['env'].PWD }}/{{ service_path }}"
     creates: "~/.config/systemd/user/conky.service"
   register: graphical_conky_systemctl_result
   changed_when: "graphical_conky_systemctl_result.rc != 0"
 - name: symlink dunst directory
   ansible.builtin.file:
     path: ~/.config/dunst
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/dunst"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/dunst"
     state: link
 - name: symlink foot directory
   ansible.builtin.file:
     path: ~/.config/foot
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/foot"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/foot"
     state: link
 - name: create labwc directory
   ansible.builtin.file:
@@ -36,18 +36,18 @@
 - name: symlink labwc files
   ansible.builtin.file:
     path: "~/.config/labwc/{{ item }}"
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/labwc/{{ item }}"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/labwc/{{ item }}"
     state: link
   with_items: "{{ graphical_labwc_files }}"
 - name: symlink labwc environment file
   ansible.builtin.file:
     path: "~/.config/labwc/environment.d/default.env"
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/labwc/default.env"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/labwc/default.env"
     state: link
 - name: link labwc-session.target systemd unit file
   # noqa command-instead-of-module command-instead-of-shell
   ansible.builtin.shell:
-    cmd: "systemctl --user link {{ ansible_env.PWD }}/{{ graphical_lst_path }}"
+    cmd: "systemctl --user link {{ ansible_facts['env'].PWD }}/{{ graphical_lst_path }}"
     creates: "~/.config/systemd/user/labwc-session.target"
   register: graphical_lst_systemctl_result
   changed_when: "graphical_lst_systemctl_result.rc != 0"
@@ -65,12 +65,12 @@
 - name: symlink swayidle directory
   ansible.builtin.file:
     path: ~/.config/swayidle
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/swayidle"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/swayidle"
     state: link
 - name: symlink swaylock directory
   ansible.builtin.file:
     path: ~/.config/swaylock
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/swaylock"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/swaylock"
     state: link
 - name: ensure the terminator config directory exists
   ansible.builtin.file:
@@ -80,21 +80,21 @@
 - name: symlink terminator config
   ansible.builtin.file:
     path: ~/.config/terminator/config
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/terminator/config"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/terminator/config"
     state: link
     mode: "0644"
 - name: symlink waybar directory
   ansible.builtin.file:
     path: ~/.config/waybar
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/waybar"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/waybar"
     state: link
 - name: symlink wlogout directory
   ansible.builtin.file:
     path: ~/.config/wlogout
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/wlogout"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/wlogout"
     state: link
 - name: symlink fuzzel directory
   ansible.builtin.file:
     path: ~/.config/fuzzel
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/fuzzel"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/fuzzel"
     state: link

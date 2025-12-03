@@ -33,7 +33,7 @@
 - name: symlink Kvantum config file
   ansible.builtin.file:
     path: ~/.config/Kvantum/kvantum.kvconfig
-    src: "{{ ansible_env.PWD }}/roles/graphical/files/kvantum.kvconfig"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/kvantum.kvconfig"
     state: link
 - name: clone KvLibadwaita Kvantum style theme
   ansible.builtin.git:

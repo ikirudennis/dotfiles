@@ -12,7 +12,7 @@
 - name: symlink ~/.zshenv
   ansible.builtin.file:
     path: ~/.zshenv
-    src: "{{ ansible_env.PWD }}/roles/macos/files/zshenv"
+    src: "{{ ansible_facts['env'].PWD }}/roles/macos/files/zshenv"
     state: link
 - name: ensure perl locallib is set up correctly
   community.general.cpanm:

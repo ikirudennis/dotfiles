@@ -2,12 +2,12 @@
 - name: symlink .gitconfig
   ansible.builtin.file:
     path: ~/.gitconfig
-    src: "{{ ansible_env.PWD }}/roles/git/files/gitconfig"
+    src: "{{ ansible_facts['env'].PWD }}/roles/git/files/gitconfig"
     state: link
 - name: symlink .gitignore
   ansible.builtin.file:
     path: ~/.gitignore
-    src: "{{ ansible_env.PWD }}/roles/git/files/gitignore"
+    src: "{{ ansible_facts['env'].PWD }}/roles/git/files/gitignore"
     state: link
 - name: touch .gitconfig_local
   ansible.builtin.file:
