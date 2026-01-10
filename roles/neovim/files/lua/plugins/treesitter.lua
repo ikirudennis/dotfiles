@@ -4,7 +4,6 @@ return {
 	branch = "main",
 	config = function()
 		require("nvim-treesitter").install({
-			"ansible",
 			"bash",
 			"comment",
 			"css",
@@ -36,7 +35,6 @@ return {
 			"requirements",
 			"sql",
 			"ssh_config",
-			"systemd",
 			"terraform",
 			"tmux",
 			"toml",
