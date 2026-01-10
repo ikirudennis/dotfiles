@@ -69,7 +69,8 @@
             "playing": ""
         },
         "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+        "tooltip-format-disconnected": "MPD (disconnected)",
+        "on-click": "flatpak run dog.unix.cantata.Cantata"
     },
     "idle_inhibitor": {
         "format": "{icon}",
