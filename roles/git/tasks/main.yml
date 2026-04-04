@@ -20,5 +20,5 @@
   ansible.builtin.git:
     repo: https://github.com/CJ-Systems/gitflow-cjs.git
     dest: ~/.cache/dburke/gitflow-cjs
-    version: main
+    version: legacy-main
   notify: run gitflow installer
