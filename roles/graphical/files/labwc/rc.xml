@@ -472,13 +472,13 @@
 
   <windowRules>
     <windowRule identifier="Conky">
-      <action name="ToggleOmnipresent"/>
-      <action name="Unfocus"/>
-      <action name="ToggleAlwaysOnBottom"/>
+      <layer>background</layer>
+      <skipPager>yes</skipPager>
       <serverDecoration>no</serverDecoration>
       <skipTaskbar>yes</skipTaskbar>
       <skipWindowSwitcher>yes</skipWindowSwitcher>
       <ignoreFocusRequests>yes</ignoreFocusRequests>
+      <focusOnClick>no</focusOnClick>
     </windowRule>
     <windowRule identifier="JetBrains Toolbox" title="Toolbox">
       <serverDecoration>no</serverDecoration>
