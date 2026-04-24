@@ -8,11 +8,11 @@ systemctl --user start labwc-session.target &
 # start the ol' openbox xdg autostarter
 /usr/libexec/openbox-xdg-autostart &
 
-# start swww-daemon
-swww-daemon &
-# if swww query shows that the desktop background is black, set it to 50% grey
+# start awww-daemon
+awww-daemon &
+# if awww query shows that the desktop background is black, set it to 50% grey
 # instead.
-(swww query | grep 'color: 000000') && swww clear 888888 &
+(awww query | grep 'color: 000000') && awww clear 888888 &
 
 # start keyring on login
 /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh &

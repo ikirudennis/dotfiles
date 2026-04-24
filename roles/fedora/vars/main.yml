@@ -22,6 +22,7 @@ fedora_pkgs:
   - zsh
 fedora_graphical_pkgs:
   - Thunar
+  - awww
   - bemenu
   - blueman
   - brightnessctl
@@ -46,7 +47,6 @@ fedora_graphical_pkgs:
   - slurp
   - swayidle
   - swaylock
-  - swww
   - terminator
   - vim-X11
   - waybar
