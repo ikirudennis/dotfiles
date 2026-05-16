@@ -31,6 +31,8 @@ require("lazy").setup("plugins")
 
 -- edit neovim init.lua
 vim.keymap.set("n", "<leader>ev", ":tabe $MYVIMRC<cr>", { desc = "edit neovim init.lua" })
+-- restart neovim session (Neovim 0.12+)
+vim.keymap.set("n", "<leader>R", "<cmd>restart<cr>", { desc = "restart neovim session" })
 -- Select recently-pasted text
 vim.keymap.set("n", "<leader>v", "V`]", { desc = "select recently-pasted text" })
 -- reformat a paragraph
