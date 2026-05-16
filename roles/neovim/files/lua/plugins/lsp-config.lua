@@ -40,34 +40,43 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			-- extend bashls lsp's filetypes to include zsh
-			local bashls_filetypes = vim.lsp.config.bashls.filetypes
-			table.insert(bashls_filetypes, 'zsh')
-			vim.lsp.config('lua_ls', {
-				capabilities = capabilities,
+			-- Set default capabilities for all servers
+			vim.lsp.config("*", {
+				capabilities = require("cmp_nvim_lsp").default_capabilities(),
 			})
-			vim.lsp.config('ansiblels', {
-				capabilities = capabilities,
+
+			-- Enable servers (configs are in ~/.config/nvim/lsp/)
+			local servers = {
+				"lua_ls",
+				"ansiblels",
+				"bashls",
+				"marksman",
+				"pyright",
+				"terraformls",
+				"tflint",
+			}
+
+			for _, server in ipairs(servers) do
+				vim.lsp.enable(server)
+			end
+
+			-- LSP Keymaps (only when an LSP attaches)
+			vim.api.nvim_create_autocmd("LspAttach", {
+				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+				callback = function(ev)
+					local opts = { buffer = ev.buf }
+					vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opts)
+					vim.keymap.set("n", "<leader>gg", vim.lsp.buf.hover, opts)
+					vim.keymap.set("n", "<leader>gl", vim.diagnostic.open_float, opts)
+					vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
+					vim.keymap.set(
+						"n",
+						"<leader>gq",
+						vim.diagnostic.setqflist,
+						{ buffer = ev.buf, desc = "Add diagnostics to quickfix list" }
+					)
+				end,
 			})
-			vim.lsp.config('bashls', {
-				capabilities = capabilities,
-				filetypes = bashls_filetypes,
-			})
-			vim.lsp.config('pyright', {
-				capabilities = capabilities,
-			})
-			vim.lsp.config('terraformls', {
-				capabilities = capabilities,
-			})
-			vim.lsp.config('tflint', {
-				capabilities = capabilities,
-			})
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "<leader>gg", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<leader>gl", vim.diagnostic.open_float, {})
-			vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
-			vim.keymap.set("n", "<leader>gq", vim.diagnostic.setqflist, { desc = "Add diagnostics to quickfix list" })
 		end,
 	},
 }
