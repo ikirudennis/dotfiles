@@ -49,6 +49,17 @@ vim.keymap.set({ "n", "v" }, "<tab>", "%", { desc = "also use <tab> for %-style 
 -- search behave sanely.  See :help /magic for more info
 vim.keymap.set({ "n", "v" }, "/", "/\\v", { desc = "default to very magic search" })
 
+-- Native completion menu navigation (Neovim 0.12+)
+vim.keymap.set("i", "<Tab>", function()
+	return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
+end, { expr = true, desc = "Next completion item" })
+vim.keymap.set("i", "<S-Tab>", function()
+	return vim.fn.pumvisible() == 1 and "<C-p>" or "<S-Tab>"
+end, { expr = true, desc = "Previous completion item" })
+vim.keymap.set("i", "<CR>", function()
+	return vim.fn.pumvisible() == 1 and "<C-y>" or "<CR>"
+end, { expr = true, desc = "Confirm completion" })
+
 -- -----------------------------------------------------------------------------
 -- iii. Custom commands
 --------------------------------------------------------------------------------

@@ -42,7 +42,7 @@ return {
 		config = function()
 			-- Set default capabilities for all servers
 			vim.lsp.config("*", {
-				capabilities = require("cmp_nvim_lsp").default_capabilities(),
+				capabilities = require('blink.cmp').get_lsp_capabilities(),
 			})
 
 			-- Enable servers (configs are in ~/.config/nvim/lsp/)
