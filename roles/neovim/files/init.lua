@@ -2,6 +2,9 @@
 -- i. Setup
 -----------------------------------------------------------------------------
 
+-- enable experimental ui2 feature (Neovim 0.12+)
+require('vim._core.ui2').enable()
+
 -- use comma instead of backslash for commands. mapleader needs to be set early
 -- in this file so that later commands may use it.
 vim.g.mapleader = ","
