@@ -2,6 +2,9 @@
 -- i. Setup
 -----------------------------------------------------------------------------
 
+-- enable experimental ui2 feature (Neovim 0.12+)
+require('vim._core.ui2').enable()
+
 -- use comma instead of backslash for commands. mapleader needs to be set early
 -- in this file so that later commands may use it.
 vim.g.mapleader = ","
@@ -28,6 +31,8 @@ require("lazy").setup("plugins")
 
 -- edit neovim init.lua
 vim.keymap.set("n", "<leader>ev", ":tabe $MYVIMRC<cr>", { desc = "edit neovim init.lua" })
+-- restart neovim session (Neovim 0.12+)
+vim.keymap.set("n", "<leader>R", "<cmd>restart<cr>", { desc = "restart neovim session" })
 -- Select recently-pasted text
 vim.keymap.set("n", "<leader>v", "V`]", { desc = "select recently-pasted text" })
 -- reformat a paragraph
@@ -43,6 +48,17 @@ vim.keymap.set({ "n", "v" }, "<tab>", "%", { desc = "also use <tab> for %-style 
 -- in both normal and visual modes, use the 'very magic' search setting.  Makes
 -- search behave sanely.  See :help /magic for more info
 vim.keymap.set({ "n", "v" }, "/", "/\\v", { desc = "default to very magic search" })
+
+-- Native completion menu navigation (Neovim 0.12+)
+vim.keymap.set("i", "<Tab>", function()
+	return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
+end, { expr = true, desc = "Next completion item" })
+vim.keymap.set("i", "<S-Tab>", function()
+	return vim.fn.pumvisible() == 1 and "<C-p>" or "<S-Tab>"
+end, { expr = true, desc = "Previous completion item" })
+vim.keymap.set("i", "<CR>", function()
+	return vim.fn.pumvisible() == 1 and "<C-y>" or "<CR>"
+end, { expr = true, desc = "Confirm completion" })
 
 -- -----------------------------------------------------------------------------
 -- iii. Custom commands
