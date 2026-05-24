@@ -28,9 +28,9 @@
     path: ~/.config/labwc
     state: directory
     mode: "0755"
-- name: create labwc environment.d directory
+- name: create systemd environment.d directory
   ansible.builtin.file:
-    path: ~/.config/labwc/environment.d
+    path: ~/.config/environment.d
     state: directory
     mode: "0755"
 - name: symlink labwc files
@@ -41,8 +41,8 @@
   with_items: "{{ graphical_labwc_files }}"
 - name: symlink labwc environment file
   ansible.builtin.file:
-    path: "~/.config/labwc/environment.d/default.env"
-    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/labwc/default.env" # noqa: yaml[line-length]
+    path: "~/.config/environment.d/10-graphical.conf"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/systemd/10-graphical.conf" # noqa: yaml[line-length]
     state: link
 - name: link labwc-session.target systemd unit file
   # noqa command-instead-of-module command-instead-of-shell
