@@ -1,4 +1,4 @@
-FROM fedora:42
+FROM fedora:44
 
 RUN useradd -G wheel dburke && \
 	passwd -d dburke && \
