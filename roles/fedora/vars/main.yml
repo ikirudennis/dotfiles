@@ -43,7 +43,6 @@ fedora_graphical_pkgs:
   - kanshi
   - kvantum
   - neovim-qt
-  - openbox
   - slurp
   - swayidle
   - swaylock
