@@ -33,7 +33,7 @@ fedora_graphical_pkgs:
   - dunst
   - flameshot
   - fontawesome-fonts
-  - fontconfig-font-replacements
+  # - fontconfig-font-replacements
   - foot
   - fuzzel
   - grim
