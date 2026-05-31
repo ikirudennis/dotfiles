@@ -168,11 +168,13 @@ set.belloff = ''
 set.textwidth = 80
 -- define how to automatically format comments.  See :help fo-table for
 -- explanation.
-set.formatoptions = "qcan1"
+set.formatoptions = "qcn1"
 -- automatically show matching brackets. Works like it does in bbedit.
 set.showmatch = true
 -- use an undofile
 set.undofile = true
+-- use unnamedplus clipboard to allow using p to paste from clipboard
+set.clipboard = "unnamedplus"
 
 ----------------------------------------------------------------------------
 -- 13 tabs and indenting
