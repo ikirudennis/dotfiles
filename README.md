@@ -45,6 +45,9 @@ of the ansible provisioning. Then, log into the vagrant box with `vagrant ssh`
 and run the following:
 
 ```sh
+# extend the disk to the size specified in Vagrantfile
+sudo growpart /dev/vda 3
+sudo btrfs filesystem resize max /
 # install dnf updates first
 sudo dnf -y upgrade
 # install pip

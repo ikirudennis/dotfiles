@@ -67,6 +67,7 @@ Vagrant.configure("2") do |config|
     libvirt.video_type = 'vga'
     libvirt.memory = 4096
     libvirt.cpus = 2
+    libvirt.machine_virtual_size = 50
   end
 
   # Enable provisioning with a shell script. Additional provisioners such as
