@@ -367,6 +367,15 @@
         <command>wlogout</command>
       </action>
     </keybind>
+    <keybind key="W-z">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>Exit command</name>
+        </startupnotify>
+        <command>~/.local/bin/labwc_exit</command>
+      </action>
+    </keybind>
     <keybind key="W-l">
       <action name="Execute">
         <startupnotify>

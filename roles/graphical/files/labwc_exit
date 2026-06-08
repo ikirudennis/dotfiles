@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# logout with labnag
+
+labnag \
+ -f "Droid Sans Regular 16" \
+ -m "Choose your logout option" \
+ -Z "  Lock   " "dburke_screen_control lock" \
+ -Z "Shutdown " "systemctl poweroff" \
+ -Z " Reboot  " "systemctl reboot" \
+ -Z " Logout  " "loginctl terminate-user $USER" \
+ -Z "Hibernate" "systemctl hibernate" \
+ -Z " Suspend " "systemctl suspend" \
+ -Z " Cancel  " \
+ --background-color 3f3f3f \
+ --border-bottom-color 000000 \
+ --button-background-color 506070 \
+ --button-border-color dcdccc \
+ --text-color c1c1b0 \
+ --button-text-color dcdccc \
+ --button-gap 8 \
+ --button-margin-right 0 \
+ --button-padding 5 \
+ --button-border-size 2 \
+ -t 60 \
+ --keyboard-focus on-demand
