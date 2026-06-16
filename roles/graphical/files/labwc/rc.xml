@@ -364,7 +364,7 @@
           <enabled>false</enabled>
           <name>wlogout</name>
         </startupnotify>
-        <command>wlogout</command>
+        <command>~/.local/bin/labwc_exit</command>
       </action>
     </keybind>
     <keybind key="W-z">
@@ -373,7 +373,7 @@
           <enabled>false</enabled>
           <name>Exit command</name>
         </startupnotify>
-        <command>~/.local/bin/labwc_exit</command>
+        <command>wlogout</command>
       </action>
     </keybind>
     <keybind key="W-l">
