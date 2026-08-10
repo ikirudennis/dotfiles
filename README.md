@@ -73,8 +73,34 @@ cd /vagrant
 ansible-playbook install_dotfiles.yml
 ```
 
+> [!IMPORTANT]
+> Since the Vagrant provider (like `libvirt`) typically uses `rsync` for synced
+> folders, any changes you make on your host machine will not automatically
+> reflect inside the `/vagrant` directory in the virtual machine.
+> 
+> Before running the playbook or testing changes inside the VM, you must run:
+> ```sh
+> vagrant rsync
+> ```
+> on your host machine to synchronize your local dotfiles directory to the
+> virtual machine. Alternatively, you can run `vagrant rsync-auto` on your host
+> to watch for changes and sync them automatically.
+
 > [!NOTE]
 > It's likely the case that the resulting virtual machine might not be too
-useable. It's probably pretty strangled as it's just intended as a minimal
-virtual machine, but at the very least, you'll be able to test that the tools
-get installed and that the configurations are all in the correct spots.
+> useable. It's probably pretty strangled as it's just intended as a minimal
+> virtual machine, but at the very least, you'll be able to test that the tools
+> get installed and that the configurations are all in the correct spots.
+
+> [!WARNING]
+> At one point, I wanted to try to use a worktree to test out some changes in
+> vagrant without having any effect on my running configuration. When I tried
+> to run the ansible playbook, it failed during an attempt to clone another git
+> repo, with a `fatal: not a git respository` error message. The reason for
+> this was due to git trying to first determine if we're in a git repository
+> (inside the dotfiles directory), and as the worktree looks like a git repo,
+> but links to a `.git` directory _outside_ the rsync-ed directory, it can't
+> see the actual repository database, and thus fails rather than trying to do
+> anything. The quickest and easiest solution: just use a separate cloned
+> directory instead. You could get around it with some other options, but it's
+> not really worth it otherwise.
