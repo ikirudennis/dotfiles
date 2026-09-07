@@ -88,11 +88,30 @@
     src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/terminator/config" # noqa: yaml[line-length]
     state: link
     mode: "0644"
-- name: symlink waybar directory
+- name: create waybar config directory
   ansible.builtin.file:
     path: ~/.config/waybar
-    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/waybar"
+    state: directory
+    mode: "0755"
+- name: check if mpd is installed
+  ansible.builtin.command: which mpd
+  register: graphical_mpd_check
+  failed_when: false
+  changed_when: false
+- name: set graphical_waybar_enable_mpd fact
+  ansible.builtin.set_fact:
+    graphical_waybar_enable_mpd: "{{ graphical_mpd_check.rc == 0 }}"
+  when: graphical_waybar_enable_mpd is not defined
+- name: symlink waybar stylesheet file
+  ansible.builtin.file:
+    path: "~/.config/waybar/style.css"
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/waybar/style.css"
     state: link
+- name: template waybar config
+  ansible.builtin.template:
+    src: waybar/config.j2
+    dest: ~/.config/waybar/config
+    mode: "0644"
 - name: symlink wlogout directory
   ansible.builtin.file:
     path: ~/.config/wlogout
