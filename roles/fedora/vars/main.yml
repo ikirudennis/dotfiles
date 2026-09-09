@@ -10,6 +10,7 @@ fedora_pkgs:
   - mercurial
   - neovim
   - perl-App-cpanminus
+  - perl-LWP-Protocol-https
   - perl-local-lib
   - python3-devel
   - python3-pip
