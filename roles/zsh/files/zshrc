@@ -146,6 +146,9 @@ fi
 # add completion for custom git commands
 zstyle ':completion:*:*:git:*' user-commands ${${(M)${(k)commands}:#git-*}/git-/}
 
+# configure killall completion to show all commands currently running as the current user
+zstyle ':completion:*:*:killall:*:processes-names' command 'ps -u $USER -o args='
+
 # this needs to be last to load completions in ~/.zsh/func/  It allows
 # .zshrc_local and .zshrc_private to specify their own fpath, if need be.
 autoload -U compinit && compinit
