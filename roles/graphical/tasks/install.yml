@@ -159,3 +159,13 @@
     src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/gtk-4.0/settings.ini"
     state: link
     force: true
+- name: set GTK legacy applications theme in dconf
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    value: "'Materia-dark'"
+    state: present
+- name: prefer dark color scheme in dconf
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/color-scheme"
+    value: "'prefer-dark'"
+    state: present
