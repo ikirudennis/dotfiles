@@ -17,3 +17,7 @@
   loop_control:
     label: "{{ item.path }}"
   listen: clean up old nerdfonts
+
+- name: update font cache
+  ansible.builtin.command: fc-cache -f -v
+  listen: clean up old nerdfonts

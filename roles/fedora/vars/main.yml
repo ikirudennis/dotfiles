@@ -23,6 +23,7 @@ fedora_pkgs:
   - zsh
 fedora_graphical_pkgs:
   - Thunar
+  - gtk-murrine-engine
   - awww
   - bemenu
   - blueman
@@ -61,6 +62,27 @@ fedora_graphical_pkgs:
   - xdg-desktop-portal-wlr
   - xfce-polkit
   - xset
+  - google-cousine-fonts
+  - google-arimo-fonts
+  - google-tinos-fonts
+  - archivo-black-fonts
+  - liberation-narrow-fonts
+  - libre-baskerville-fonts
+  - impallari-libre-baskerville-fonts
+  - linux-libertine-biolinum-fonts
+  - komika-text-fonts
+  - sorkintype-merriweather-fonts
+  - sorkintype-merriweather-sans-fonts
+  - courier-prime-fonts
+  - texlive-tex-gyre
+  - catharsis-cormorant-garamond-fonts
+  - sorkintype-gelasio-fonts
+  - lato-fonts
+  - texlive-cabin
+  - passion-one-fonts
+  - adobe-source-sans-pro-fonts
+  - google-noto-sans-fonts
+  - google-noto-sans-mono-fonts
 fedora_copr_repos:
   - alebastr/sway-extras
   - chriscowleyunix/better_fonts

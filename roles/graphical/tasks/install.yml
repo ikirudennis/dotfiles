@@ -122,3 +122,40 @@
     path: ~/.config/fuzzel
     src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/fuzzel"
     state: link
+- name: ensure local themes directory exists
+  ansible.builtin.file:
+    path: ~/.local/share/themes
+    state: directory
+    mode: "0755"
+- name: symlink Materia-dark theme directory
+  ansible.builtin.file:
+    path: ~/.local/share/themes/Materia-dark
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/themes/Materia-dark"
+    state: link
+- name: symlink Vent theme directory
+  ansible.builtin.file:
+    path: ~/.local/share/themes/Vent
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/themes/Vent"
+    state: link
+- name: ensure gtk-3.0 config directory exists
+  ansible.builtin.file:
+    path: ~/.config/gtk-3.0
+    state: directory
+    mode: "0755"
+- name: symlink gtk-3.0 settings.ini
+  ansible.builtin.file:
+    path: ~/.config/gtk-3.0/settings.ini
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/gtk-3.0/settings.ini"
+    state: link
+    force: true
+- name: ensure gtk-4.0 config directory exists
+  ansible.builtin.file:
+    path: ~/.config/gtk-4.0
+    state: directory
+    mode: "0755"
+- name: symlink gtk-4.0 settings.ini
+  ansible.builtin.file:
+    path: ~/.config/gtk-4.0/settings.ini
+    src: "{{ ansible_facts['env'].PWD }}/roles/graphical/files/gtk-4.0/settings.ini"
+    state: link
+    force: true
