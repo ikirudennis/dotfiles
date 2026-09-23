@@ -36,7 +36,6 @@ return {
 			"sql",
 			"ssh_config",
 			"terraform",
-			"tmux",
 			"toml",
 			"udev",
 			"vim",
