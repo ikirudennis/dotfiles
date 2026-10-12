@@ -306,129 +306,73 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Terminal</name>
-        </startupnotify>
         <command>foot</command>
       </action>
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Web Browser</name>
-        </startupnotify>
         <command>/opt/firefox/firefox</command>
       </action>
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Editor</name>
-        </startupnotify>
         <command>nvim-qt</command>
       </action>
     </keybind>
     <keybind key="W-f">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>File Manager</name>
-        </startupnotify>
         <command>thunar</command>
       </action>
     </keybind>
     <keybind key="W-m">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>bemenu</name>
-        </startupnotify>
         <command>bemenu-run</command>
       </action>
     </keybind>
     <keybind key="W-o">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>screen off</name>
-        </startupnotify>
         <command>~/.local/bin/dburke_screen_control force_off</command>
       </action>
     </keybind>
     <keybind key="W-x">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>wlogout</name>
-        </startupnotify>
         <command>~/.local/bin/labwc_exit</command>
       </action>
     </keybind>
     <keybind key="W-l">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>lock screen</name>
-        </startupnotify>
         <command>~/.local/bin/dburke_screen_control lock</command>
       </action>
     </keybind>
     <keybind key="W-h">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Htop system process</name>
-        </startupnotify>
         <command>foot htop</command>
       </action>
     </keybind>
     <!-- dunst-related keybindings -->
     <keybind key="C-W-space">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Close Dunst notification</name>
-        </startupnotify>
         <command>dunstctl close</command>
       </action>
     </keybind>
     <keybind key="C-S-W-space">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Close Dunst all notifications</name>
-        </startupnotify>
         <command>dunstctl close-all</command>
       </action>
     </keybind>
     <keybind key="C-grave">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Display previous Dunst notifications</name>
-        </startupnotify>
         <command>dunstctl history-pop</command>
       </action>
     </keybind>
     <keybind key="C-W-period">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>Display Dunst context menu</name>
-        </startupnotify>
         <!-- change dunst config to use bemenu instead of dmenu -->
         <command>dunstctl context</command>
       </action>
     </keybind>
     <keybind key="W-j">
       <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>fuzzel</name>
-        </startupnotify>
         <command>fuzzel</command>
       </action>
     </keybind>
