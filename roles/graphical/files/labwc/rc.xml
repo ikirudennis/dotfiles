@@ -206,7 +206,6 @@
     <!-- Keybindings for windows -->
     <keybind key="A-Escape">
       <action name="Lower"/>
-      <action name="FocusToBottom"/>
       <action name="Unfocus"/>
       <action name="NextWindow"/>
       <action name="PreviousWindow"/>
